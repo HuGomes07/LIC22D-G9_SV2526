@@ -48,11 +48,11 @@
     "sec2_2": false,
     "sec3": true,
     "sec4": true,
-    "sec4_1": true,
-    "sec4_2": true,
-    "sec4_3": true,
-    "sec5": true,
-    "sec6": true,
-    "sec7": true,
-    "sec8": true
+    "sec4_1": false,
+    "sec4_2": false,
+    "sec4_3": false,
+    "sec5": false,
+    "sec6": false,
+    "sec7": false,
+    "sec8": false
 }

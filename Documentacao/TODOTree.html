@@ -42,85 +42,7 @@ input[type="checkbox"] {
     margin-right: 8px;
 }
 </style>
-<script>
 
-let fileHandle = null;
-
-// Selecionar ficheiro JSON existente ou criar novo
-async function selectFile() {
-    try {
-        fileHandle = await window.showSaveFilePicker({
-            suggestedName: "todoCheck.json",
-            types: [{
-                description: "JSON File",
-                accept: { "application/json": [".json"] }
-            }]
-        });
-
-        document.getElementById("fileStatus").innerText = "Ficheiro ligado ✔";
-
-        saveToFile(); // grava imediatamente
-
-    } catch (err) {
-        console.log("Cancelado.");
-    }
-}
-
-
-// Gerar objeto com progresso
-function generateProgressObject() {
-    const data = {};
-
-    document.querySelectorAll("input[type='checkbox']").forEach(box => {
-        data[box.id] = box.checked;
-    });
-
-    document.querySelectorAll("details").forEach(section => {
-        data[section.id] = section.open;
-    });
-
-    return data;
-}
-
-
-// Guardar no ficheiro real
-async function saveToFile() {
-    if (!fileHandle) return;
-
-    const writable = await fileHandle.createWritable();
-    const data = generateProgressObject();
-    await writable.write(JSON.stringify(data, null, 4));
-    await writable.close();
-}
-
-
-// Restaurar do localStorage
-window.onload = function() {
-
-    document.querySelectorAll("input[type='checkbox']").forEach(box => {
-
-        const saved = localStorage.getItem(box.id);
-        if (saved === "true") box.checked = true;
-
-        box.addEventListener("change", function() {
-            localStorage.setItem(box.id, box.checked);
-            saveToFile(); // atualiza ficheiro automaticamente
-        });
-    });
-
-    document.querySelectorAll("details").forEach(section => {
-
-        const saved = localStorage.getItem(section.id);
-        if (saved === "true") section.open = true;
-
-        section.addEventListener("toggle", function() {
-            localStorage.setItem(section.id, section.open);
-            saveToFile();
-        });
-    });
-};
-
-</script>
 </head>
 
 <body>
@@ -246,35 +168,58 @@ window.onload = function() {
 </details>
 
 <script>
-// RESTORE CHECKBOXES + ACCORDIONS
-window.onload = function() {
 
-    // Checkboxes
+let fileHandle = null;
+
+// Selecionar ficheiro JSON existente ou criar novo
+async function selectFile() {
+    try {
+        fileHandle = await window.showSaveFilePicker({
+            suggestedName: "todoCheck.json",
+            types: [{
+                description: "JSON File",
+                accept: { "application/json": [".json"] }
+            }]
+        });
+
+        document.getElementById("fileStatus").innerText = "Ficheiro ligado ✔";
+
+        saveToFile(); // grava imediatamente
+
+    } catch (err) {
+        console.log("Cancelado.");
+    }
+}
+
+
+// Gerar objeto com progresso
+function generateProgressObject() {
+    const data = {};
+
     document.querySelectorAll("input[type='checkbox']").forEach(box => {
-
-        const saved = localStorage.getItem(box.id);
-        if (saved === "true") {
-            box.checked = true;
-        }
-
-        box.addEventListener("change", function() {
-            localStorage.setItem(box.id, box.checked);
-        });
+        data[box.id] = box.checked;
     });
 
-    // Accordions
     document.querySelectorAll("details").forEach(section => {
-
-        const saved = localStorage.getItem(section.id);
-        if (saved === "true") {
-            section.open = true;
-        }
-
-        section.addEventListener("toggle", function() {
-            localStorage.setItem(section.id, section.open);
-        });
+        data[section.id] = section.open;
     });
-};
+
+    return data;
+}
+
+
+// Guardar no ficheiro real
+async function saveToFile() {
+    if (!fileHandle) return;
+
+    const writable = await fileHandle.createWritable();
+    const data = generateProgressObject();
+    await writable.write(JSON.stringify(data, null, 4));
+    await writable.close();
+}
+
+
+
 </script>
 
 </body>
