@@ -1,4 +1,4 @@
-set_global_assignment -name TOP_LEVEL_ENTITY UsbPort
+set_global_assignment -name TOP_LEVEL_ENTITY TicketMachine
 set_location_assignment PIN_C10 -to inputPort[0]
 set_location_assignment PIN_C11 -to inputPort[1]
 set_location_assignment PIN_D12 -to inputPort[2]
@@ -18,6 +18,11 @@ set_location_assignment PIN_D14 -to outputPort[7]
 set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name VHDL_FILE UsbPort.vhd
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name VHDL_FILE KeyboardReader.vhd
+set_global_assignment -name VHDL_FILE KeyDecode.vhd
+set_global_assignment -name VHDL_FILE KeyScan.vhd
+set_global_assignment -name VHDL_FILE TicketMachine.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
