@@ -18,7 +18,7 @@ set_location_assignment PIN_D14 -to outputPort[7]
 set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name VHDL_FILE UsbPort.vhd
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
 set_global_assignment -name VHDL_FILE KeyboardReader.vhd
 set_global_assignment -name VHDL_FILE KeyDecode.vhd
 set_global_assignment -name VHDL_FILE KeyScan.vhd
