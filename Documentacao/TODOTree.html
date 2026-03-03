@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Máquina de Venda de Bilhetes</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f6f8;
+}
+
+h1 {
+    text-align: center;
+}
+
+details {
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details details {
+    margin-top: 8px;
+    margin-left: 15px;
+    background: #f9fafb;
+}
+
+.item {
+    margin: 6px 0 6px 25px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Máquina de Venda de Bilhetes</h1>
+<button onclick="selectFile()">Selecionar todoCheck.json</button>
+<span id="fileStatus">Nenhum ficheiro selecionado</span>
+<!-- 1 -->
+<details id="sec1">
+<summary>1. Objetivo do Projeto</summary>
+
+<div class="item"><input type="checkbox" id="c1"> Implementar venda de bilhetes</div>
+<div class="item"><input type="checkbox" id="c2"> Integrar modo Venda e Manutenção</div>
+
+</details>
+
+<!-- 2 -->
+<details id="sec2">
+<summary>2. Funcionalidades</summary>
+
+<details id="sec2_1">
+<summary>Modo Venda</summary>
+<div class="item"><input type="checkbox" id="c3"> Consulta por ID ou ↑ ↓</div>
+<div class="item"><input type="checkbox" id="c4"> Compra com '#'</div>
+<div class="item"><input type="checkbox" id="c5"> Alternar ida/ida-volta com '*'</div>
+<div class="item"><input type="checkbox" id="c6"> Cancelamento devolve moedas</div>
+<div class="item"><input type="checkbox" id="c7"> Máquina não dá troco</div>
+</details>
+
+<details id="sec2_2">
+<summary>Modo Manutenção</summary>
+<div class="item"><input type="checkbox" id="c8"> Teste sem contabilização</div>
+<div class="item"><input type="checkbox" id="c9"> Consulta bilhetes vendidos</div>
+<div class="item"><input type="checkbox" id="c10"> Consulta moedas</div>
+<div class="item"><input type="checkbox" id="c11"> Reiniciar contadores</div>
+<div class="item"><input type="checkbox" id="c12"> Guardar dados ao desligar</div>
+</details>
+
+</details>
+
+<!-- 3 -->
+<details id="sec3">
+<summary>3. Arquitetura do Sistema</summary>
+
+<div class="item"><input type="checkbox" id="c13"> Keyboard Reader (Hardware)</div>
+<div class="item"><input type="checkbox" id="c14"> Port Expander LCD</div>
+<div class="item"><input type="checkbox" id="c15"> Port Expander Ticket Dispenser</div>
+<div class="item"><input type="checkbox" id="c16"> Coin Acceptor</div>
+<div class="item"><input type="checkbox" id="c17"> Control (Software Kotlin)</div>
+
+</details>
+
+<!-- 4 -->
+<details id="sec4">
+<summary>4. Keyboard Reader</summary>
+
+<details id="sec4_1">
+<summary>Key Decode</summary>
+<div class="item"><input type="checkbox" id="c18"> Descodificação teclado 4x4</div>
+<div class="item"><input type="checkbox" id="c19"> Controlo Kval/Kack</div>
+<div class="item"><input type="checkbox" id="c20"> Auto-repeat</div>
+</details>
+
+<details id="sec4_2">
+<summary>Ring Buffer</summary>
+<div class="item"><input type="checkbox" id="c21"> FIFO 16 posições</div>
+<div class="item"><input type="checkbox" id="c22"> RAM + putIndex/getIndex</div>
+<div class="item"><input type="checkbox" id="c23"> Sinais DAV/DAC/CTS</div>
+</details>
+
+<details id="sec4_3">
+<summary>Key Transmitter</summary>
+<div class="item"><input type="checkbox" id="c24"> Transmissão série 4 bits</div>
+<div class="item"><input type="checkbox" id="c25"> Sinais TXD/TXclk</div>
+<div class="item"><input type="checkbox" id="c26"> Controlo KBfree</div>
+</details>
+
+</details>
+
+<!-- 5 -->
+<details id="sec5">
+<summary>5. Coin Acceptor</summary>
+
+<div class="item"><input type="checkbox" id="c27"> Codificação 3 bits</div>
+<div class="item"><input type="checkbox" id="c28"> Sinal Coin</div>
+<div class="item"><input type="checkbox" id="c29"> accept / eject / collect</div>
+
+</details>
+
+<!-- 6 -->
+<details id="sec6">
+<summary>6. Port Expander LCD (PELCD)</summary>
+
+<div class="item"><input type="checkbox" id="c30"> Trama 10 bits</div>
+<div class="item"><input type="checkbox" id="c31"> RS + 8 dados + E</div>
+<div class="item"><input type="checkbox" id="c32"> Shift + Hold Register</div>
+
+</details>
+
+<!-- 7 -->
+<details id="sec7">
+<summary>7. Port Expander Ticket Dispenser (PETD)</summary>
+
+<div class="item"><input type="checkbox" id="c33"> Tipo de bilhete</div>
+<div class="item"><input type="checkbox" id="c34"> Estação origem 4 bits</div>
+<div class="item"><input type="checkbox" id="c35"> Estação destino 4 bits</div>
+<div class="item"><input type="checkbox" id="c36"> Bit início impressão</div>
+<div class="item"><input type="checkbox" id="c37"> Sinais Prt e Fn</div>
+
+</details>
+
+<!-- 8 -->
+<details id="sec8">
+<summary>8. Control (Software Kotlin)</summary>
+
+<div class="item"><input type="checkbox" id="c38"> HAL</div>
+<div class="item"><input type="checkbox" id="c39"> KBD</div>
+<div class="item"><input type="checkbox" id="c40"> LCD</div>
+<div class="item"><input type="checkbox" id="c41"> SerialEmitter</div>
+<div class="item"><input type="checkbox" id="c42"> TicketDispenser</div>
+<div class="item"><input type="checkbox" id="c43"> Persistência em ficheiros</div>
+
+</details>
+
+<script>
+
+let fileHandle = null;
+
+// Selecionar ficheiro JSON existente ou criar novo
+async function selectFile() {
+    try {
+        fileHandle = await window.showSaveFilePicker({
+            suggestedName: "todoCheck.json",
+            types: [{
+                description: "JSON File",
+                accept: { "application/json": [".json"] }
+            }]
+        });
+
+        document.getElementById("fileStatus").innerText = "Ficheiro ligado ✔";
+
+        saveToFile(); // grava imediatamente
+
+    } catch (err) {
+        console.log("Cancelado.");
+    }
+}
+
+
+// Gerar objeto com progresso
+function generateProgressObject() {
+    const data = {};
+
+    document.querySelectorAll("input[type='checkbox']").forEach(box => {
+        data[box.id] = box.checked;
+    });
+
+    document.querySelectorAll("details").forEach(section => {
+        data[section.id] = section.open;
+    });
+
+    return data;
+}
+
+
+// Guardar no ficheiro real
+async function saveToFile() {
+    if (!fileHandle) return;
+
+    const writable = await fileHandle.createWritable();
+    const data = generateProgressObject();
+    await writable.write(JSON.stringify(data, null, 4));
+    await writable.close();
+}
+
+
+
+</script>
+
+</body>
+</html>
