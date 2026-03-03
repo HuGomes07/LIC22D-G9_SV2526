@@ -1,4 +1,9 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity KeyboardReader is
+--library ieee;
+--use ieee.std_logic_1164.all;
+--
+--entity KeyboardReader is
+--end KeyboardReader;
+--
+--architecture structural of KeyboardReader is
+--begin
+--end structural;

@@ -1,4 +1,9 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity KeyDecode is
+--library ieee;
+--use ieee.std_logic_1164.all;
+--
+--entity KeyDecode is
+--end KeyDecode;
+--
+--architecture structural of KeyDecode is
+--begin
+--end structural;

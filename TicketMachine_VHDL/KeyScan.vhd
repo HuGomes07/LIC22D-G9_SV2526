@@ -1,4 +1,9 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity KeyScan is
+--library ieee;
+--use ieee.std_logic_1164.all;
+--
+--entity KeyScan is
+--end KeyScan;
+--
+--architecture structural of KeyScan is
+--begin
+--end structural;

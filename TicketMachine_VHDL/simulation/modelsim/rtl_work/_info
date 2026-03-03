@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim
+Edecoder
+Z1 w1772537961
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z4 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+Z5 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+l0
+L3 1
+VWBfTMIIbMBI>@7W4dm=l_1
+!s100 L``_Q?Td`afiYPjkIg3Be0
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1772537970
+!i10b 1
+Z8 !s108 1772537970.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd|
+Z10 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+Z13 DEx4 work 7 decoder 0 22 WBfTMIIbMBI>@7W4dm=l_1
+!i122 4
+l27
+L12 22
+VGh9SehLXW`Jf7?lOkUhdc3
+!s100 P1Jn`BZ<`fBETzJT832h43
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edemux
+Z14 w1772537106
+R2
+R3
+!i122 3
+R0
+Z15 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+Z16 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+l0
+L4 1
+VS=D?jW7E9aJNK;WOJjo3m2
+!s100 ;]l^Y3Xgn0VDYSPW@bRlh3
+R6
+32
+Z17 !s110 1772537585
+!i10b 1
+Z18 !s108 1772537585.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd|
+Z20 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 5 demux 0 22 S=D?jW7E9aJNK;WOJjo3m2
+!i122 3
+l14
+L13 5
+VhO:c0g9WiYBj<K^RA3C@U3
+!s100 Q^HLk[51OS;L_Piaz>=k?0
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Eticketmachine
+Z21 w1772537479
+R2
+R3
+!i122 0
+R0
+Z22 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+Z23 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+l0
+L4 1
+Vz`fdZ;H3e_bVCn?C6macP2
+!s100 0483?TFSA]M79L:bA?cZ^1
+R6
+31
+Z24 !s110 1772537498
+!i10b 1
+Z25 !s108 1772537498.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd|
+Z27 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd|
+!i113 1
+Z28 o-93 -work work
+R12
+Astructural
+R2
+R3
+DEx4 work 13 ticketmachine 0 22 z`fdZ;H3e_bVCn?C6macP2
+!i122 0
+l11
+L10 4
+VSYi8c;eU>VC:TaAAUiXBM2
+!s100 =6MMSPRgn8FR5DfjgUACW0
+R6
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R28
+R12

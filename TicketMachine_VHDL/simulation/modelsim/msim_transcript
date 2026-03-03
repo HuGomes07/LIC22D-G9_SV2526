@@ -1,0 +1,152 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do TicketMachine_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:38 on Mar 03,2026
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine
+# -- Compiling architecture structural of TicketMachine
+# End time: 11:31:38 on Mar 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:51 on Mar 03,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder
+# -- Compiling architecture structural of Decoder
+# End time: 11:31:51 on Mar 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.decoder
+# vsim work.decoder 
+# Start time: 11:31:55 on Mar 03,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.decoder(structural)
+# ** Warning: (vsim-3473) Component instance "DeMUX1 : DeMUX" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /decoder File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# ** Warning: (vsim-3473) Component instance "DeMUX2 : DeMUX" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /decoder File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# ** Warning: (vsim-3473) Component instance "DeMUX3 : DeMUX" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /decoder File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+add wave -position insertpoint sim:/decoder/*
+force -freeze sim:/decoder/S 00 0
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:05 on Mar 03,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder
+# -- Compiling architecture structural of Decoder
+# End time: 11:33:05 on Mar 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:05 on Mar 03,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DeMUX
+# -- Compiling architecture structural of DeMUX
+# End time: 11:33:05 on Mar 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.demux
+# End time: 11:33:12 on Mar 03,2026, Elapsed time: 0:01:17
+# Errors: 0, Warnings: 3
+# vsim work.demux 
+# Start time: 11:33:12 on Mar 03,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux(structural)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/demux/*
+force -freeze sim:/demux/Y 1 0
+force -freeze sim:/demux/E 1 0
+force -freeze sim:/demux/S 0 0
+run
+force -freeze sim:/demux/S 1 0
+run
+vsim work.decoder work.demux
+# End time: 11:34:06 on Mar 03,2026, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 0
+# vsim work.decoder work.demux 
+# Start time: 11:34:06 on Mar 03,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/decoder/*
+add wave -position insertpoint sim:/demux/*
+force -freeze sim:/decoder/S 00 0
+run
+force -freeze sim:/decoder/S 01 0
+run
+force -freeze sim:/decoder/S 10 0
+run
+force -freeze sim:/decoder/S 11 0
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:39:30 on Mar 03,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder
+# -- Compiling architecture structural of Decoder
+# End time: 11:39:30 on Mar 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.decoder
+# End time: 11:39:40 on Mar 03,2026, Elapsed time: 0:05:34
+# Errors: 0, Warnings: 0
+# vsim work.decoder 
+# Start time: 11:39:40 on Mar 03,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/decoder/*
+force -freeze sim:/decoder/S 00 0
+run
+force -freeze sim:/decoder/S 01 0
+run
+force -freeze sim:/decoder/S 10 0
+run
+force -freeze sim:/decoder/S 11 0
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim/decoder.do
+# image file format "bmp" is unknown
+# End time: 11:48:00 on Mar 03,2026, Elapsed time: 0:08:20
+# Errors: 0, Warnings: 0
