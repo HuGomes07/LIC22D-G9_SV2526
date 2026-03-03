@@ -1,0 +1,190 @@
+|Counter
+CE => rg4:Reg.EN
+Reset => rg4:Reg.Reset
+MClk => rg4:Reg.CLK
+Q[0] <= rg4:Reg.Q[0]
+Q[1] <= rg4:Reg.Q[1]
+Q[2] <= rg4:Reg.Q[2]
+Q[3] <= rg4:Reg.Q[3]
+
+
+|Counter|Adder:Adder
+A[0] => fa:U1.A
+A[1] => fa:U2.A
+A[2] => fa:U3.A
+A[3] => fa:U4.A
+B[0] => fa:U1.B
+B[1] => fa:U2.B
+B[2] => fa:U3.B
+B[3] => fa:U4.B
+Cin => fa:U1.Ci
+R[0] <= fa:U1.S
+R[1] <= fa:U2.S
+R[2] <= fa:U3.S
+R[3] <= fa:U4.S
+Cout <= fa:U4.Co
+
+
+|Counter|Adder:Adder|FA:U1
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U1|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U1|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U2
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U2|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U2|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U3
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U3|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U3|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U4
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U4|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|Adder:Adder|FA:U4|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|RG4:Reg
+D[0] => ffd:FDD0.D
+D[1] => ffd:FDD1.D
+D[2] => ffd:FDD2.D
+D[3] => ffd:FDD3.D
+Q[0] <= ffd:FDD0.Q
+Q[1] <= ffd:FDD1.Q
+Q[2] <= ffd:FDD2.Q
+Q[3] <= ffd:FDD3.Q
+CLK => ffd:FDD0.CLK
+CLK => ffd:FDD1.CLK
+CLK => ffd:FDD2.CLK
+CLK => ffd:FDD3.CLK
+EN => ffd:FDD0.EN
+EN => ffd:FDD1.EN
+EN => ffd:FDD2.EN
+EN => ffd:FDD3.EN
+Reset => ffd:FDD0.RESET
+Reset => ffd:FDD1.RESET
+Reset => ffd:FDD2.RESET
+Reset => ffd:FDD3.RESET
+
+
+|Counter|RG4:Reg|FFD:FDD0
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|RG4:Reg|FFD:FDD1
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|RG4:Reg|FFD:FDD2
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Counter|RG4:Reg|FFD:FDD3
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

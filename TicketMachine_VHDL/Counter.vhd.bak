@@ -1,0 +1,8 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Counter is port(
+	CE		: in std_logic;
+	MClk  : in std_logic; 
+	Q 		: out std_logic_vector(3 downto 0)
+);

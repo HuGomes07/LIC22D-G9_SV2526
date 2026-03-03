@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Mar 03 09:14:24 2026
+Analysis & Synthesis Status : Successful - Tue Mar 03 15:42:46 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TicketMachine
-Top-level Entity Name : UsbPort
+Top-level Entity Name : Counter
 Family : MAX 10
-Total logic elements : 148
-    Total combinational functions : 124
-    Dedicated logic registers : 86
-Total registers : 86
-Total pins : 16
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 4
+Total registers : 4
+Total pins : 7
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
