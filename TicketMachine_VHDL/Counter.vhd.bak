@@ -8,7 +8,7 @@ entity Counter is port(
 );
 end Counter;
 
-architecture behavioral of Counter is 
+architecture structural of Counter is 
 	signal CurrQ,RGtoAdd: std_logic_vector(3 downto 0);
 	
 begin
@@ -17,4 +17,4 @@ begin
 	Reg   :entity work.RG4 port
 		map(CLK =>MCLK, D=>CurrQ, Q=>RGtoAdd, En=>CE, Reset=>Reset);
 	Q<=RGtoAdd;
-end behavioral;
+end structural;

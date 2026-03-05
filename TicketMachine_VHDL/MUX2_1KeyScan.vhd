@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity MUX2_1KeyScan is
+entity MUX2_1 is
 	port
 	(
 		A: in std_logic;
@@ -9,9 +9,9 @@ entity MUX2_1KeyScan is
 		S: in std_logic;
 		Y: out std_logic
 	);
-end MUX2_1KeyScan;
+end MUX2_1;
 
-architecture structural of MUX2_1KeyScan is
+architecture structural of MUX2_1 is
 	
 	begin
 		Y <= (A and (not S)) or (B and S);

@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity MUX4_1KeyScan is
+entity MUX4_1 is
 	port
 	(
 		I0: in std_logic;
@@ -12,11 +12,11 @@ entity MUX4_1KeyScan is
 		S1: in std_logic;
 		Y: out std_logic
 	);
-end MUX4_1KeyScan;
+end MUX4_1;
 
-architecture structural of MUX4_1KeyScan is
+architecture structural of MUX4_1 is
 
-	component MUX2_1KeyScan
+	component MUX2_1
 	port
 	(
 		A: in std_logic;
@@ -31,21 +31,21 @@ architecture structural of MUX4_1KeyScan is
 	
 	begin
 	
-	MUX1: MUX2_1KeyScan port map(
+	MUX1: MUX2_1 port map(
 			A => I0,
 			B => I1,
 			S => S0,
 			Y => MUX1_out
 		);
 			
-	MUX2: MUX2_1KeyScan port map(
+	MUX2: MUX2_1 port map(
 			A => I2,
 			B => I3,
 			S => S0,
 			Y => MUX2_out
 		);
 			
-	MUX3: MUX2_1KeyScan port map(
+	MUX3: MUX2_1 port map(
 			A => MUX1_out,
 			B => MUX2_out,
 			S => S1,
