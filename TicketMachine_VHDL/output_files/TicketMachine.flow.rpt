@@ -1,5 +1,5 @@
 Flow report for TicketMachine
-Wed Mar 04 10:53:18 2026
+Thu Mar 05 17:04:37 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Mar 04 10:53:18 2026       ;
+; Flow Status                        ; Successful - Thu Mar 05 17:04:37 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TicketMachine                               ;
 ; Top-level Entity Name              ; TicketMachine                               ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2026 10:53:13 ;
+; Start date & time ; 03/05/2026 17:04:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TicketMachine       ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141562629269046.177262159307016        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 141562629269046.177273027226940        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
@@ -93,8 +93,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:05     ; 1.0                     ; 4796 MB             ; 00:00:11                           ;
-; Total                  ; 00:00:05     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Elaboration ; 00:00:06     ; 1.0                     ; 4797 MB             ; 00:00:12                           ;
+; Total                  ; 00:00:06     ; --                      ; --                  ; 00:00:12                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

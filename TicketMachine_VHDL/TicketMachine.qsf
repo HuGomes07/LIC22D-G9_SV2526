@@ -87,16 +87,16 @@ set_global_assignment -name VHDL_FILE DeMUX.vhd
 #set_location_assignment PIN_Y8     -to LCD_DATA[6]
 #set_location_assignment PIN_Y7     -to LCD_DATA[7]
 
-#set_location_assignment PIN_W5     -to KEYPAD_LIN[0]
-#set_location_assignment PIN_AA14   -to	KEYPAD_LIN[1]
-#set_location_assignment PIN_W12    -to KEYPAD_LIN[2]
-#set_location_assignment PIN_AB12   -to	KEYPAD_LIN[3]
-#set_location_assignment PIN_AB11   -to	KEYPAD_COL[0]
-#set_location_assignment PIN_AB10   -to	KEYPAD_COL[1]
-#set_location_assignment PIN_AA9    -to	KEYPAD_COL[2]
-#set_location_assignment PIN_AA8    -to	KEYPAD_COL[3]
+set_location_assignment PIN_W5 -to KbdLin[1]
+set_location_assignment PIN_AA14 -to KbdLin[2]
+set_location_assignment PIN_W12 -to KbdLin[3]
+set_location_assignment PIN_AB12 -to KbdLin[4]
+set_location_assignment PIN_AB11 -to KbdCol[1]
+set_location_assignment PIN_AB10 -to KbdCol[2]
+set_location_assignment PIN_AA9 -to KbdCol[3]
+set_location_assignment PIN_AA8 -to KbdCol[4]
 
-#set_location_assignment PIN_C10 -to SW[0]
+set_location_assignment PIN_C10 -to rst
 #set_location_assignment PIN_C11 -to SW[1]
 #set_location_assignment PIN_D12 -to SW[2]
 #set_location_assignment PIN_C12 -to SW[3]
@@ -118,7 +118,8 @@ set_global_assignment -name VHDL_FILE DeMUX.vhd
 #set_location_assignment PIN_A11 -to LEDR[8]
 #set_location_assignment PIN_B11 -to LEDR[9]
 
-#set_location_assignment PIN_P11 -to CLOCK_50
+set_location_assignment PIN_P11 -to MClk
+
 set_global_assignment -name VHDL_FILE Adder.vhd
 set_global_assignment -name VHDL_FILE clkDIV.vhd
 set_global_assignment -name VHDL_FILE Counter.vhd

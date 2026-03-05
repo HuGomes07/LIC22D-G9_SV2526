@@ -1,4 +1,378 @@
 |TicketMachine
-O << <GND>
+MClk => CLKDIV:Osc.clk_in
+rst => KeyboardReader:Readr.Reset
+KbdLin[1] => KeyboardReader:Readr.KbdLin[0]
+KbdLin[2] => KeyboardReader:Readr.KbdLin[1]
+KbdLin[3] => KeyboardReader:Readr.KbdLin[2]
+KbdLin[4] => KeyboardReader:Readr.KbdLin[3]
+KbdCol[1] << KeyboardReader:Readr.KbdCol[0]
+KbdCol[2] << KeyboardReader:Readr.KbdCol[1]
+KbdCol[3] << KeyboardReader:Readr.KbdCol[2]
+KbdCol[4] << KeyboardReader:Readr.KbdCol[3]
+Tdelay[0] => KeyboardReader:Readr.Tdelay[0]
+Tdelay[1] => KeyboardReader:Readr.Tdelay[1]
+
+
+|TicketMachine|CLKDIV:Osc
+clk_in => tmp.CLK
+clk_in => count[0].CLK
+clk_in => count[1].CLK
+clk_in => count[2].CLK
+clk_in => count[3].CLK
+clk_in => count[4].CLK
+clk_in => count[5].CLK
+clk_in => count[6].CLK
+clk_in => count[7].CLK
+clk_in => count[8].CLK
+clk_in => count[9].CLK
+clk_in => count[10].CLK
+clk_in => count[11].CLK
+clk_in => count[12].CLK
+clk_in => count[13].CLK
+clk_in => count[14].CLK
+clk_in => count[15].CLK
+clk_in => count[16].CLK
+clk_in => count[17].CLK
+clk_in => count[18].CLK
+clk_in => count[19].CLK
+clk_in => count[20].CLK
+clk_in => count[21].CLK
+clk_in => count[22].CLK
+clk_in => count[23].CLK
+clk_in => count[24].CLK
+clk_in => count[25].CLK
+clk_in => count[26].CLK
+clk_in => count[27].CLK
+clk_in => count[28].CLK
+clk_in => count[29].CLK
+clk_in => count[30].CLK
+clk_in => count[31].CLK
+clk_out <= tmp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr
+Clk => KeyDecode:Decode.Clk
+Reset => KeyDecode:Decode.Reset
+RxClk => ~NO_FANOUT~
+KbdLin[0] => KeyDecode:Decode.KbdLin[1]
+KbdLin[1] => KeyDecode:Decode.KbdLin[2]
+KbdLin[2] => KeyDecode:Decode.KbdLin[3]
+KbdLin[3] => KeyDecode:Decode.KbdLin[4]
+Tdelay[0] => KeyDecode:Decode.Tdelay[0]
+Tdelay[1] => KeyDecode:Decode.Tdelay[1]
+KbdCol[0] <= KeyDecode:Decode.KbdCol[1]
+KbdCol[1] <= KeyDecode:Decode.KbdCol[2]
+KbdCol[2] <= KeyDecode:Decode.KbdCol[3]
+KbdCol[3] <= KeyDecode:Decode.KbdCol[4]
+TXd <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode
+Clk => KeyScan:Scan.Clk
+Reset => KeyScan:Scan.rst
+KbdLin[1] => KeyScan:Scan.KbdLin[1]
+KbdLin[2] => KeyScan:Scan.KbdLin[2]
+KbdLin[3] => KeyScan:Scan.KbdLin[3]
+KbdLin[4] => KeyScan:Scan.KbdLin[4]
+Tdelay[0] => ~NO_FANOUT~
+Tdelay[1] => ~NO_FANOUT~
+Kack => ~NO_FANOUT~
+KbdCol[1] <= KeyScan:Scan.KbdCol[1]
+KbdCol[2] <= KeyScan:Scan.KbdCol[2]
+KbdCol[3] <= KeyScan:Scan.KbdCol[3]
+KbdCol[4] <= KeyScan:Scan.KbdCol[4]
+Kval <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Kcode[0] <= KeyScan:Scan.K[0]
+Kcode[1] <= KeyScan:Scan.K[1]
+Kcode[2] <= KeyScan:Scan.K[2]
+Kcode[3] <= KeyScan:Scan.K[3]
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan
+Clk => Counter:Cont.MClk
+rst => Counter:Cont.Reset
+Kscan => Counter:Cont.CE
+KbdLin[1] => MUX4_1KeyScan:MUX.I0
+KbdLin[2] => MUX4_1KeyScan:MUX.I1
+KbdLin[3] => MUX4_1KeyScan:MUX.I2
+KbdLin[4] => MUX4_1KeyScan:MUX.I3
+KbdCol[1] <= Decoder:DEC.O[0]
+KbdCol[2] <= Decoder:DEC.O[1]
+KbdCol[3] <= Decoder:DEC.O[2]
+KbdCol[4] <= Decoder:DEC.O[3]
+K[0] <= Counter:Cont.Q[0]
+K[1] <= Counter:Cont.Q[1]
+K[2] <= Counter:Cont.Q[2]
+K[3] <= Counter:Cont.Q[3]
+Kpress <= MUX4_1KeyScan:MUX.Y
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont
+CE => rg4:Reg.EN
+Reset => rg4:Reg.Reset
+MClk => rg4:Reg.CLK
+Q[0] <= rg4:Reg.Q[0]
+Q[1] <= rg4:Reg.Q[1]
+Q[2] <= rg4:Reg.Q[2]
+Q[3] <= rg4:Reg.Q[3]
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder
+A[0] => fa:U1.A
+A[1] => fa:U2.A
+A[2] => fa:U3.A
+A[3] => fa:U4.A
+B[0] => fa:U1.B
+B[1] => fa:U2.B
+B[2] => fa:U3.B
+B[3] => fa:U4.B
+Cin => fa:U1.Ci
+R[0] <= fa:U1.S
+R[1] <= fa:U2.S
+R[2] <= fa:U3.S
+R[3] <= fa:U4.S
+Cout <= fa:U4.Co
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U1
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U1|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U1|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U2
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U2|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U2|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U3
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U3|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U3|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U4
+A => ha:U1.A
+B => ha:U1.B
+Ci => ha:U2.B
+S <= ha:U2.S
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U4|HA:U1
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U4|HA:U2
+A => S.IN0
+A => Co.IN0
+B => S.IN1
+B => Co.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG4:Reg
+D[0] => ffd:FDD0.D
+D[1] => ffd:FDD1.D
+D[2] => ffd:FDD2.D
+D[3] => ffd:FDD3.D
+Q[0] <= ffd:FDD0.Q
+Q[1] <= ffd:FDD1.Q
+Q[2] <= ffd:FDD2.Q
+Q[3] <= ffd:FDD3.Q
+CLK => ffd:FDD0.CLK
+CLK => ffd:FDD1.CLK
+CLK => ffd:FDD2.CLK
+CLK => ffd:FDD3.CLK
+EN => ffd:FDD0.EN
+EN => ffd:FDD1.EN
+EN => ffd:FDD2.EN
+EN => ffd:FDD3.EN
+Reset => ffd:FDD0.RESET
+Reset => ffd:FDD1.RESET
+Reset => ffd:FDD2.RESET
+Reset => ffd:FDD3.RESET
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG4:Reg|FFD:FDD0
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG4:Reg|FFD:FDD1
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG4:Reg|FFD:FDD2
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG4:Reg|FFD:FDD3
+CLK => Q~reg0.CLK
+RESET => Q.IN0
+SET => Q.IN1
+D => Q~reg0.DATAIN
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC
+S[0] => DeMUX:DeMUX2.S
+S[0] => DeMUX:DeMUX3.S
+S[1] => DeMUX:DeMUX1.S
+E => ~NO_FANOUT~
+O[0] <= DeMUX:DeMUX2.O[0]
+O[1] <= DeMUX:DeMUX2.O[1]
+O[2] <= DeMUX:DeMUX3.O[0]
+O[3] <= DeMUX:DeMUX3.O[1]
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC|DeMUX:DeMUX1
+Y => O.IN1
+Y => O.IN1
+E => O.IN0
+E => O.IN0
+S => O.IN1
+S => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC|DeMUX:DeMUX2
+Y => O.IN1
+Y => O.IN1
+E => O.IN0
+E => O.IN0
+S => O.IN1
+S => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC|DeMUX:DeMUX3
+Y => O.IN1
+Y => O.IN1
+E => O.IN0
+E => O.IN0
+S => O.IN1
+S => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|MUX4_1KeyScan:MUX
+I0 => MUX2_1KeyScan:MUX1.A
+I1 => MUX2_1KeyScan:MUX1.B
+I2 => MUX2_1KeyScan:MUX2.A
+I3 => MUX2_1KeyScan:MUX2.B
+S0 => MUX2_1KeyScan:MUX1.S
+S0 => MUX2_1KeyScan:MUX2.S
+S1 => MUX2_1KeyScan:MUX3.S
+Y <= MUX2_1KeyScan:MUX3.Y
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|MUX4_1KeyScan:MUX|MUX2_1KeyScan:MUX1
+A => Y.IN0
+B => Y.IN0
+S => Y.IN1
+S => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|MUX4_1KeyScan:MUX|MUX2_1KeyScan:MUX2
+A => Y.IN0
+B => Y.IN0
+S => Y.IN1
+S => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|MUX4_1KeyScan:MUX|MUX2_1KeyScan:MUX3
+A => Y.IN0
+B => Y.IN0
+S => Y.IN1
+S => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 

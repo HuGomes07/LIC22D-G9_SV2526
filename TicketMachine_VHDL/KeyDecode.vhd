@@ -1,9 +1,36 @@
---library ieee;
---use ieee.std_logic_1164.all;
---
---entity KeyDecode is
---end KeyDecode;
---
---architecture structural of KeyDecode is
---begin
---end structural;
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity KeyDecode is
+	port(
+		Clk	: in std_logic;
+		Reset	: in std_logic;
+		KbdLin: in std_logic_vector(4 downto 1);
+		Tdelay: in std_logic_vector(1 downto 0);
+		Kack	: in std_logic;
+		KbdCol: out std_logic_vector(4 downto 1);
+		Kval	: out std_logic;
+		Kcode	: out std_logic_vector(3 downto 0)
+	);
+end KeyDecode;
+
+architecture structural of KeyDecode is
+
+component KeyScan is
+	port(
+		Clk, rst, Kscan: in std_logic;
+		KbdLin: in std_logic_vector(4 downto 1);
+		KbdCol: out std_logic_vector(4 downto 1);
+		K:	out std_logic_vector(3 downto 0);
+		Kpress: out std_logic
+	);
+end component KeyScan;
+
+signal Kscan:	std_logic;
+signal Kpress:	std_logic;
+
+begin
+	Kscan <= '0';
+	Scan	: KeyScan		port map(Clk => Clk, rst => Reset, Kscan => Kscan, KbdLin => KbdLin, KbdCol => KbdCol, K => Kcode, Kpress => Kpress);
+	--Ctrl	: KeyControl	port map();
+end structural;
