@@ -20,14 +20,10 @@ component DeMUX is
 	);
 end component DeMUX;
 
-signal EN: std_logic;
 signal Outs: std_logic_vector(1 downto 0);
-signal NormalO: std_logic_vector(3 downto 0);
 
 begin
-	EN <= '1' or E;
-	DeMUX1: DeMUX port map(Y => '1', E => EN, S => S(1), O => Outs);
-	DeMUX2: DeMUX port map(Y => Outs(0), E => EN, S => S(0), O(0) => NormalO(0), O(1) => NormalO(1));
-	DeMUX3: DeMUX port map(Y => Outs(1), E => EN, S => S(0), O(0) => NormalO(2), O(1) => NormalO(3));
-	O <= not(NormalO);
+	DeMUX1: DeMUX port map(Y => '1', E => E, S => S(1), O => Outs);
+	DeMUX2: DeMUX port map(Y => Outs(0), E => E, S => S(0), O(0) => O(0), O(1) => O(1));
+	DeMUX3: DeMUX port map(Y => Outs(1), E => E, S => S(0), O(0) => O(2), O(1) => O(3));
 end structural;

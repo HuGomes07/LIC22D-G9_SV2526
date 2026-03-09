@@ -6,8 +6,8 @@ entity KeyScan is
 		Clk: in std_logic;
 		rst: in std_logic;
 		Kscan: in std_logic_vector(1 downto 0);
-		KbdLin: in std_logic_vector(4 downto 1);
-		KbdCol: out std_logic_vector(4 downto 1);
+		KbdLin: in std_logic_vector(3 downto 0);
+		KbdCol: out std_logic_vector(3 downto 0);
 		K:	out std_logic_vector(3 downto 0);
 		Kpress: out std_logic
 	);
@@ -23,16 +23,26 @@ component Counter is
 	);
 end component Counter;
 
+component Decoder is
+	port(
+		S:	in std_logic_vector(1 downto 0);
+		E:	in std_logic;
+		
+		O: out std_logic_vector(3 downto 0)
+	);
+end component Decoder;
+
 signal Q,Ys,RgO	: std_logic_vector(1 downto 0);
-signal nKbdLin 				: std_logic_vector(3 downto 0);
+signal nKbdLin, DecO				: std_logic_vector(3 downto 0);
 
 	begin
-		Cont:	Counter 			port map(CE => Kscan(1), Reset => rst, MClk => Clk, Q => Q);
-		DEC: 	work.Decoder port map(S(0) => Q(0), S(1) => Q(1), E => '1', O => KbdCol);
+		Cont:	Counter 			port map(CE => Kscan(0), Reset => rst, MClk => Clk, Q => Q);
+		DEC: 	Decoder port map(S(0) => Q(0), S(1) => Q(1), E => '1', O => DecO);
+		KbdCol <= not DecO;
 		nKbdLin <= not KbdLin;
 		PEnc: entity work.PEnc42 port map (I=>nKbdLin,A=>Ys, Gs=>Kpress );
 		RG: entity work.RG2 port map(D=>Ys , Q=>RgO ,En=>'1',CLK=>Kscan(1),Reset=>'0');
---		MUX: 	MUX4_1KeyScan	port map(I0 => KbdLin(1), I1 => KbdLin(2), I2 => KbdLin(3), I3 => KbdLin(4), S0 => Q(0), S1 => Q(1), Y => Kpress);
+--		MUX: 	MUX4_1KeyScan	port map(I0 => KbdLin(0), I1 => KbdLin(1), I2 => KbdLin(2), I3 => KbdLin(3), S0 => Q(0), S1 => Q(1), Y => Kpress);
 		
 		K <= Q & RgO;
 
