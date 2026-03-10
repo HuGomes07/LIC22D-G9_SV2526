@@ -6,3 +6,4 @@ fun main(args: Array<String>) {
         UsbPort.write(value)
     }
 }
+
