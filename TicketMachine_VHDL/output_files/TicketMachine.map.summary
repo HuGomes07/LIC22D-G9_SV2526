@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Mon Mar 09 18:23:28 2026
+Analysis & Elaboration Status : Successful - Tue Mar 10 15:49:47 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TicketMachine
-Top-level Entity Name : KeyScan
+Top-level Entity Name : TicketMachine
 Family : MAX 10
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

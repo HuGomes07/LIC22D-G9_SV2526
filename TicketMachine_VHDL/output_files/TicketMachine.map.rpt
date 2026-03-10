@@ -1,5 +1,5 @@
 Analysis & Elaboration report for TicketMachine
-Mon Mar 09 18:23:28 2026
+Tue Mar 10 15:49:47 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -9,14 +9,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "RG2:RG"
-  6. Port Connectivity Checks: "Decoder:DEC|DeMUX:DeMUX1"
-  7. Port Connectivity Checks: "Decoder:DEC"
-  8. Port Connectivity Checks: "Counter:Cont|RG2:Reg|FFD:FDD1"
-  9. Port Connectivity Checks: "Counter:Cont|RG2:Reg|FFD:FDD0"
- 10. Port Connectivity Checks: "Counter:Cont|Adder:Adder"
- 11. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: CLKDIV:Osc
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|RG2:RG"
+  7. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC|DeMUX:DeMUX1"
+  8. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC"
+  9. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG2:Reg|FFD:FDD1"
+ 10. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG2:Reg|FFD:FDD0"
+ 11. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder"
+ 12. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan"
+ 13. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode"
+ 14. Port Connectivity Checks: "KeyboardReader:Readr"
+ 15. Analysis & Elaboration Messages
 
 
 
@@ -43,10 +47,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Mar 09 18:23:28 2026       ;
+; Analysis & Elaboration Status      ; Successful - Tue Mar 10 15:49:47 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TicketMachine                               ;
-; Top-level Entity Name              ; KeyScan                                     ;
+; Top-level Entity Name              ; TicketMachine                               ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -78,13 +82,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CLKDIV:Osc ;
++----------------+----------+-----------------------------+
+; Parameter Name ; Value    ; Type                        ;
++----------------+----------+-----------------------------+
+; div            ; 50000000 ; Signed Integer              ;
++----------------+----------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; KeyScan            ; TicketMachine      ;
+; Top-level entity name                                            ; TicketMachine      ; TicketMachine      ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -164,54 +178,54 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------+
-; Port Connectivity Checks: "RG2:RG"      ;
-+-------+-------+----------+--------------+
-; Port  ; Type  ; Severity ; Details      ;
-+-------+-------+----------+--------------+
-; en    ; Input ; Info     ; Stuck at VCC ;
-; reset ; Input ; Info     ; Stuck at GND ;
-+-------+-------+----------+--------------+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|RG2:RG" ;
++-------+-------+----------+------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                    ;
++-------+-------+----------+------------------------------------------------------------+
+; en    ; Input ; Info     ; Stuck at VCC                                               ;
+; reset ; Input ; Info     ; Stuck at GND                                               ;
++-------+-------+----------+------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Port Connectivity Checks: "Decoder:DEC|DeMUX:DeMUX1" ;
-+------+-------+----------+----------------------------+
-; Port ; Type  ; Severity ; Details                    ;
-+------+-------+----------+----------------------------+
-; y    ; Input ; Info     ; Stuck at VCC               ;
-+------+-------+----------+----------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC|DeMUX:DeMUX1" ;
++------+-------+----------+-------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                       ;
++------+-------+----------+-------------------------------------------------------------------------------+
+; y    ; Input ; Info     ; Stuck at VCC                                                                  ;
++------+-------+----------+-------------------------------------------------------------------------------+
 
 
-+-----------------------------------------+
-; Port Connectivity Checks: "Decoder:DEC" ;
-+------+-------+----------+---------------+
-; Port ; Type  ; Severity ; Details       ;
-+------+-------+----------+---------------+
-; e    ; Input ; Info     ; Stuck at VCC  ;
-+------+-------+----------+---------------+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC" ;
++------+-------+----------+------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                          ;
++------+-------+----------+------------------------------------------------------------------+
+; e    ; Input ; Info     ; Stuck at VCC                                                     ;
++------+-------+----------+------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "Counter:Cont|RG2:Reg|FFD:FDD1" ;
-+------+-------+----------+---------------------------------+
-; Port ; Type  ; Severity ; Details                         ;
-+------+-------+----------+---------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                    ;
-+------+-------+----------+---------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG2:Reg|FFD:FDD1" ;
++------+-------+----------+------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                       ;
++------+-------+----------+------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "Counter:Cont|RG2:Reg|FFD:FDD0" ;
-+------+-------+----------+---------------------------------+
-; Port ; Type  ; Severity ; Details                         ;
-+------+-------+----------+---------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                    ;
-+------+-------+----------+---------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG2:Reg|FFD:FDD0" ;
++------+-------+----------+------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                       ;
++------+-------+----------+------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Counter:Cont|Adder:Adder"                                                           ;
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder"        ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -221,13 +235,42 @@ https://fpgasoftware.intel.com/eula.
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan"                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; kpress ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode"                                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; kval  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; kcode ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyboardReader:Readr"                                                                                                                         ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; txd   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; rxclk ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 09 18:23:21 2026
+    Info: Processing started: Tue Mar 10 15:49:40 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TicketMachine -c TicketMachine --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -288,22 +331,34 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux4_1.
 Info (12021): Found 2 design units, including 1 entities, in source file penc42.vhd
     Info (12022): Found design unit 1: PEnc42-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 11
     Info (12023): Found entity 1: PEnc42 File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 4
-Info (12127): Elaborating entity "KeyScan" for the top level hierarchy
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Cont" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 39
-Info (12128): Elaborating entity "Adder" for hierarchy "Counter:Cont|Adder:Adder" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 15
-Info (12128): Elaborating entity "FA" for hierarchy "Counter:Cont|Adder:Adder|FA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd Line: 18
-Info (12128): Elaborating entity "HA" for hierarchy "Counter:Cont|Adder:Adder|FA:U1|HA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd Line: 17
-Info (12128): Elaborating entity "RG2" for hierarchy "Counter:Cont|RG2:Reg" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 17
-Info (12128): Elaborating entity "FFD" for hierarchy "Counter:Cont|RG2:Reg|FFD:FDD0" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd Line: 15
-Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:DEC" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 40
-Warning (10541): VHDL Signal Declaration warning at Decoder.vhd(23): used implicit default value for signal "EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd Line: 23
-Info (12128): Elaborating entity "DeMUX" for hierarchy "Decoder:DEC|DeMUX:DeMUX1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd Line: 27
-Info (12128): Elaborating entity "PEnc42" for hierarchy "PEnc42:PEnc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 43
-Info (12128): Elaborating entity "PEnc" for hierarchy "PEnc42:PEnc|PEnc:PEnc1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 15
-Info (12128): Elaborating entity "MUX2_1" for hierarchy "PEnc42:PEnc|MUX2_1:Mux" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 19
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+Info (12127): Elaborating entity "TicketMachine" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at TicketMachine.vhd(35): object "Xd" assigned a value but never read File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 35
+Info (12128): Elaborating entity "CLKDIV" for hierarchy "CLKDIV:Osc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 38
+Info (12128): Elaborating entity "KeyboardReader" for hierarchy "KeyboardReader:Readr" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 39
+Warning (10541): VHDL Signal Declaration warning at KeyboardReader.vhd(12): used implicit default value for signal "TXd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at KeyboardReader.vhd(29): used implicit default value for signal "Kack" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at KeyboardReader.vhd(30): object "Kval" assigned a value but never read File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at KeyboardReader.vhd(31): object "K" assigned a value but never read File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 31
+Info (12128): Elaborating entity "KeyDecode" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 34
+Warning (10541): VHDL Signal Declaration warning at KeyDecode.vhd(12): used implicit default value for signal "Kval" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at KeyDecode.vhd(29): used implicit default value for signal "Kscan" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at KeyDecode.vhd(30): object "Kpress" assigned a value but never read File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 30
+Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 33
+Info (12128): Elaborating entity "Counter" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 39
+Info (12128): Elaborating entity "Adder" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 15
+Info (12128): Elaborating entity "FA" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd Line: 18
+Info (12128): Elaborating entity "HA" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|Adder:Adder|FA:U1|HA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd Line: 17
+Info (12128): Elaborating entity "RG2" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG2:Reg" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 17
+Info (12128): Elaborating entity "FFD" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Counter:Cont|RG2:Reg|FFD:FDD0" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd Line: 15
+Info (12128): Elaborating entity "Decoder" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 40
+Info (12128): Elaborating entity "DeMUX" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|Decoder:DEC|DeMUX:DeMUX1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd Line: 26
+Info (12128): Elaborating entity "PEnc42" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|PEnc42:PEnc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 43
+Info (12128): Elaborating entity "PEnc" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|PEnc42:PEnc|PEnc:PEnc1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 15
+Info (12128): Elaborating entity "MUX2_1" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scan|PEnc42:PEnc|MUX2_1:Mux" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 19
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Mon Mar 09 18:23:28 2026
+    Info: Processing ended: Tue Mar 10 15:49:47 2026
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:13
 
