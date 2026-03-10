@@ -1,0 +1,22 @@
+$date
+	Mon Mar 09 20:07:20 2026
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+$scope module keyscan $end
+$var wire 1 ! Kscan [1] $end
+$var wire 1 " Kscan [0] $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+#30000
+1"
+#80000
+1!
+0"

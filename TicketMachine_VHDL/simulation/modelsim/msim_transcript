@@ -934,3 +934,5 @@ run
 run
 run
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim/keyscan.do
+# End time: 20:53:21 on Mar 09,2026, Elapsed time: 1:01:14
+# Errors: 0, Warnings: 0
