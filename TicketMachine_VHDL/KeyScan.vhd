@@ -43,7 +43,7 @@ signal REGclk: std_logic;
 		nKbdLin <= not KbdLin;
 		REGclk <= not Kscan;
 		PEnc: entity work.PEnc42 port map (I=>nKbdLin,A=>Ys, Gs=>Kpress );
-		RG: entity work.RG2 port map(D=>Ys , Q=>RgO ,En=>'1',CLK=>REGclk, Reset=>'0');
+		RG: entity work.RG2 port map(D=>Ys , Q=>RgO ,En=>'1',CLK=>REGclk, Reset=>rst);
 --		MUX: 	MUX4_1KeyScan	port map(I0 => KbdLin(0), I1 => KbdLin(1), I2 => KbdLin(2), I3 => KbdLin(3), S0 => Q(0), S1 => Q(1), Y => Kpress);
 		
 		K <= Q & RgO;

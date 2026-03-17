@@ -30,24 +30,6 @@ set_global_assignment -name BOARD "MAX 10 DE10 - Lite"
 
 set_global_assignment -name TOP_LEVEL_ENTITY KeyDecode
 
-set_location_assignment PIN_C10 -to inputPort[0]
-set_location_assignment PIN_C11 -to inputPort[1]
-set_location_assignment PIN_D12 -to inputPort[2]
-set_location_assignment PIN_C12 -to inputPort[3]
-set_location_assignment PIN_A12 -to inputPort[4]
-set_location_assignment PIN_B12 -to inputPort[5]
-set_location_assignment PIN_A13 -to inputPort[6]
-set_location_assignment PIN_A14 -to inputPort[7]
-
-set_location_assignment PIN_A8 -to outputPort[0]
-set_location_assignment PIN_A9 -to outputPort[1]
-set_location_assignment PIN_A10 -to outputPort[2]
-set_location_assignment PIN_B10 -to outputPort[3]
-set_location_assignment PIN_D13 -to outputPort[4]
-set_location_assignment PIN_C13 -to outputPort[5]
-set_location_assignment PIN_E14 -to outputPort[6]
-set_location_assignment PIN_D14 -to outputPort[7]
-
 set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name FAMILY "MAX 10"
 
@@ -64,56 +46,27 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 
 set_global_assignment -name VHDL_FILE DeMUX.vhd
 
-#set_location_assignment PIN_W8     -to LCD_RS
-#set_location_assignment PIN_V5     -to LCD_EN
+set_location_assignment PIN_P11 -to Clk
+#Switches:
+set_location_assignment PIN_C10 -to Reset
+set_location_assignment PIN_C11 -to Kack
 
-#set_location_assignment PIN_AA15   -to LCD_DATA[0]
-#set_location_assignment PIN_W13    -to LCD_DATA[1]
-#set_location_assignment PIN_AB13   -to LCD_DATA[2]
-#set_location_assignment PIN_Y11    -to LCD_DATA[3]
-#set_location_assignment PIN_W11    -to LCD_DATA[4]
-#set_location_assignment PIN_AA10   -to LCD_DATA[5]
-#set_location_assignment PIN_Y8     -to LCD_DATA[6]
-#set_location_assignment PIN_Y7     -to LCD_DATA[7]
+#Leds:
+set_location_assignment PIN_A8 -to Kcode[0]
+set_location_assignment PIN_A9 -to Kcode[1]
+set_location_assignment PIN_A10 -to Kcode[2]
+set_location_assignment PIN_B10 -to Kcode[3]
+set_location_assignment PIN_D13 -to Kval
 
+#Keyboard:
 set_location_assignment PIN_W5 -to KbdLin[0]
 set_location_assignment PIN_AA14 -to KbdLin[1]
 set_location_assignment PIN_W12 -to KbdLin[2]
 set_location_assignment PIN_AB12 -to KbdLin[3]
-
 set_location_assignment PIN_AB11 -to KbdCol[0]
 set_location_assignment PIN_AB10 -to KbdCol[1]
 set_location_assignment PIN_AA9 -to KbdCol[2]
 set_location_assignment PIN_AA8 -to KbdCol[3]
-
-set_location_assignment PIN_C10 -to rst
-set_location_assignment PIN_C11 -to Clk
-
-set_location_assignment PIN_D12 -to Kscan[0]
-set_location_assignment PIN_C12 -to Kscan[1]
-
-#set_location_assignment PIN_A12 -to Kpress[4]
-#set_location_assignment PIN_B12 -to SW[5]
-#set_location_assignment PIN_A13 -to SW[6]
-#set_location_assignment PIN_A14 -to SW[7]
-#set_location_assignment PIN_B14 -to SW[8]
-#set_location_assignment PIN_F15 -to SW[9]
-
-#set_location_assignment PIN_A8 -to KbdCol[0]
-#set_location_assignment PIN_A9 -to KbdCol[1]
-#set_location_assignment PIN_A10 -to KbdCol[2]
-#set_location_assignment PIN_B10 -to KbdCol[3]
-
-set_location_assignment PIN_D13 -to K[0]
-set_location_assignment PIN_C13 -to K[1]
-set_location_assignment PIN_E14 -to K[2]
-set_location_assignment PIN_D14 -to K[3]
-
-#set_location_assignment PIN_A11 -to LEDR[8]
-
-set_location_assignment PIN_B11 -to Kpress
-
-set_location_assignment PIN_P11 -to MClk
 
 set_global_assignment -name VHDL_FILE Adder.vhd
 set_global_assignment -name VHDL_FILE clkDIV.vhd
@@ -129,6 +82,7 @@ set_global_assignment -name VHDL_FILE MUX4_1.vhd
 set_global_assignment -name VHDL_FILE PEnc42.vhd
 
 
+set_global_assignment -name VHDL_FILE KeyControl.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

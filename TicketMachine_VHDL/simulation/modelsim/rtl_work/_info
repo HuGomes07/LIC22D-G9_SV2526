@@ -13,7 +13,7 @@ Eadder
 Z1 w1772990275
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 14
+!i122 12
 R0
 Z4 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd
 Z5 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd
@@ -23,9 +23,9 @@ V@JP?zi98@BN5fYR8g8X5P3
 !s100 ZDi_J>USO_Tl23=l<F=V_0
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1773157918
+Z7 !s110 1773739956
 !i10b 1
-Z8 !s108 1773157918.000000
+Z8 !s108 1773739956.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd|
 Z10 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd|
 !i113 1
@@ -36,7 +36,7 @@ Z13 DEx4 work 2 fa 0 22 oUoJ;UDaEZdIGh>1UUNj33
 R2
 R3
 Z14 DEx4 work 5 adder 0 22 @JP?zi98@BN5fYR8g8X5P3
-!i122 14
+!i122 12
 l17
 L13 10
 VE1D903GBEcBf>lFAMnNl73
@@ -51,57 +51,14 @@ R10
 !i113 1
 R11
 R12
-Eclkdiv
-Z15 w1764176083
-Z16 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-R2
-R3
-!i122 5
-R0
-Z17 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd
-Z18 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd
-l0
-L5 1
-VZ=f7g^c?a5zF`2O:4UlYN0
-!s100 `V>M>?BkYR7zEBSMA5V8A0
-R6
-31
-Z19 !s110 1773157917
-!i10b 1
-Z20 !s108 1773157917.000000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd|
-Z22 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd|
-!i113 1
-R11
-R12
-Abhv
-R16
-R2
-R3
-DEx4 work 6 clkdiv 0 22 Z=f7g^c?a5zF`2O:4UlYN0
-!i122 5
-l16
-L11 22
-VgbaYXVPKT2[U5kSbZMFS63
-!s100 <1TaS59>[IjzZo4K_;_?R1
-R6
-31
-R19
-!i10b 1
-R20
-R21
-R22
-!i113 1
-R11
-R12
 Ecounter
 R1
 R2
 R3
-!i122 15
+!i122 13
 R0
-Z23 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
-Z24 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
+Z15 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
+Z16 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
 l0
 L4 1
 V?oG;YLdWe74A8n3a=kIFK2
@@ -111,18 +68,18 @@ R6
 R7
 !i10b 1
 R8
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd|
-Z26 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd|
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd|
+!s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd|
 !i113 1
 R11
 R12
 Astructural
-Z27 DEx4 work 3 rg2 0 22 l3N>kBVH]OZaK2?BVQ>NQ1
+Z18 DEx4 work 3 rg2 0 22 l3N>kBVH]OZaK2?BVQ>NQ1
 R14
 R2
 R3
 DEx4 work 7 counter 0 22 ?oG;YLdWe74A8n3a=kIFK2
-!i122 15
+!i122 13
 l14
 L11 10
 V^N^_cimQX^gB`Oa8X06Wa1
@@ -132,30 +89,30 @@ R6
 R7
 !i10b 1
 R8
-R25
-R26
+R17
+Z19 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd|
 !i113 1
 R11
 R12
 Edecoder
-Z28 w1773081837
+Z20 w1773081837
 R2
 R3
-!i122 3
+!i122 1
 R0
-Z29 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
-Z30 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+Z21 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+Z22 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
 l0
 L3 1
 Vc:K<`iEJ]LKO9FT:of@IG1
 !s100 L``_Q?Td`afiYPjkIg3Be0
 R6
 31
-R19
+Z23 !s110 1773739955
 !i10b 1
-R20
-Z31 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd|
-Z32 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd|
+Z24 !s108 1773739955.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd|
+Z26 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd|
 !i113 1
 R11
 R12
@@ -163,40 +120,40 @@ Astructural
 R2
 R3
 DEx4 work 7 decoder 0 22 c:K<`iEJ]LKO9FT:of@IG1
-!i122 3
+!i122 1
 l25
 L12 18
 V=:So_TQI7JeZYj`8>K]o:3
 !s100 NhIjFEook;<[To5;VhI5K0
 R6
 31
-R19
+R23
 !i10b 1
-R20
-R31
-R32
+R24
+R25
+R26
 !i113 1
 R11
 R12
 Edemux
-Z33 w1772537106
+Z27 w1772537106
 R2
 R3
-!i122 4
+!i122 2
 R0
-Z34 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
-Z35 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+Z28 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+Z29 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
 l0
 L4 1
 VXiEe?dlZ4b=_?2GS^g[f=1
 !s100 ;]l^Y3Xgn0VDYSPW@bRlh3
 R6
 31
-R19
+R23
 !i10b 1
-R20
-Z36 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd|
-Z37 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd|
+R24
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd|
+Z31 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd|
 !i113 1
 R11
 R12
@@ -204,401 +161,360 @@ Astructural
 R2
 R3
 DEx4 work 5 demux 0 22 XiEe?dlZ4b=_?2GS^g[f=1
-!i122 4
+!i122 2
 l14
 L13 5
 VIA81H<`LU]i_naYg:@dfG1
 !s100 Q^HLk[51OS;L_Piaz>=k?0
 R6
 31
-R19
+R23
 !i10b 1
-R20
-R36
-R37
+R24
+R30
+R31
 !i113 1
 R11
 R12
 Efa
-Z38 w1772619926
+Z32 w1772619926
 R2
 R3
-!i122 10
+!i122 8
 R0
-Z39 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
-Z40 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
+Z33 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
+Z34 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
 l0
 L4 1
 VoUoJ;UDaEZdIGh>1UUNj33
 !s100 oNQ3SB5VWU6I5;=M_4=Ph2
 R6
 31
-R19
+R7
 !i10b 1
-R20
-Z41 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd|
-Z42 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd|
+R8
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd|
+Z36 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd|
 !i113 1
 R11
 R12
 Astructural
-Z43 DEx4 work 2 ha 0 22 1Xf?DLPlYDN2W2<kH]1=^1
+Z37 DEx4 work 2 ha 0 22 1Xf?DLPlYDN2W2<kH]1=^1
 R2
 R3
 R13
-!i122 10
+!i122 8
 l16
 L11 12
 VjWaz?;bn:Mg>WZKT3I_go0
 !s100 KM:0kK9@fE9a=g4XJ^M403
 R6
 31
-R19
+R7
 !i10b 1
-R20
-R41
-R42
+R8
+R35
+R36
 !i113 1
 R11
 R12
 Effd
-R38
+R32
 R2
 R3
-!i122 6
+!i122 3
 R0
-Z44 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
-Z45 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
+Z38 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
+Z39 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
 l0
 L4 1
 VlLnJhUY99`]7^:0M0ZT@z3
 !s100 7zIA7N0c8k?G4DH:]Q7>;3
 R6
 31
-R19
+R23
 !i10b 1
-R20
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd|
-Z47 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd|
+R24
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd|
+Z41 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd|
 !i113 1
 R11
 R12
 Alogicfunction
 R2
 R3
-Z48 DEx4 work 3 ffd 0 22 lLnJhUY99`]7^:0M0ZT@z3
-!i122 6
+Z42 DEx4 work 3 ffd 0 22 lLnJhUY99`]7^:0M0ZT@z3
+!i122 3
 l16
 L14 9
 VhDjIMZI3^Y6A<En_SnbXN0
 !s100 _IF06UZD3g[h?0A940meC3
 R6
 31
-R19
+R23
 !i10b 1
-R20
-R46
-R47
+R24
+R40
+R41
 !i113 1
 R11
 R12
 Eha
-R38
+R32
 R2
 R3
-!i122 7
+!i122 4
 R0
-Z49 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
-Z50 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
+Z43 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
+Z44 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
 l0
 L4 1
 V1Xf?DLPlYDN2W2<kH]1=^1
 !s100 :zzb=4CMYiG1bZ?QNeK@o1
 R6
 31
-R19
+R23
 !i10b 1
-R20
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd|
-Z52 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd|
+R24
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd|
+Z46 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd|
 !i113 1
 R11
 R12
 Astructural
 R2
 R3
-R43
-!i122 7
+R37
+!i122 4
 l12
 L11 5
 VZS7Lj5BncjBeOKeRY0P4o3
 !s100 NI83VSI?8=QbIJ3UiUa7N0
 R6
 31
-R19
+R23
 !i10b 1
-R20
-R51
-R52
-!i113 1
-R11
-R12
-Ekeyboardreader
-Z53 w1772730054
-R2
-R3
-!i122 0
-R0
-Z54 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd
-Z55 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd
-l0
-L4 1
-VNabbKQT5HC<]RQ@]QokEf3
-!s100 =Ca^N?Z_FmYC<Ufz4BA4K3
-R6
-31
-Z56 !s110 1773157916
-!i10b 1
-Z57 !s108 1773157916.000000
-Z58 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd|
-Z59 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd|
-!i113 1
-R11
-R12
-Astructural
-R2
-R3
-DEx4 work 14 keyboardreader 0 22 NabbKQT5HC<]RQ@]QokEf3
-!i122 0
-l33
-L16 22
-Vd89S9b;C5_X=42fnT]Uh?1
-!s100 3iFaC`@]IPOe?V_oLRWG71
-R6
-31
-R56
-!i10b 1
-R57
-R58
-R59
+R24
+R45
+R46
 !i113 1
 R11
 R12
 Ekeycontrol
-Z60 w1773162685
+Z47 w1773162685
 R2
 R3
-!i122 20
+!i122 7
 R0
-Z61 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
-Z62 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
+Z48 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
+Z49 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
 l0
 L4 1
-Vj:Q0HED]YFIONa21KJK?k1
+V^FB7DELQeU51ZOi7MVQ;h2
 !s100 :2VVOR0^TULcjm5nVg:?c2
 R6
-32
-Z63 !s110 1773162693
+31
+R23
 !i10b 1
-Z64 !s108 1773162693.000000
-Z65 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd|
-!s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd|
+R24
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd|
+Z51 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd|
 !i113 1
-Z66 o-work work
+R11
 R12
 Abehavioral
 R2
 R3
-DEx4 work 10 keycontrol 0 22 j:Q0HED]YFIONa21KJK?k1
-!i122 20
+DEx4 work 10 keycontrol 0 22 ^FB7DELQeU51ZOi7MVQ;h2
+!i122 7
 l16
 L11 29
-V7LZbAX2]Zm9V@`Okg:P@_1
+V]2iG89h?0OD;bH9zlf[;60
 !s100 kQ>hdMUoN[2=ONm_C>2H93
 R6
-32
-R63
+31
+R23
 !i10b 1
-R64
-R65
-Z67 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd|
+R24
+R50
+R51
 !i113 1
-R66
+R11
 R12
 Ekeydecode
-Z68 w1773157778
+Z52 w1773739783
 R2
 R3
-!i122 1
+!i122 0
 R0
-Z69 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
-Z70 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
+Z53 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
+Z54 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
 l0
 L4 1
-VM^SaL2Y>WYeAB`YLiGF[G3
-!s100 Z8?>Kk=@_S>Ak:=C[<mPj1
+V=@]2R:FCHO^PjSGC]M2i40
+!s100 KQU[LPO<c@EJN=>z?JL`P1
 R6
 31
-R56
+R23
 !i10b 1
-R57
-Z71 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd|
-Z72 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd|
+R24
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd|
+Z56 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd|
 !i113 1
 R11
 R12
 Astructural
 R2
 R3
-DEx4 work 9 keydecode 0 22 M^SaL2Y>WYeAB`YLiGF[G3
-!i122 1
-l32
-L17 19
-VijROnTA^PbOWT3:82kiAU1
-!s100 6IW5S0kHg]RdU12oO4m790
+DEx4 work 9 keydecode 0 22 =@]2R:FCHO^PjSGC]M2i40
+!i122 0
+l44
+L21 27
+VMogK7Y14FbBFkGLna1CYT1
+!s100 4SPY9TBCU:<Jg?j;aGNW53
 R6
 31
-R56
+R23
 !i10b 1
-R57
-R71
-R72
+R24
+R55
+R56
 !i113 1
 R11
 R12
 Ekeyscan
-Z73 w1773158805
+Z57 w1773738881
 R2
 R3
-!i122 17
+!i122 11
 R0
-Z74 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
-Z75 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
+Z58 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
+Z59 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
 l0
 L4 1
-Vh?bO3oQM^fFdJDV^WlIZ83
+VEWH4ZbCcFSOl`MzHGTYj70
 !s100 Q8iQWPe1RD]`N[lMgamjG3
 R6
-32
-Z76 !s110 1773158813
+31
+R7
 !i10b 1
-Z77 !s108 1773158813.000000
-Z78 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd|
-Z79 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd|
+R8
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd|
+Z61 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd|
 !i113 1
-R66
+R11
 R12
 Astructural
-R27
-Z80 DEx4 work 6 penc42 0 22 :Yi^zobj4@7LoQRF4k1D53
+R18
+Z62 DEx4 work 6 penc42 0 22 :Yi^zobj4@7LoQRF4k1D53
 R2
 R3
-DEx4 work 7 keyscan 0 22 h?bO3oQM^fFdJDV^WlIZ83
-!i122 17
+DEx4 work 7 keyscan 0 22 EWH4ZbCcFSOl`MzHGTYj70
+!i122 11
 l39
 L16 36
-VJ_01e=e0^`g1WU>l;HJ7b2
-!s100 IaHW^Nb8_V3IE3=[654Ll3
+Vej^R0i_E:D?V;XNO3]h7l2
+!s100 fZ`^j@LjYRd_h_fN^NdkX2
 R6
-32
-R76
+31
+R7
 !i10b 1
-R77
-R78
-R79
+R8
+R60
+R61
 !i113 1
-R66
+R11
 R12
 Emux2_1
-Z81 w1772995312
+Z63 w1772995312
 R2
 R3
-!i122 9
+!i122 6
 R0
-Z82 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
-Z83 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
+Z64 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
+Z65 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
 l0
 L4 1
 V^3S>Ve2=okm_`l_d]m<mo3
 !s100 ejE4i]b7>1B`USBl1YGQ32
 R6
 31
-R19
+R23
 !i10b 1
-R20
-Z84 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd|
-Z85 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd|
+R24
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd|
+Z67 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd|
 !i113 1
 R11
 R12
 Astructural
 R2
 R3
-Z86 DEx4 work 6 mux2_1 0 22 ^3S>Ve2=okm_`l_d]m<mo3
-!i122 9
+Z68 DEx4 work 6 mux2_1 0 22 ^3S>Ve2=okm_`l_d]m<mo3
+!i122 6
 l16
 L14 5
 V4N]TLJWERX9ED6XeYASY`3
 !s100 @gYjiS131FLU`7hf3lR202
 R6
 31
-R19
+R23
 !i10b 1
-R20
-R84
-R85
+R24
+R66
+R67
 !i113 1
 R11
 R12
 Epenc
-R81
+R63
 R2
 R3
-!i122 8
+!i122 5
 R0
-Z87 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
-Z88 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
+Z69 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
+Z70 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
 l0
 L4 1
 VZ:^X?Q0`a^f6A1DXR>@GY1
 !s100 Md^i<^`o:;I1^`cS^QDTd3
 R6
 31
-R19
+R23
 !i10b 1
-R20
-Z89 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd|
-Z90 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd|
+R24
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd|
+Z72 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd|
 !i113 1
 R11
 R12
 Astructural
 R2
 R3
-Z91 DEx4 work 4 penc 0 22 Z:^X?Q0`a^f6A1DXR>@GY1
-!i122 8
+Z73 DEx4 work 4 penc 0 22 Z:^X?Q0`a^f6A1DXR>@GY1
+!i122 5
 l12
 L10 7
 V4lLjHQX3=AfFoeL?g>eCe2
 !s100 KkYDdV;Iz2^ZUj0lj1?4c0
 R6
 31
-R19
+R23
 !i10b 1
-R20
-R89
-R90
+R24
+R71
+R72
 !i113 1
 R11
 R12
 Epenc42
-R81
+R63
 R2
 R3
-!i122 12
+!i122 10
 R0
-Z92 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
-Z93 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
+Z74 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
+Z75 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
 l0
 L4 1
 V:Yi^zobj4@7LoQRF4k1D53
@@ -607,19 +523,19 @@ R6
 31
 R7
 !i10b 1
-R20
-Z94 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd|
-Z95 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd|
+R8
+Z76 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd|
+Z77 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd|
 !i113 1
 R11
 R12
 Astructural
-R86
-R91
+R68
+R73
 R2
 R3
-R80
-!i122 12
+R62
+!i122 10
 l14
 L11 14
 VlQ0Mdc7P?NSjAe^m1>D;m1
@@ -628,92 +544,51 @@ R6
 31
 R7
 !i10b 1
-R20
-R94
-R95
+R8
+R76
+R77
 !i113 1
 R11
 R12
 Erg2
-R81
+R63
 R2
 R3
-!i122 11
+!i122 9
 R0
-Z96 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
-Z97 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
+Z78 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
+Z79 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
 l0
 L4 1
 Vl3N>kBVH]OZaK2?BVQ>NQ1
 !s100 :UB1nf2?z<N1YznUTXc2V3
 R6
 31
-R19
+R7
 !i10b 1
-R20
-Z98 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd|
-Z99 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd|
+R8
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd|
+Z81 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd|
 !i113 1
 R11
 R12
 Alogicfunction
-R48
+R42
 R2
 R3
-R27
-!i122 11
+R18
+!i122 9
 l13
 L12 9
 Vk5;UCo1d>d2PZbX>UJS^j2
 !s100 HfmUNPH080[oOFC4EZZGl2
 R6
 31
-R19
+R7
 !i10b 1
-R20
-R98
-R99
-!i113 1
-R11
-R12
-Eticketmachine
-Z100 w1772730005
-R2
-R3
-!i122 2
-R0
-Z101 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
-Z102 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
-l0
-L4 1
-V]DmWEI2J:NAgOhE5OKahV3
-!s100 zH6C0RQH61LI9F7USn6FY0
-R6
-31
-R56
-!i10b 1
-R57
-Z103 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd|
-Z104 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd|
-!i113 1
-R11
-R12
-Astructural
-R2
-R3
-DEx4 work 13 ticketmachine 0 22 ]DmWEI2J:NAgOhE5OKahV3
-!i122 2
-l37
-L14 27
-VbmK^H_4lPKVMj<MJhC^cH0
-!s100 2jI?g:ZOOg5Ci7j0iGNY;3
-R6
-31
-R56
-!i10b 1
-R57
-R103
-R104
+R8
+R80
+R81
 !i113 1
 R11
 R12

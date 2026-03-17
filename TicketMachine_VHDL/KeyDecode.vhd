@@ -13,7 +13,8 @@ entity KeyDecode is
 		Kcode	: out std_logic_vector(3 downto 0);
 --		for test
 		Kpress: out std_logic;
-		Kscan: in std_logic_vector(1 downto 0)
+		Kscan: in std_logic
+		
 	);
 end KeyDecode;
 
@@ -23,7 +24,7 @@ component KeyScan is
 	port(
 		Clk: in std_logic;
 		rst: in std_logic;
-		Kscan: in std_logic_vector(1 downto 0);
+		Kscan: in std_logic;
 		KbdLin: in std_logic_vector(3 downto 0);
 		KbdCol: out std_logic_vector(3 downto 0);
 		K:	out std_logic_vector(3 downto 0);
@@ -31,7 +32,16 @@ component KeyScan is
 	);
 end component KeyScan;
 
+component KeyControl is
+	port(
+		Kack, Kpress, rst, clk: in std_logic;
+		Kval, Kscan: out std_logic
+	);
+end component KeyControl;
+
+signal Press, Scan: std_logic;
+
 begin
-	Scan	: KeyScan		port map(Clk => Clk, rst => Reset, Kscan => Kscan, KbdLin => KbdLin, KbdCol => KbdCol, K => Kcode, Kpress => Kpress);
-	--Ctrl	: KeyControl	port map();
+	degnouerdsbvgd	: KeyScan		port map(Clk => Clk, rst => Reset, Kscan => Scan, KbdLin => KbdLin, KbdCol => KbdCol, K => Kcode, Kpress => Press);
+	Ctrl	: KeyControl	port map(Kack => Kack, Kpress => Press, rst => Reset, clk => Clk, Kval => Kval, Kscan => Scan);
 end structural;
