@@ -46,3 +46,17 @@ object HAL{
         UsbPort.write(currBits and mask.inv())
     }
 }
+object KBD{
+    const val NONE = 0
+    fun init(){}
+
+    fun getKey(): Char{
+        val k =HAL.readBit(0b00001111)
+        val kVal = HAL.readBit(0b00010000) //desnecessario
+        return 'A'
+    }
+    fun waitKey(timeout:Long):Char{
+
+        return 'a'
+    }
+}
