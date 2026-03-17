@@ -10,11 +10,9 @@ entity KeyDecode is
 		Kack	: in std_logic;
 		KbdCol: out std_logic_vector(3 downto 0);
 		Kval	: out std_logic;
-		Kcode	: out std_logic_vector(3 downto 0);
---		for test
-		Kpress: out std_logic;
-		Kscan: in std_logic
+		Kcode	: out std_logic_vector(3 downto 0);	
 		
+		Cols: out std_logic_vector(3 downto 0)
 	);
 end KeyDecode;
 
@@ -39,9 +37,23 @@ component KeyControl is
 	);
 end component KeyControl;
 
-signal Press, Scan: std_logic;
+component clkDIV is
+	port(
+		clk_in: in std_logic;
+		clk_out: out std_logic
+	);
+end component clkDIV;
+
+signal Press, Scan, mclock: std_logic;
+signal ntClk: std_logic;
+signal columns: std_logic_vector(3 downto 0);
 
 begin
-	degnouerdsbvgd	: KeyScan		port map(Clk => Clk, rst => Reset, Kscan => Scan, KbdLin => KbdLin, KbdCol => KbdCol, K => Kcode, Kpress => Press);
-	Ctrl	: KeyControl	port map(Kack => Kack, Kpress => Press, rst => Reset, clk => Clk, Kval => Kval, Kscan => Scan);
+	Div	: clkDIV			port map(clk_in => Clk, clk_out => mclock);
+	ntClk <= not(mclock);
+	Scann	: KeyScan		port map(Clk => mclock, rst => Reset, Kscan => Scan, KbdLin => KbdLin, KbdCol => columns, K => Kcode, Kpress => Press);
+	Ctrl	: KeyControl	port map(Kack => Kack, Kpress => Press, rst => Reset, clk => ntClk, Kval => Kval, Kscan => Scan);
+	Cols <= columns;
+	KbdCol <= columns;
+	
 end structural;

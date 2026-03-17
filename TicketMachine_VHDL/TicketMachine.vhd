@@ -44,6 +44,7 @@ signal clk		: std_logic;
 signal Xd		: std_logic;
 
 	begin
+	-- Input:  Outros  Val  K
 		USBPrt:	UsbPort			port map(inputPort => SW, outputPort => LCD);
 		Osc:		CLKDIV 			port map(clk_in => MClk, clk_out => clk);
 		Readr: 	KeyboardReader	port map(Clk => clk, Reset => rst, KbdLin => KbdLin, Tdelay => Tdelay, KbdCol => KbdCol, TXd => Xd);

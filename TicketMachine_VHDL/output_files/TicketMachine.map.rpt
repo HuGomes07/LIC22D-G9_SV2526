@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TicketMachine
-Tue Mar 17 09:51:17 2026
+Tue Mar 17 11:06:16 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,15 +16,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. State Machine - |KeyDecode|KeyControl:Ctrl|CurrentState
   9. General Register Statistics
  10. Inverted Register Statistics
- 11. Port Connectivity Checks: "KeyScan:degnouerdsbvgd|RG2:RG"
- 12. Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Decoder:DEC|DeMUX:DeMUX1"
- 13. Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Decoder:DEC"
- 14. Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD1"
- 15. Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD0"
- 16. Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Counter:Cont|Adder:Adder"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 11. Parameter Settings for User Entity Instance: CLKDIV:Div
+ 12. Port Connectivity Checks: "KeyScan:Scann|RG2:RG"
+ 13. Port Connectivity Checks: "KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX1"
+ 14. Port Connectivity Checks: "KeyScan:Scann|Decoder:DEC"
+ 15. Port Connectivity Checks: "KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD1"
+ 16. Port Connectivity Checks: "KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0"
+ 17. Port Connectivity Checks: "KeyScan:Scann|Counter:Cont|Adder:Adder"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -51,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 17 09:51:17 2026       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 17 11:06:16 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TicketMachine                               ;
 ; Top-level Entity Name              ; KeyDecode                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 13                                          ;
-;     Total combinational functions  ; 13                                          ;
-;     Dedicated logic registers      ; 7                                           ;
-; Total registers                    ; 7                                           ;
-; Total pins                         ; 20                                          ;
+; Total logic elements               ; 65                                          ;
+;     Total combinational functions  ; 65                                          ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 22                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -169,7 +170,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -183,6 +185,7 @@ https://fpgasoftware.intel.com/eula.
 ; Decoder.vhd                      ; yes             ; User VHDL File  ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd    ;         ;
 ; DeMUX.vhd                        ; yes             ; User VHDL File  ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd      ;         ;
 ; Adder.vhd                        ; yes             ; User VHDL File  ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd      ;         ;
+; clkDIV.vhd                       ; yes             ; User VHDL File  ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd     ;         ;
 ; Counter.vhd                      ; yes             ; User VHDL File  ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd    ;         ;
 ; FA.vhd                           ; yes             ; User VHDL File  ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd         ;         ;
 ; FFD.vhd                          ; yes             ; User VHDL File  ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd        ;         ;
@@ -195,60 +198,61 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                          ;
-+---------------------------------------------+--------------------------------------------------------+
-; Resource                                    ; Usage                                                  ;
-+---------------------------------------------+--------------------------------------------------------+
-; Estimated Total logic elements              ; 13                                                     ;
-;                                             ;                                                        ;
-; Total combinational functions               ; 13                                                     ;
-; Logic element usage by number of LUT inputs ;                                                        ;
-;     -- 4 input functions                    ; 4                                                      ;
-;     -- 3 input functions                    ; 2                                                      ;
-;     -- <=2 input functions                  ; 7                                                      ;
-;                                             ;                                                        ;
-; Logic elements by mode                      ;                                                        ;
-;     -- normal mode                          ; 13                                                     ;
-;     -- arithmetic mode                      ; 0                                                      ;
-;                                             ;                                                        ;
-; Total registers                             ; 7                                                      ;
-;     -- Dedicated logic registers            ; 7                                                      ;
-;     -- I/O registers                        ; 0                                                      ;
-;                                             ;                                                        ;
-; I/O pins                                    ; 20                                                     ;
-;                                             ;                                                        ;
-; Embedded Multiplier 9-bit elements          ; 0                                                      ;
-;                                             ;                                                        ;
-; Maximum fan-out node                        ; KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD0|Q ;
-; Maximum fan-out                             ; 7                                                      ;
-; Total fan-out                               ; 86                                                     ;
-; Average fan-out                             ; 1.43                                                   ;
-+---------------------------------------------+--------------------------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 65        ;
+;                                             ;           ;
+; Total combinational functions               ; 65        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 14        ;
+;     -- 3 input functions                    ; 11        ;
+;     -- <=2 input functions                  ; 40        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 34        ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 40        ;
+;     -- Dedicated logic registers            ; 40        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 22        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; Clk~input ;
+; Maximum fan-out                             ; 33        ;
+; Total fan-out                               ; 289       ;
+; Average fan-out                             ; 1.94      ;
++---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                             ; Entity Name ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+-------------+--------------+
-; |KeyDecode                  ; 13 (0)              ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 20   ; 0            ; 0          ; |KeyDecode                                                      ; KeyDecode   ; work         ;
-;    |KeyControl:Ctrl|        ; 5 (5)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyControl:Ctrl                                      ; KeyControl  ; work         ;
-;    |KeyScan:degnouerdsbvgd| ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd                               ; KeyScan     ; work         ;
-;       |Counter:Cont|        ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|Counter:Cont                  ; Counter     ; work         ;
-;          |RG2:Reg|          ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg          ; RG2         ; work         ;
-;             |FFD:FDD0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD0 ; FFD         ; work         ;
-;             |FFD:FDD1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD1 ; FFD         ; work         ;
-;       |Decoder:DEC|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|Decoder:DEC                   ; Decoder     ; work         ;
-;          |DeMUX:DeMUX2|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|Decoder:DEC|DeMUX:DeMUX2      ; DeMUX       ; work         ;
-;          |DeMUX:DeMUX3|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|Decoder:DEC|DeMUX:DeMUX3      ; DeMUX       ; work         ;
-;       |PEnc42:PEnc|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|PEnc42:PEnc                   ; PEnc42      ; work         ;
-;          |MUX2_1:Mux|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|PEnc42:PEnc|MUX2_1:Mux        ; MUX2_1      ; work         ;
-;          |PEnc:PEnc1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|PEnc42:PEnc|PEnc:PEnc1        ; PEnc        ; work         ;
-;       |RG2:RG|              ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|RG2:RG                        ; RG2         ; work         ;
-;          |FFD:FDD0|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|RG2:RG|FFD:FDD0               ; FFD         ; work         ;
-;          |FFD:FDD1|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:degnouerdsbvgd|RG2:RG|FFD:FDD1               ; FFD         ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+-------------+--------------+
+; |KeyDecode                 ; 65 (0)              ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |KeyDecode                                             ; KeyDecode   ; work         ;
+;    |CLKDIV:Div|            ; 52 (52)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|CLKDIV:Div                                  ; CLKDIV      ; work         ;
+;    |KeyControl:Ctrl|       ; 5 (5)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyControl:Ctrl                             ; KeyControl  ; work         ;
+;    |KeyScan:Scann|         ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann                               ; KeyScan     ; work         ;
+;       |Counter:Cont|       ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|Counter:Cont                  ; Counter     ; work         ;
+;          |RG2:Reg|         ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|Counter:Cont|RG2:Reg          ; RG2         ; work         ;
+;             |FFD:FDD0|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0 ; FFD         ; work         ;
+;             |FFD:FDD1|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD1 ; FFD         ; work         ;
+;       |Decoder:DEC|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|Decoder:DEC                   ; Decoder     ; work         ;
+;          |DeMUX:DeMUX2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX2      ; DeMUX       ; work         ;
+;          |DeMUX:DeMUX3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX3      ; DeMUX       ; work         ;
+;       |PEnc42:PEnc|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|PEnc42:PEnc                   ; PEnc42      ; work         ;
+;          |MUX2_1:Mux|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|PEnc42:PEnc|MUX2_1:Mux        ; MUX2_1      ; work         ;
+;          |PEnc:PEnc1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|PEnc42:PEnc|PEnc:PEnc1        ; PEnc        ; work         ;
+;       |RG2:RG|             ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|RG2:RG                        ; RG2         ; work         ;
+;          |FFD:FDD0|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|RG2:RG|FFD:FDD0               ; FFD         ; work         ;
+;          |FFD:FDD1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyDecode|KeyScan:Scann|RG2:RG|FFD:FDD1               ; FFD         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -269,7 +273,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7     ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 7     ;
@@ -279,66 +283,77 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------+
-; Inverted Register Statistics                                     ;
-+--------------------------------------------------------+---------+
-; Inverted Register                                      ; Fan out ;
-+--------------------------------------------------------+---------+
-; KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD0|Q ; 7       ;
-; KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD1|Q ; 6       ;
-; KeyScan:degnouerdsbvgd|RG2:RG|FFD:FDD0|Q               ; 1       ;
-; KeyScan:degnouerdsbvgd|RG2:RG|FFD:FDD1|Q               ; 1       ;
-; Total number of inverted registers = 4                 ;         ;
-+--------------------------------------------------------+---------+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0|Q ; 7       ;
+; KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD1|Q ; 6       ;
+; KeyScan:Scann|RG2:RG|FFD:FDD0|Q               ; 1       ;
+; KeyScan:Scann|RG2:RG|FFD:FDD1|Q               ; 1       ;
+; CLKDIV:Div|count[0]                           ; 2       ;
+; Total number of inverted registers = 5        ;         ;
++-----------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "KeyScan:degnouerdsbvgd|RG2:RG" ;
-+------+-------+----------+---------------------------------+
-; Port ; Type  ; Severity ; Details                         ;
-+------+-------+----------+---------------------------------+
-; en   ; Input ; Info     ; Stuck at VCC                    ;
-+------+-------+----------+---------------------------------+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CLKDIV:Div ;
++----------------+---------+------------------------------+
+; Parameter Name ; Value   ; Type                         ;
++----------------+---------+------------------------------+
+; div            ; 5000000 ; Signed Integer               ;
++----------------+---------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------+
-; Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Decoder:DEC|DeMUX:DeMUX1" ;
-+------+-------+----------+---------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                           ;
-+------+-------+----------+---------------------------------------------------+
-; y    ; Input ; Info     ; Stuck at VCC                                      ;
-+------+-------+----------+---------------------------------------------------+
++--------------------------------------------------+
+; Port Connectivity Checks: "KeyScan:Scann|RG2:RG" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; en   ; Input ; Info     ; Stuck at VCC           ;
++------+-------+----------+------------------------+
 
 
-+----------------------------------------------------------------+
-; Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Decoder:DEC" ;
-+------+-------+----------+--------------------------------------+
-; Port ; Type  ; Severity ; Details                              ;
-+------+-------+----------+--------------------------------------+
-; e    ; Input ; Info     ; Stuck at VCC                         ;
-+------+-------+----------+--------------------------------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX1" ;
++------+-------+----------+------------------------------------------+
+; Port ; Type  ; Severity ; Details                                  ;
++------+-------+----------+------------------------------------------+
+; y    ; Input ; Info     ; Stuck at VCC                             ;
++------+-------+----------+------------------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD1" ;
-+------+-------+----------+--------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                ;
-+------+-------+----------+--------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                           ;
-+------+-------+----------+--------------------------------------------------------+
++-------------------------------------------------------+
+; Port Connectivity Checks: "KeyScan:Scann|Decoder:DEC" ;
++------+-------+----------+-----------------------------+
+; Port ; Type  ; Severity ; Details                     ;
++------+-------+----------+-----------------------------+
+; e    ; Input ; Info     ; Stuck at VCC                ;
++------+-------+----------+-----------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD0" ;
-+------+-------+----------+--------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                ;
-+------+-------+----------+--------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                           ;
-+------+-------+----------+--------------------------------------------------------+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD1" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "KeyScan:degnouerdsbvgd|Counter:Cont|Adder:Adder"                                    ;
+; Port Connectivity Checks: "KeyScan:Scann|Counter:Cont|Adder:Adder"                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -353,19 +368,21 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 20                          ;
-; cycloneiii_ff         ; 7                           ;
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 40                          ;
 ;     CLR               ; 7                           ;
-; cycloneiii_lcell_comb ; 21                          ;
-;     normal            ; 21                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 72                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 41                          ;
+;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 7                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 4                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.46                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -384,7 +401,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar 17 09:51:11 2026
+    Info: Processing started: Tue Mar 17 11:06:10 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TicketMachine -c TicketMachine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -395,7 +412,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file keyboar
     Info (12022): Found design unit 1: KeyboardReader-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 16
     Info (12023): Found entity 1: KeyboardReader File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keydecode.vhd
-    Info (12022): Found design unit 1: KeyDecode-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 21
+    Info (12022): Found design unit 1: KeyDecode-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 19
     Info (12023): Found entity 1: KeyDecode File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keyscan.vhd
     Info (12022): Found design unit 1: KeyScan-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 16
@@ -449,38 +466,35 @@ Info (12021): Found 2 design units, including 1 entities, in source file keycont
     Info (12022): Found design unit 1: KeyControl-behavioral File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd Line: 11
     Info (12023): Found entity 1: KeyControl File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd Line: 4
 Info (12127): Elaborating entity "KeyDecode" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at KeyDecode.vhd(15): used implicit default value for signal "Kpress" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 15
-Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyScan:degnouerdsbvgd" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 45
-Info (12128): Elaborating entity "Counter" for hierarchy "KeyScan:degnouerdsbvgd|Counter:Cont" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 40
-Info (12128): Elaborating entity "Adder" for hierarchy "KeyScan:degnouerdsbvgd|Counter:Cont|Adder:Adder" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 15
-Info (12128): Elaborating entity "FA" for hierarchy "KeyScan:degnouerdsbvgd|Counter:Cont|Adder:Adder|FA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd Line: 18
-Info (12128): Elaborating entity "HA" for hierarchy "KeyScan:degnouerdsbvgd|Counter:Cont|Adder:Adder|FA:U1|HA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd Line: 17
-Info (12128): Elaborating entity "RG2" for hierarchy "KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 17
-Info (12128): Elaborating entity "FFD" for hierarchy "KeyScan:degnouerdsbvgd|Counter:Cont|RG2:Reg|FFD:FDD0" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd Line: 15
-Info (12128): Elaborating entity "Decoder" for hierarchy "KeyScan:degnouerdsbvgd|Decoder:DEC" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 41
-Info (12128): Elaborating entity "DeMUX" for hierarchy "KeyScan:degnouerdsbvgd|Decoder:DEC|DeMUX:DeMUX1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd Line: 26
-Info (12128): Elaborating entity "PEnc42" for hierarchy "KeyScan:degnouerdsbvgd|PEnc42:PEnc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 45
-Info (12128): Elaborating entity "PEnc" for hierarchy "KeyScan:degnouerdsbvgd|PEnc42:PEnc|PEnc:PEnc1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 15
-Info (12128): Elaborating entity "MUX2_1" for hierarchy "KeyScan:degnouerdsbvgd|PEnc42:PEnc|MUX2_1:Mux" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 19
-Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyControl:Ctrl" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 46
+Info (12128): Elaborating entity "CLKDIV" for hierarchy "CLKDIV:Div" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 52
+Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyScan:Scann" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 54
+Info (12128): Elaborating entity "Counter" for hierarchy "KeyScan:Scann|Counter:Cont" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 40
+Info (12128): Elaborating entity "Adder" for hierarchy "KeyScan:Scann|Counter:Cont|Adder:Adder" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 15
+Info (12128): Elaborating entity "FA" for hierarchy "KeyScan:Scann|Counter:Cont|Adder:Adder|FA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd Line: 18
+Info (12128): Elaborating entity "HA" for hierarchy "KeyScan:Scann|Counter:Cont|Adder:Adder|FA:U1|HA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd Line: 17
+Info (12128): Elaborating entity "RG2" for hierarchy "KeyScan:Scann|Counter:Cont|RG2:Reg" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 17
+Info (12128): Elaborating entity "FFD" for hierarchy "KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd Line: 15
+Info (12128): Elaborating entity "Decoder" for hierarchy "KeyScan:Scann|Decoder:DEC" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 41
+Info (12128): Elaborating entity "DeMUX" for hierarchy "KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd Line: 26
+Info (12128): Elaborating entity "PEnc42" for hierarchy "KeyScan:Scann|PEnc42:PEnc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 45
+Info (12128): Elaborating entity "PEnc" for hierarchy "KeyScan:Scann|PEnc42:PEnc|PEnc:PEnc1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 15
+Info (12128): Elaborating entity "MUX2_1" for hierarchy "KeyScan:Scann|PEnc42:PEnc|MUX2_1:Mux" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 19
+Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyControl:Ctrl" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 55
 Info (13000): Registers with preset signals will power-up high File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd Line: 10
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Kpress" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Tdelay[0]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 9
     Warning (15610): No output dependent on input pin "Tdelay[1]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 9
-    Warning (15610): No output dependent on input pin "Kscan" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 16
-Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Tue Mar 17 09:51:17 2026
+Info (21057): Implemented 87 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 13 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Tue Mar 17 11:06:16 2026
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:12
 
