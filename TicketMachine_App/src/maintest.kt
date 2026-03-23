@@ -2,17 +2,15 @@ import isel.leic.UsbPort
 import isel.leic.utils.Time
 
 fun main(args: Array<String>) {
-    while(true) {
-        val value = UsbPort.read()
-        println(value)
-    }
+//    while(true) {
+//        val value = UsbPort.read()
+//        println(value)
+//    }
     //dentro desta main estão so testes das funções
-
+    HAL.clrBits(0xFF)
     val lED_MASK = 0b00000001
     Time.sleep(10000)
     HAL.setBits(lED_MASK)
-    println("Setted bits")
-
 //    HAL.clrBits(lED_MASK)      // turn LED off
 //    Time.sleep(10000)
 //    HAL.setBits(lED_MASK)      // turn LED on
@@ -20,6 +18,8 @@ fun main(args: Array<String>) {
 //    Time.sleep(10000)
 //
 //    HAL.clrBits(lED_MASK)      // turn LED off
+    val key = KBD.waitKey(5000)
+    println(key)
 }
 object HAL{
     fun init(){
@@ -31,7 +31,7 @@ object HAL{
     }
     fun isBit(value: Int): Boolean {
         val currBits = UsbPort.read()
-        return (value and currBits) == 1
+        return (value and currBits) != 0
     }
     fun readBit(mask:Int): Int{
         val currBits = UsbPort.read()
@@ -46,17 +46,33 @@ object HAL{
         UsbPort.write(currBits and mask.inv())
     }
 }
-object KBD{
-    const val NONE = 0
-    fun init(){}
 
-    fun getKey(): Char{
-        val k =HAL.readBit(0b00001111)
-        val kVal = HAL.readBit(0b00010000) //desnecessario
-        return 'A'
+object KBD {
+    const val NONE = 0;
+    val matrix = listOf(
+        listOf('1', '2', '3', 'A'),
+        listOf('4', '5', '6', 'B'),
+        listOf('7', '8', '9', 'C'),
+        listOf('*', '0', '#', 'D')
+    )
+
+    fun init() {}
+
+    fun getKey(): Char {
+        val keyCol = HAL.readBit(0b00001100) / 4
+        val keyLin = HAL.readBit(0b00000011)
+        val Kval = HAL.isBit(0b00010000)
+        return if(Kval) {
+            matrix[keyLin][keyCol]
+        } else NONE.digitToChar()
     }
-    fun waitKey(timeout:Long):Char{
 
-        return 'a'
+    fun waitKey(timeout: Long): Char {
+        val startTime = Time.getTimeInMillis()
+        while(Time.getTimeInMillis() - startTime < timeout) {
+            val key = getKey()
+            if(key != NONE.digitToChar()) { return key }
+        }
+        return NONE.digitToChar()
     }
 }
