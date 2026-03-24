@@ -10,9 +10,7 @@ entity KeyDecode is
 		Kack	: in std_logic;
 		KbdCol: out std_logic_vector(3 downto 0);
 		Kval	: out std_logic;
-		Kcode	: out std_logic_vector(3 downto 0);	
-		
-		Cols: out std_logic_vector(3 downto 0)
+		Kcode	: out std_logic_vector(3 downto 0)
 	);
 end KeyDecode;
 
@@ -51,9 +49,6 @@ signal columns: std_logic_vector(3 downto 0);
 begin
 	Div	: clkDIV			port map(clk_in => Clk, clk_out => mclock);
 	ntClk <= not(mclock);
-	Scann	: KeyScan		port map(Clk => mclock, rst => Reset, Kscan => Scan, KbdLin => KbdLin, KbdCol => columns, K => Kcode, Kpress => Press);
-	Ctrl	: KeyControl	port map(Kack => Kack, Kpress => Press, rst => Reset, clk => ntClk, Kval => Kval, Kscan => Scan);
-	Cols <= columns;
-	KbdCol <= columns;
-	
+	Scann	: KeyScan		port map(Clk => mclock, rst => Reset, Kscan => Scan, KbdLin => KbdLin, KbdCol => KbdCol, K => Kcode, Kpress => Press);
+	Ctrl	: KeyControl	port map(Kack => Kack, Kpress => Press, rst => Reset, clk => ntClk, Kval => Kval, Kscan => Scan);	
 end structural;

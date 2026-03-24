@@ -2,25 +2,13 @@ import isel.leic.UsbPort
 import isel.leic.utils.Time
 
 fun main(args: Array<String>) {
-//    while(true) {
-//        val value = UsbPort.read()
-//        println(value)
-//    }
-    //dentro desta main estão so testes das funções
-    HAL.clrBits(0xFF)
-    val lED_MASK = 0b00000001
-    Time.sleep(10000)
-    HAL.setBits(lED_MASK)
-//    HAL.clrBits(lED_MASK)      // turn LED off
-//    Time.sleep(10000)
-//    HAL.setBits(lED_MASK)      // turn LED on
-//    println(HAL.isBit(lED_MASK))
-//    Time.sleep(10000)
-//
-//    HAL.clrBits(lED_MASK)      // turn LED off
-    val key = KBD.waitKey(5000)
-    println(key)
+    HAL.init()
+    while (true) {
+        val key = KBD.getKey()
+        println(key)
+    }
 }
+
 object HAL{
     fun init(){
         UsbPort.write(0b00000000)
@@ -49,17 +37,17 @@ object HAL{
 
 object KBD {
     const val NONE = 0;
-    val matrix = listOf(
-        listOf('1', '2', '3', 'A'),
-        listOf('4', '5', '6', 'B'),
-        listOf('7', '8', '9', 'C'),
-        listOf('*', '0', '#', 'D')
+    val matrix = arrayOf(
+        arrayOf('1', '2', '3', 'A'),
+        arrayOf('4', '5', '6', 'B'),
+        arrayOf('7', '8', '9', 'C'),
+        arrayOf('*', '0', '#', 'D')
     )
 
     fun init() {}
 
     fun getKey(): Char {
-        val keyCol = HAL.readBit(0b00001100) / 4
+        val keyCol = HAL.readBit(0b00001100) shr 2
         val keyLin = HAL.readBit(0b00000011)
         val Kval = HAL.isBit(0b00010000)
         return if(Kval) {
@@ -75,4 +63,25 @@ object KBD {
         }
         return NONE.digitToChar()
     }
+}
+
+object LCD {
+    const val LINES = 2
+    const val COLS = 16
+    fun writeByteSerial(rs: Boolean, data: Int) {}
+    fun writeByte (rs: Boolean, data: Int) {}
+    fun writeCMD (data : Int ) {}
+    fun writeDATA (data : Int ) {}
+    fun init() {}
+    fun write (c : Char ) {}
+    fun write (text : String ) {}
+    fun cursor(line: Int, column : Int ) {}
+    fun clear() {}
+}
+
+object SerialEmitter {
+    enum class Peripheral {LCD, TICKET}
+    fun init() {}
+    fun send(addr : Peripheral , data : Int ) {}
+    fun isBusy(): Boolean {}
 }

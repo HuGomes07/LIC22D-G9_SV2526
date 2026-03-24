@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity PELCD is
+	port(
+		LCDsel: in std_logic;
+		SCLK	: in std_logic;
+		SDX	: in std_logic;
+		D		: out std_logic_vector(8 downto 0);
+		D9		: out std_logic
+	);
+end PELCD;
+
+architecture structural of PELCD is
+component SerialReceiver is
+	port(
+		SS, SCLK, SDX	: in std_logic;
+		D					: out std_logic_vector(8 downto 0);
+		D9					: out std_logic
+	);
+end component SerialReceiver;
+
+begin
+	Rec: SerialReceiver port map(SS => LCDsel, SCLK => SCLK, SDX => SDX, D => D, D9 => D9);
+end structural;

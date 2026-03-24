@@ -1,0 +1,33 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY RG10 IS
+PORT(	D					: in  std_logic_vector(9 downto 0);
+		Q 					: out STD_LOGIC_vector(9 downto 0);
+		CLK,EN,Reset 	: in STD_LOGIC
+		);
+END RG10;
+
+ARCHITECTURE logicFunction OF RG10 IS
+BEGIN
+	FDD0: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(0), Q=>Q(0), SET =>'0', EN=>EN);
+	FDD1: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(1), Q=>Q(1), SET =>'0', EN=>EN);
+	FDD2: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(2), Q=>Q(2), SET =>'0', EN=>EN);
+	FDD3: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(3), Q=>Q(3), SET =>'0', EN=>EN);
+	FDD4: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(4), Q=>Q(4), SET =>'0', EN=>EN);
+	FDD5: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(5), Q=>Q(5), SET =>'0', EN=>EN);
+	FDD6: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(6), Q=>Q(6), SET =>'0', EN=>EN);
+	FDD7: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(7), Q=>Q(7), SET =>'0', EN=>EN);
+	FDD8: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(8), Q=>Q(8), SET =>'0', EN=>EN);
+	FDD9: entity work.FFD port
+		map (CLK=>CLK, RESET =>Reset,D=>D(9), Q=>Q(9), SET =>'0', EN=>EN);
+END LogicFunction;
