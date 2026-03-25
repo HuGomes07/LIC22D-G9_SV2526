@@ -1,5 +1,7 @@
 import isel.leic.UsbPort
 import isel.leic.utils.Time
+import HAL
+import KBD
 
 fun main(args: Array<String>) {
     HAL.init()
@@ -83,5 +85,5 @@ object SerialEmitter {
     enum class Peripheral {LCD, TICKET}
     fun init() {}
     fun send(addr : Peripheral , data : Int ) {}
-    fun isBusy(): Boolean {}
+    //fun isBusy(): Boolean {}
 }

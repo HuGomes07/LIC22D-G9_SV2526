@@ -14,7 +14,7 @@ inv  = Not
 # --------------------------------------
 # Key Decode
 1 -> kbd.oe
-kbd.val -> UsbPort.I7
+kbd.val -> UsbPort.I4
 kbd.K[0-3] -> UsbPort.I[0-3]
 UsbPort.O7-> kbd.ack
 

@@ -25,8 +25,8 @@ end component ShiftReg;
 
 component RG10 is
 	PORT(	
-		D					: in  std_logic_vector(9 downto 0);
-		Q 					: out STD_LOGIC_vector(9 downto 0);
+		D		: in  std_logic_vector(9 downto 0);
+		Q 		: out STD_LOGIC_vector(9 downto 0);
 		CLK,EN,Reset 	: in STD_LOGIC
 		);
 end component RG10;
