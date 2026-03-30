@@ -24,7 +24,7 @@ UsbPort.O7-> kbd.ack
 # Port Expander
 UsbPort.O2 -> sr.in
 UsbPort.O1-> sr.clk
-UsbPort.O1-> inv.in, hr.clk
+UsbPort.O0-> inv.in, hr.clk
 inv.out -> sr.en
 sr.out[0-9] -> hr.in[0-9]
 hr.out[1-8] -> lcd.D[0-7]

@@ -4,16 +4,17 @@ import kotlin.math.log2
 
 fun main(args: Array<String>) {
     HAL.init()
-    SerialEmitter.init()
+    Time.sleep(3000)
+    SerialEmitter.send(SerialEmitter.Peripheral.LCD, 0b01001110)
 }
 
 //masks:
-    val kMask =     0b00001111
-    val kValMask =  0b00010000
+    const val kMask =     0b00001111
+    const val kValMask =  0b00010000
 
-    val LCDsel =    0b00000001
-    val sCLK =      0b00000010
-    val sdx =       0b00000100
+    const val LCDsel =    0b00000001
+    const val sCLK =      0b00000010
+    const val sdx =       0b00000100
 //
 object HAL{
     fun init(){
@@ -94,7 +95,7 @@ object SerialEmitter {
     fun send(addr: Peripheral, data: Int) {
         val sel = LCDsel
 
-        val interval = 1L
+        val interval = 10L
 
         // Ensure idle state
         HAL.setBits(sel)
