@@ -5,12 +5,13 @@ entity KeyboardReader is
 	port(
 		Clk: in std_logic;
 		Reset: in std_logic;
-		RxClk: in std_logic;
 		KbdLin: in std_logic_vector(3 downto 0);
 		Tdelay: in std_logic_vector(1 downto 0);
 		KbdCol: out std_logic_vector(3 downto 0);
 		TXd: out std_logic;
-		UPort: out std_logic_vector(7 downto 0)
+		UPort: out std_logic_vector(7 downto 0);
+		
+		Kack: in std_logic
 	);
 end KeyboardReader;
 
@@ -27,7 +28,7 @@ component KeyDecode is
 	);
 end component KeyDecode;
 
-signal Kack:	std_logic;
+--signal Kack:	std_logic;
 signal Kval:	std_logic;
 signal K:		std_logic_vector(3 downto 0);
 	

@@ -20,5 +20,5 @@ begin
 		map (A=>As(0) ,B=>As(1) , S=>S ,Y=>MuxS);	
 	PEnc3: entity work.PEnc port 
 		map (I => Gss,A=>S,Gs=>Gs);
-	A<=MuxS & S;
+	A<= S & MuxS;
 end structural;
