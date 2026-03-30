@@ -1,17 +1,23 @@
 import isel.leic.UsbPort
 import isel.leic.utils.Time
+import kotlin.math.log2
 
 fun main(args: Array<String>) {
     HAL.init()
-    while (true) {
-        val key = KBD.getKey()
-        println(key)
-    }
+    SerialEmitter.init()
 }
 
+//masks:
+    val kMask =     0b00001111
+    val kValMask =  0b00010000
+
+    val LCDsel =    0b00000001
+    val sCLK =      0b00000010
+    val sdx =       0b00000100
+//
 object HAL{
     fun init(){
-        UsbPort.write(0b00000000)
+        clrBits(0b11111111)
     }
     fun writeBit(mask:Int, value: Int) {
         val currBits =UsbPort.read()
@@ -49,7 +55,7 @@ object KBD {
     fun getKey(): Char {
         val keyCol = HAL.readBit(0b00001100) shr 2
         val keyLin = HAL.readBit(0b00000011)
-        val Kval = HAL.isBit(0b00010000)
+        val Kval = HAL.isBit(kValMask)
         return if(Kval) {
             matrix[keyLin][keyCol]
         } else NONE.digitToChar()
@@ -65,23 +71,103 @@ object KBD {
     }
 }
 
+object SerialEmitter {
+    enum class Peripheral {LCD, TICKET}
+
+    fun init() {
+        Time.sleep(1000)
+
+        send(Peripheral.LCD, 0b0000110000)
+        Time.sleep(5)
+        send(Peripheral.LCD, 0b0000110000)
+        Time.sleep(1)
+        send(Peripheral.LCD, 0b0000110000)
+
+        send(Peripheral.LCD, 0b0000111000)  //0b000000100 => N  0=1line 1=2line F => 0b00001000 1:0 5x10dots:5x8
+        send(Peripheral.LCD, 0b0000001000)
+        send(Peripheral.LCD, 0b0000000001)
+        send(Peripheral.LCD, 0b0000000110)
+
+        send(Peripheral.LCD, 0b0000001111)
+
+    }
+    fun send(addr: Peripheral, data: Int) {
+        val sel = LCDsel
+
+        val interval = 1L
+
+        // Ensure idle state
+        HAL.setBits(sel)
+        HAL.clrBits(sCLK)
+
+        // Start condition (falling edge)
+        HAL.clrBits(sel)
+
+        // Send exactly 10 bits (MSB first)
+        for (i in 9 downTo 0) {
+            val bit = (data shr i) and 1
+
+            if (bit == 1) HAL.setBits(sdx)
+            else HAL.clrBits(sdx)
+
+            Time.sleep(interval)
+
+            // Clock pulse
+            HAL.setBits(sCLK)
+            Time.sleep(interval)
+            HAL.clrBits(sCLK)
+        }
+
+        // End transmission
+        HAL.setBits(sel)
+    }
+    /*fun isBusy(): Boolean {
+        return false
+    }*/
+}
+
 object LCD {
     const val LINES = 2
     const val COLS = 16
-    fun writeByteSerial(rs: Boolean, data: Int) {}
-    fun writeByte (rs: Boolean, data: Int) {}
-    fun writeCMD (data : Int ) {}
-    fun writeDATA (data : Int ) {}
-    fun init() {}
-    fun write (c : Char ) {}
-    fun write (text : String ) {}
-    fun cursor(line: Int, column : Int ) {}
-    fun clear() {}
-}
+    fun writeByteSerial(rs: Boolean, data: Int) {
+        val rsBit = if (rs) 1 else 0
 
-object SerialEmitter {
-    enum class Peripheral {LCD, TICKET}
-    fun init() {}
-    fun send(addr : Peripheral , data : Int ) {}
-    fun isBusy(): Boolean {}
+        // Build frame: RS (bit 9), DATA (bits 8–1), E (bit 0)
+        val frame = (rsBit shl 9) or (data shl 1) or 1
+
+        SerialEmitter.send(SerialEmitter.Peripheral.LCD, frame)
+    }
+    fun writeByte (rs: Boolean, data: Int) {
+        writeByteSerial(rs, data)
+        Time.sleep(2)
+    }
+    fun writeCMD (data : Int ) {
+        writeByte(false, data)
+    }
+    fun writeDATA (data : Int ) {
+        writeByte(true, data)
+    }
+    fun init() {
+        Time.sleep(50)
+        writeCMD(0x38) // 8-bit, 2 lines
+        writeCMD(0x0C) // display ON
+        writeCMD(0x01) // clear
+        writeCMD(0x06) // entry mode
+    }
+    fun write (c : Char ) {
+        writeDATA(c.code)
+    }
+    fun write (text : String ) {
+        for (i in text){
+            write(i)
+        }
+    }
+    fun cursor(line: Int, column : Int ) {
+        val address = if (line == 0) column else 0x40 + column
+        writeCMD(0x80 or address)
+    }
+    fun clear() {
+        writeCMD(0x01)
+        Time.sleep(2)
+    }
 }
