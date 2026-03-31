@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Mar 17 11:06:16 2026
+Analysis & Synthesis Status : Successful - Tue Mar 31 17:38:12 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TicketMachine
-Top-level Entity Name : KeyDecode
+Top-level Entity Name : TicketMachine
 Family : MAX 10
-Total logic elements : 65
-    Total combinational functions : 65
-    Dedicated logic registers : 40
-Total registers : 40
-Total pins : 22
+Total logic elements : 230
+    Total combinational functions : 186
+    Dedicated logic registers : 146
+Total registers : 146
+Total pins : 42
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

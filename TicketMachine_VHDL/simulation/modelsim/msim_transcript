@@ -11,122 +11,242 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd}
+# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd 
+# Start time: 09:24:23 on Mar 31,2026
+# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity KeyDecode
-# -- Compiling architecture structural of KeyDecode
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd}
+# -- Compiling entity UsbPort
+# -- Compiling architecture bdf_type of UsbPort
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd(90): (vcom-1035) Formal port "tdo" has OPEN or no actual associated with it.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd(92): VHDL Compiler exiting
+# End time: 09:24:23 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./TicketMachine_run_msim_rtl_vhdl.do line 8
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd}"
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder
+# -- Compiling architecture structural of Adder
+# ** Error: (vcom-11) Could not find work.fa.
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd(18): (vcom-1195) Cannot find expanded name "work.FA".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd(18): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.fa.
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd(20): (vcom-1195) Cannot find expanded name "work.FA".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd(20): Unknown expanded name.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd(22): VHDL Compiler exiting
+# End time: 09:24:41 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CLKDIV
+# -- Compiling architecture bhv of CLKDIV
+# End time: 09:24:41 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter
+# -- Compiling architecture structural of Counter
+# -- Loading entity Adder
+# ** Error: (vcom-11) Could not find work.rg2.
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd(17): (vcom-1195) Cannot find expanded name "work.RG2".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd(17): Unknown expanded name.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd(20): VHDL Compiler exiting
+# End time: 09:24:41 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Decoder
 # -- Compiling architecture structural of Decoder
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
+# End time: 09:24:41 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd}
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd 
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity DeMUX
 # -- Compiling architecture structural of DeMUX
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
+# End time: 09:24:41 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd}
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity FFD
-# -- Compiling architecture logicFunction of FFD
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity HA
-# -- Compiling architecture structural of HA
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PEnc
-# -- Compiling architecture structural of PEnc
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity MUX2_1
-# -- Compiling architecture structural of MUX2_1
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:35 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyControl
-# -- Compiling architecture behavioral of KeyControl
-# End time: 09:32:35 on Mar 17,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:36 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd 
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FA
 # -- Compiling architecture structural of FA
-# -- Loading entity HA
-# End time: 09:32:36 on Mar 17,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd}
+# ** Error: (vcom-11) Could not find work.ha.
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd(17): (vcom-1195) Cannot find expanded name "work.HA".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd(17): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.ha.
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd(19): (vcom-1195) Cannot find expanded name "work.HA".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd(19): Unknown expanded name.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd(22): VHDL Compiler exiting
+# End time: 09:24:41 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:36 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd 
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity RG2
-# -- Compiling architecture logicFunction of RG2
-# -- Loading entity FFD
-# End time: 09:32:36 on Mar 17,2026, Elapsed time: 0:00:00
+# -- Compiling entity FFD
+# -- Compiling architecture logicFunction of FFD
+# End time: 09:24:41 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd}
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:36 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd 
+# Start time: 09:24:41 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HA
+# -- Compiling architecture structural of HA
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader
+# -- Compiling architecture structural of KeyboardReader
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyControl
+# -- Compiling architecture behavioral of KeyControl
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyDecode
+# -- Compiling architecture structural of KeyDecode
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyScan
+# -- Compiling architecture structural of KeyScan
+# ** Error: (vcom-11) Could not find work.penc42.
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd(45): (vcom-1195) Cannot find expanded name "work.PEnc42".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd(45): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.rg2.
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd(46): (vcom-1195) Cannot find expanded name "work.RG2".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd(46): Unknown expanded name.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd(51): VHDL Compiler exiting
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LSL
+# -- Compiling architecture rtl of LSL
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX2_1
+# -- Compiling architecture structural of MUX2_1
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX4_1
+# -- Compiling architecture structural of MUX4_1
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PELCD
+# -- Compiling architecture structural of PELCD
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:42 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PEnc
+# -- Compiling architecture structural of PEnc
+# End time: 09:24:42 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -134,37 +254,118 @@
 # -- Compiling architecture structural of PEnc42
 # -- Loading entity PEnc
 # -- Loading entity MUX2_1
-# End time: 09:32:36 on Mar 17,2026, Elapsed time: 0:00:00
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd}
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:36 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd 
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity KeyScan
-# -- Compiling architecture structural of KeyScan
-# -- Loading entity PEnc42
-# -- Loading entity RG2
-# End time: 09:32:36 on Mar 17,2026, Elapsed time: 0:00:00
+# -- Compiling entity RG2
+# -- Compiling architecture logicFunction of RG2
+# -- Loading entity FFD
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd}
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:36 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd 
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG4
+# -- Compiling architecture logicFunction of RG4
+# -- Loading entity FFD
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG10
+# -- Compiling architecture logicFunction of RG10
+# -- Loading entity FFD
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver
+# -- Compiling architecture structural of SerialReceiver
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftReg
+# -- Compiling architecture structural of ShiftReg
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine
+# -- Compiling architecture structural of TicketMachine
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:24:43 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd(45): (vcom-1484) Unknown formal identifier "SW_TB".
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd(66): VHDL Compiler exiting
+# End time: 09:24:43 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:27 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Adder
 # -- Compiling architecture structural of Adder
 # -- Loading entity FA
-# End time: 09:32:36 on Mar 17,2026, Elapsed time: 0:00:00
+# End time: 09:25:27 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd}
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:32:36 on Mar 17,2026
-# vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd 
+# Start time: 09:25:27 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CLKDIV
+# -- Compiling architecture bhv of CLKDIV
+# End time: 09:25:27 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:27 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -172,16 +373,424 @@
 # -- Compiling architecture structural of Counter
 # -- Loading entity Adder
 # -- Loading entity RG2
-# End time: 09:32:36 on Mar 17,2026, Elapsed time: 0:00:00
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder
+# -- Compiling architecture structural of Decoder
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DeMUX
+# -- Compiling architecture structural of DeMUX
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture structural of FA
+# -- Loading entity HA
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FFD
+# -- Compiling architecture logicFunction of FFD
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HA
+# -- Compiling architecture structural of HA
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader
+# -- Compiling architecture structural of KeyboardReader
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyControl
+# -- Compiling architecture behavioral of KeyControl
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyDecode
+# -- Compiling architecture structural of KeyDecode
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyScan
+# -- Compiling architecture structural of KeyScan
+# -- Loading entity PEnc42
+# -- Loading entity RG2
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:28 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LSL
+# -- Compiling architecture rtl of LSL
+# End time: 09:25:28 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX2_1
+# -- Compiling architecture structural of MUX2_1
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX4_1
+# -- Compiling architecture structural of MUX4_1
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PELCD
+# -- Compiling architecture structural of PELCD
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PEnc
+# -- Compiling architecture structural of PEnc
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PEnc42
+# -- Compiling architecture structural of PEnc42
+# -- Loading entity PEnc
+# -- Loading entity MUX2_1
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG2
+# -- Compiling architecture logicFunction of RG2
+# -- Loading entity FFD
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG4
+# -- Compiling architecture logicFunction of RG4
+# -- Loading entity FFD
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG10
+# -- Compiling architecture logicFunction of RG10
+# -- Loading entity FFD
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver
+# -- Compiling architecture structural of SerialReceiver
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftReg
+# -- Compiling architecture structural of ShiftReg
+# End time: 09:25:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:29 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine
+# -- Compiling architecture structural of TicketMachine
+# End time: 09:25:30 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:30 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# End time: 09:25:30 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ticketmachine_tb
+# vsim work.ticketmachine_tb 
+# Start time: 09:25:34 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# ** Error: (vsim-3173) Entity 'C:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim/rtl_work.usbport' has no architecture.
+# Load interrupted
+# Error loading design
+# End time: 09:25:34 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:25:57 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine
+# -- Compiling architecture structural of TicketMachine
+# End time: 09:25:57 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ticketmachine_tb
+# vsim work.ticketmachine_tb 
+# Start time: 09:26:00 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine_tb/UUT/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint sim:/ticketmachine_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlfts3basi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts3basi
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.ticketmachine
+# End time: 09:32:00 on Mar 31,2026, Elapsed time: 0:06:00
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine 
+# Start time: 09:32:00 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftjx7g6k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjx7g6k
+force -freeze sim:/ticketmachine/MClk 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/ticketmachine/KbdLin 1111 0
+force -freeze sim:/ticketmachine/SW 0000000000 0
+force -freeze sim:/ticketmachine/Tdelay 00 0
+run
+force -freeze sim:/ticketmachine/clk 1 0, 0 {5000 ps} -r 10000
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+force -freeze sim:/ticketmachine/MClk 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/ticketmachine/rst 1 0
+force -freeze sim:/ticketmachine/KbdLin 1111 0
+force -freeze sim:/ticketmachine/SW 0000000000 0
+force -freeze sim:/ticketmachine/Tdelay 00 0
+force -freeze sim:/ticketmachine/clk 1 0, 0 {5000 ps} -r 10000
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
 # 
-vsim work.keydecode
-# vsim work.keydecode 
-# Start time: 09:32:51 on Mar 17,2026
+# 
+force -freeze sim:/ticketmachine/UsbOut 0000000 0
+# Value length (7) does not equal array index length (8).
+# ** UI-Msg: (vsim-4011) Invalid force value: 0000000 0.
+# 
+force -freeze sim:/ticketmachine/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.ticketmachine
+# End time: 09:36:52 on Mar 31,2026, Elapsed time: 0:04:52
+# Errors: 0, Warnings: 1
+# vsim work.ticketmachine 
+# Start time: 09:36:52 on Mar 31,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
 # Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
 # Loading work.keyscan(structural)
 # Loading work.counter(structural)
 # Loading work.adder(structural)
@@ -194,89 +803,724 @@ vsim work.keydecode
 # Loading work.penc42(structural)
 # Loading work.penc(structural)
 # Loading work.mux2_1(structural)
-# Loading work.keycontrol(behavioral)
-add wave -position insertpoint sim:/keydecode/*
-add wave -position insertpoint sim:/keydecode/degnouerdsbvgd/*
-add wave -position insertpoint sim:/keydecode/Ctrl/*
-force -freeze sim:/keydecode/Clk 1 0, 0 {5000 ps} -r 10000
-force -freeze sim:/keydecode/Reset 0 0
-force -freeze sim:/keydecode/KbdLin 1111 0
-force -freeze sim:/keydecode/Tdelay 00 0
-force -freeze sim:/keydecode/Kack 0 0
-run
-force -freeze sim:/keydecode/Reset 1 0
-run
-force -freeze sim:/keydecode/Reset 0 0
-run
-force -freeze sim:/keydecode/KbdLin 1101 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vsim work.keyscan
-# End time: 09:43:13 on Mar 17,2026, Elapsed time: 0:10:22
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftdqqdc3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdqqdc3
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:38:02 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine
+# -- Compiling architecture structural of TicketMachine
+# End time: 09:38:02 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim work.keyscan 
-# Start time: 09:43:13 on Mar 17,2026
+vsim work.ticketmachine_tb
+# End time: 09:38:24 on Mar 31,2026, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine_tb 
+# Start time: 09:38:24 on Mar 31,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine_tb/UUT/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft3im2xv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3im2xv
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:39:10 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# End time: 09:39:10 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ticketmachine_tb
+# End time: 09:39:16 on Mar 31,2026, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine_tb 
+# Start time: 09:39:16 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine_tb/UUT/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftch4h9g".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftch4h9g
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:42:00 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# End time: 09:42:00 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ticketmachine_tb
+# End time: 09:42:05 on Mar 31,2026, Elapsed time: 0:02:49
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine_tb 
+# Start time: 09:42:05 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine_tb/UUT/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftykrjd1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftykrjd1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint sim:/ticketmachine_tb/UUT/*
+run
+run
+vsim work.ticketmachine_tb
+# End time: 09:45:25 on Mar 31,2026, Elapsed time: 0:03:20
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine_tb 
+# Start time: 09:45:25 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine_tb/UUT/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlfthbv6qg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthbv6qg
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:46:07 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# End time: 09:46:07 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ticketmachine_tb
+# End time: 09:46:11 on Mar 31,2026, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine_tb 
+# Start time: 09:46:11 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine_tb/UUT/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftenrvig".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftenrvig
+add wave -position insertpoint sim:/ticketmachine_tb/UUT/*
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:47:50 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd(37): Integer literal 10000 is not of type std.STANDARD.TIME.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd(67): VHDL Compiler exiting
+# End time: 09:47:50 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:48:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# End time: 09:48:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ticketmachine_tb
+# End time: 09:48:27 on Mar 31,2026, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine_tb 
+# Start time: 09:48:27 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine_tb(ticketmachine_tb_arch)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine_tb/UUT/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftt2vjj1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftt2vjj1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.ticketmachine
+# End time: 09:49:54 on Mar 31,2026, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 3
+# vsim work.ticketmachine 
+# Start time: 09:49:54 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine(structural)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# Loading work.pelcd(structural)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/ticketmachine/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftv42emm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftv42emm
+force -freeze sim:/ticketmachine/MClk 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/ticketmachine/rst 1 0
+force -freeze sim:/ticketmachine/KbdLin 1111 0
+force -freeze sim:/ticketmachine/SW 0000000000 0
+force -freeze sim:/ticketmachine/Tdelay 00 0
+run
+force -freeze sim:/ticketmachine/UsbOut 00000000 0
+run
+force -freeze sim:/ticketmachine/clk 1 0, 0 {5000 ps} -r 10000
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint sim:/ticketmachine/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8683) Uninitialized out port /ticketmachine/Readr/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+force -freeze sim:/ticketmachine/MClk 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/ticketmachine/rst 1 0
+force -freeze sim:/ticketmachine/KbdLin 1111 0
+force -freeze sim:/ticketmachine/SW 0000000000 0
+force -freeze sim:/ticketmachine/Tdelay 00 0
+force -freeze sim:/ticketmachine/clk 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/ticketmachine/UsbOut 00000000 0
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
+# 
+# 
+run
+force -freeze sim:/ticketmachine/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/ticketmachine/KbdLin 1011 0
+run
+run
+force -freeze sim:/ticketmachine/SW 0000000001 0
+run
+force -freeze sim:/ticketmachine/SW 0000000000 0
+run
+run
+run
+run
+run
+run
+vsim work.counter
+# End time: 09:58:39 on Mar 31,2026, Elapsed time: 0:08:45
+# Errors: 0, Warnings: 1
+# vsim work.counter 
+# Start time: 09:58:39 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/counter/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftvk6y4m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvk6y4m
+force -freeze sim:/counter/Reset 1 0
+force -freeze sim:/counter/MClk 1 0, 0 {5000 ps} -r 10000
+run
+force -freeze sim:/counter/CE 0 0
+run
+force -freeze sim:/counter/Reset 0 0
+force -freeze sim:/counter/CE 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:23:36 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter_tb
+# -- Compiling architecture Counter_tb_arch of Counter_tb
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd(17): near "CE_TB": (vcom-1576) expecting BEGIN.
+# End time: 10:23:36 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:24:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter_tb
+# -- Compiling architecture Counter_tb_arch of Counter_tb
+# End time: 10:24:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.counter_tb
+# End time: 10:24:25 on Mar 31,2026, Elapsed time: 0:25:46
+# Errors: 0, Warnings: 2
+# vsim work.counter_tb 
+# Start time: 10:24:25 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.counter_tb(counter_tb_arch)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/counter_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft8zbtfm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8zbtfm
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.decoder
+# End time: 10:27:30 on Mar 31,2026, Elapsed time: 0:03:05
+# Errors: 0, Warnings: 2
+# vsim work.decoder 
+# Start time: 10:27:30 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/decoder/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft7m2mrx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7m2mrx
+force -freeze sim:/decoder/S 00 0
+force -freeze sim:/decoder/E 1 0
+run
+force -freeze sim:/decoder/S 01 0
+run
+force -freeze sim:/decoder/S 10 0
+run
+force -freeze sim:/decoder/S 11 0
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:48:04 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_tb
+# -- Compiling architecture Decoder_tb_arch of Counter_tb
+# -- Loading entity Counter_tb
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd(26): Illegal target for signal assignment.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd(26): (vcom-1136) Unknown identifier "MClk_TB".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd(26): (vcom-1136) Unknown identifier "MClk_TB".
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd(44): VHDL Compiler exiting
+# End time: 10:48:04 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_tb
+# -- Compiling architecture Decoder_tb_arch of Counter_tb
+# -- Loading entity Counter_tb
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd(24): (vcom-1136) Unknown identifier "MClk_period".
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd(24): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd(45): VHDL Compiler exiting
+# End time: 10:49:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:32 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_tb
+# -- Compiling architecture Decoder_tb_arch of Counter_tb
+# -- Loading entity Counter_tb
+# End time: 10:49:32 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.decoder_tb
+# End time: 10:49:39 on Mar 31,2026, Elapsed time: 0:22:09
+# Errors: 0, Warnings: 2
+# vsim work.decoder_tb 
+# Start time: 10:49:39 on Mar 31,2026
+# Loading std.standard
+# ** Error: (vsim-3173) Entity 'C:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim/rtl_work.decoder_tb' has no architecture.
+# Error loading design
+# End time: 10:49:40 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vsim work.decoder_tb
+# vsim work.decoder_tb 
+# Start time: 10:49:48 on Mar 31,2026
+# Loading std.standard
+# ** Error: (vsim-3173) Entity 'C:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim/rtl_work.decoder_tb' has no architecture.
+# Error loading design
+# End time: 10:49:48 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:55 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_tb
+# -- Compiling architecture Decoder_tb_arch of Counter_tb
+# -- Loading entity Counter_tb
+# End time: 10:49:55 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:50:22 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_tb
+# -- Compiling architecture Decoder_tb_arch of Decoder_tb
+# End time: 10:50:22 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.decoder_tb
+# vsim work.decoder_tb 
+# Start time: 10:50:25 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.decoder_tb(decoder_tb_arch)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/decoder_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft05st1e".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft05st1e
+run
+run
+run
+run
+run
+vsim work.keyboardreader
+# End time: 11:02:45 on Mar 31,2026, Elapsed time: 0:12:20
+# Errors: 0, Warnings: 2
+# vsim work.keyboardreader 
+# Start time: 11:02:45 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
 # Loading work.keyscan(structural)
 # Loading work.counter(structural)
 # Loading work.adder(structural)
@@ -290,31 +1534,113 @@ vsim work.keyscan
 # Loading work.penc(structural)
 # Loading work.mux2_1(structural)
 # WARNING: No extended dataflow license exists
-add wave -position insertpoint sim:/keyscan/*
-force -freeze sim:/keyscan/Clk 1 0, 0 {5000 ps} -r 10000
-force -freeze sim:/keyscan/rst 1 0
-force -freeze sim:/keyscan/Kscan 1 0
-force -freeze sim:/keyscan/KbdLin 1111 0
+add wave -position insertpoint sim:/keyboardreader/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftx38a27".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftx38a27
+force -freeze sim:/keyboardreader/Clk 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/keyboardreader/Reset 1 0
+force -freeze sim:/keyboardreader/KbdLin 1111 0
+force -freeze sim:/keyboardreader/Tdelay 00 0
+force -freeze sim:/keyboardreader/Kack 0 0
 run
-force -freeze sim:/keyscan/rst 0 0
+force -freeze sim:/keyboardreader/Reset 0 0
 run
 run
 run
 run
 run
+force -freeze sim:/keyboardreader/KbdLin 1011 0
+run
+run
+force -freeze sim:/keyboardreader/Kack 1 0
+run
+run
+run
+noforce sim:/keyboardreader/KbdLin
+force -freeze sim:/keyboardreader/KbdLin 1111 0
+force -freeze sim:/keyboardreader/Kack 0 0
 run
 run
 run
 run
-vsim work.keydecode
-# End time: 09:46:09 on Mar 17,2026, Elapsed time: 0:02:56
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:18:54 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(17): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 11:18:54 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:19:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(35): (vcom-1141) Identifier "KeyboardReader" does not identify a component declaration.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(57): VHDL Compiler exiting
+# End time: 11:19:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:19:51 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(35): (vcom-1141) Identifier "KeyboardReader" does not identify a component declaration.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(57): VHDL Compiler exiting
+# End time: 11:19:51 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:21:21 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(41): (vcom-1035) Formal port "Reset" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(41): (vcom-1035) Formal port "Kack" has OPEN or no actual associated with it.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd(57): VHDL Compiler exiting
+# End time: 11:21:21 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:28:12 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# End time: 11:28:12 on Mar 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim work.keydecode 
-# Start time: 09:46:09 on Mar 17,2026
+vsim work.keyboardreader_tb
+# End time: 11:28:17 on Mar 31,2026, Elapsed time: 0:25:32
+# Errors: 0, Warnings: 2
+# vsim work.keyboardreader_tb 
+# Start time: 11:28:17 on Mar 31,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(keyboardreader_tb_arch)
+# Loading work.keyboardreader(structural)
 # Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
 # Loading work.keyscan(structural)
 # Loading work.counter(structural)
 # Loading work.adder(structural)
@@ -327,18 +1653,327 @@ vsim work.keydecode
 # Loading work.penc42(structural)
 # Loading work.penc(structural)
 # Loading work.mux2_1(structural)
+# ** Warning: (vsim-8683) Uninitialized out port /keyboardreader_tb/UUT/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/keyboardreader_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft1h3yt8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1h3yt8
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:30:12 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# End time: 11:30:12 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 11:30:19 on Mar 31,2026, Elapsed time: 0:02:02
+# Errors: 0, Warnings: 3
+# vsim work.keyboardreader_tb 
+# Start time: 11:30:19 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(keyboardreader_tb_arch)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# ** Warning: (vsim-8683) Uninitialized out port /keyboardreader_tb/UUT/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/keyboardreader_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft9xzik2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9xzik2
+add wave -position insertpoint sim:/keyboardreader_tb/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.serialreceiver
+# End time: 11:31:59 on Mar 31,2026, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 3
+# vsim work.serialreceiver 
+# Start time: 11:31:59 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/serialreceiver/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft8q53e9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8q53e9
+force -freeze sim:/serialreceiver/SS 1 0
+force -freeze sim:/serialreceiver/SDX 1 0
+force -freeze sim:/serialreceiver/SCLK 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/serialreceiver/rst 1 0
+run
+force -freeze sim:/serialreceiver/rst 0 0
+run
+run
+run
+force -freeze sim:/serialreceiver/SS 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/serialreceiver/SS 1 0
+run
+force -freeze sim:/serialreceiver/rst 1 0
+run
+force -freeze sim:/serialreceiver/rst 0 0
+run
+force -freeze sim:/serialreceiver/SS 0 0
+run
+run
+run
+run
+force -freeze sim:/serialreceiver/SS 1 0
+run
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:37:50 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter_tb
+# -- Compiling architecture Counter_tb_arch of Counter_tb
+# End time: 11:37:50 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.serialreceiver
+# End time: 11:44:23 on Mar 31,2026, Elapsed time: 0:12:24
+# Errors: 0, Warnings: 2
+# vsim work.serialreceiver 
+# Start time: 11:44:23 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:44:34 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver_tb
+# -- Compiling architecture SerialReceiver_tb_arch of SerialReceiver_tb
+# ** Error (suppressible): C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd(30): (vcom-1272) Length of formal "Q" is 10; length of actual is 2.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd(44): VHDL Compiler exiting
+# End time: 11:44:35 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:07 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver_tb
+# -- Compiling architecture SerialReceiver_tb_arch of SerialReceiver_tb
+# End time: 11:45:07 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.serialreceiver_tb
+# End time: 11:45:12 on Mar 31,2026, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 0
+# vsim work.serialreceiver_tb 
+# Start time: 11:45:12 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver_tb(serialreceiver_tb_arch)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/serialreceiver_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft8h3qw0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8h3qw0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.keycontrol
+# End time: 11:53:41 on Mar 31,2026, Elapsed time: 0:08:29
+# Errors: 0, Warnings: 2
+# vsim work.keycontrol 
+# Start time: 11:53:41 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
 # Loading work.keycontrol(behavioral)
 # WARNING: No extended dataflow license exists
-add wave -position insertpoint sim:/keydecode/*
-add wave -position insertpoint sim:/keydecode/degnouerdsbvgd/*
-add wave -position insertpoint sim:/keydecode/Ctrl/*
-force -freeze sim:/keydecode/Clk 1 0, 0 {5000 ps} -r 10000
-force -freeze sim:/keydecode/Reset 1 0
-force -freeze sim:/keydecode/KbdLin 1111 0
-force -freeze sim:/keydecode/Tdelay 00 0
-force -freeze sim:/keydecode/Kack 0 0
+add wave -position insertpoint sim:/keycontrol/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftabvhyk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftabvhyk
+force -freeze sim:/keycontrol/rst 1 0
+force -freeze sim:/keycontrol/clk 1 0, 0 {5000 ps} -r 10000
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:22:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyControl_tb
+# -- Compiling architecture KeyControl_tb_arch of KeyControl_tb
+# End time: 12:22:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keycontrol_tb
+# End time: 12:22:25 on Mar 31,2026, Elapsed time: 0:28:44
+# Errors: 0, Warnings: 2
+# vsim work.keycontrol_tb 
+# Start time: 12:22:25 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keycontrol_tb(keycontrol_tb_arch)
+# Loading work.keycontrol(behavioral)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/keycontrol_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft5d56s4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5d56s4
 run
-force -freeze sim:/keydecode/Reset 0 0
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+vsim work.keyboardreader_tb
+# End time: 14:28:55 on Mar 31,2026, Elapsed time: 2:06:30
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 14:28:55 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(keyboardreader_tb_arch)
+# Loading work.keyboardreader(structural)
+# Loading work.keydecode(structural)
+# Loading work.keycontrol(behavioral)
+# Loading work.keyscan(structural)
+# Loading work.counter(structural)
+# Loading work.adder(structural)
+# Loading work.fa(structural)
+# Loading work.ha(structural)
+# Loading work.rg2(logicfunction)
+# Loading work.ffd(logicfunction)
+# Loading work.decoder(structural)
+# Loading work.demux(structural)
+# Loading work.penc42(structural)
+# Loading work.penc(structural)
+# Loading work.mux2_1(structural)
+# ** Warning: (vsim-8683) Uninitialized out port /keyboardreader_tb/UUT/TXd has no driver.
+# This port will contribute value (U) to the signal network.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/keyboardreader_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftr6z8e2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftr6z8e2
 run
 run
 run
@@ -354,8 +1989,1089 @@ run
 run
 run
 run
-force -freeze sim:/keydecode/KbdLin 1110 0
 run
 run
 run
 run
+vsim work.serialreceiver_tb
+# End time: 15:13:54 on Mar 31,2026, Elapsed time: 0:44:59
+# Errors: 0, Warnings: 3
+# vsim work.serialreceiver_tb 
+# Start time: 15:13:54 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver_tb(serialreceiver_tb_arch)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/serialreceiver_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftvssaes".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvssaes
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
+# 
+# 
+restart
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.shiftreg
+# End time: 15:43:28 on Mar 31,2026, Elapsed time: 0:29:34
+# Errors: 0, Warnings: 0
+# vsim work.shiftreg 
+# Start time: 15:43:28 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.shiftreg(structural)
+# Loading work.lsl(rtl)
+# Loading work.rg10(logicfunction)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/shiftreg/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftvixsdq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvixsdq
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:12 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder
+# -- Compiling architecture structural of Adder
+# -- Loading entity FA
+# End time: 15:45:12 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CLKDIV
+# -- Compiling architecture bhv of CLKDIV
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter
+# -- Compiling architecture structural of Counter
+# -- Loading entity Adder
+# -- Loading entity RG2
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter_tb
+# -- Compiling architecture Counter_tb_arch of Counter_tb
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder
+# -- Compiling architecture structural of Decoder
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_tb
+# -- Compiling architecture Decoder_tb_arch of Decoder_tb
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DeMUX
+# -- Compiling architecture structural of DeMUX
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture structural of FA
+# -- Loading entity HA
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FFD
+# -- Compiling architecture logicFunction of FFD
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HA
+# -- Compiling architecture structural of HA
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader
+# -- Compiling architecture structural of KeyboardReader
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# End time: 15:45:13 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyControl
+# -- Compiling architecture behavioral of KeyControl
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyControl_tb
+# -- Compiling architecture KeyControl_tb_arch of KeyControl_tb
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyDecode
+# -- Compiling architecture structural of KeyDecode
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyScan
+# -- Compiling architecture structural of KeyScan
+# -- Loading entity PEnc42
+# -- Loading entity RG2
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LSL
+# -- Compiling architecture rtl of LSL
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX2_1
+# -- Compiling architecture structural of MUX2_1
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX4_1
+# -- Compiling architecture structural of MUX4_1
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PELCD
+# -- Compiling architecture structural of PELCD
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PEnc
+# -- Compiling architecture structural of PEnc
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PEnc42
+# -- Compiling architecture structural of PEnc42
+# -- Loading entity PEnc
+# -- Loading entity MUX2_1
+# End time: 15:45:14 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:14 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG2
+# -- Compiling architecture logicFunction of RG2
+# -- Loading entity FFD
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:15 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG4
+# -- Compiling architecture logicFunction of RG4
+# -- Loading entity FFD
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:15 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG10
+# -- Compiling architecture logicFunction of RG10
+# -- Loading entity FFD
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:15 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver
+# -- Compiling architecture structural of SerialReceiver
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:15 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver_tb
+# -- Compiling architecture SerialReceiver_tb_arch of SerialReceiver_tb
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:15 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftReg
+# -- Compiling architecture structural of ShiftReg
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(31): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(32): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(33): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(34): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(35): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(36): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(37): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(38): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(39): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(40): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(49): VHDL Compiler exiting
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 10, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:15 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine
+# -- Compiling architecture structural of TicketMachine
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:15 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# End time: 15:45:15 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.shiftreg
+# End time: 15:45:29 on Mar 31,2026, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 2
+# vsim work.shiftreg 
+# Start time: 15:45:29 on Mar 31,2026
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.shiftreg(structural) because work.shiftreg has changed.
+# Error loading design
+# End time: 15:45:29 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.shiftreg
+# vsim work.shiftreg 
+# Start time: 15:46:06 on Mar 31,2026
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.shiftreg(structural) because work.shiftreg has changed.
+# Error loading design
+# End time: 15:46:07 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:46:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftReg
+# -- Compiling architecture structural of ShiftReg
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(31): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(32): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(33): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(34): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(35): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(36): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(37): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(38): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(39): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(40): (vcom-1035) Formal port "EN" has OPEN or no actual associated with it.
+# ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd(49): VHDL Compiler exiting
+# End time: 15:46:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 10, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:32 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftReg
+# -- Compiling architecture structural of ShiftReg
+# End time: 15:47:32 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.shiftreg
+# vsim work.shiftreg 
+# Start time: 15:47:35 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.shiftreg(structural)
+# Loading work.ffd(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/shiftreg/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftmiqgxa".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmiqgxa
+force -freeze sim:/shiftreg/SerialIn 1 0
+force -freeze sim:/shiftreg/SCLK 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/shiftreg/enableShift 1 0
+force -freeze sim:/shiftreg/rst 1 0
+run
+force -freeze sim:/shiftreg/enableShift 0 0
+force -freeze sim:/shiftreg/rst 0 0
+run
+run
+force -freeze sim:/shiftreg/enableShift 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.serialreceiver
+# End time: 15:50:47 on Mar 31,2026, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 2
+# vsim work.serialreceiver 
+# Start time: 15:50:47 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "SerialIn".
+#    Time: 0 ps  Iteration: 0  Instance: /serialreceiver/ShiReg0 File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd Line: 6
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:50:47 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.serialreceiver
+# vsim work.serialreceiver 
+# Start time: 15:52:18 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "SerialIn".
+#    Time: 0 ps  Iteration: 0  Instance: /serialreceiver/ShiReg0 File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd Line: 6
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:52:19 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder
+# -- Compiling architecture structural of Adder
+# -- Loading entity FA
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/clkDIV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CLKDIV
+# -- Compiling architecture bhv of CLKDIV
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter
+# -- Compiling architecture structural of Counter
+# -- Loading entity Adder
+# -- Loading entity RG2
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter_tb
+# -- Compiling architecture Counter_tb_arch of Counter_tb
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder
+# -- Compiling architecture structural of Decoder
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_tb
+# -- Compiling architecture Decoder_tb_arch of Decoder_tb
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/DeMUX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DeMUX
+# -- Compiling architecture structural of DeMUX
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture structural of FA
+# -- Loading entity HA
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FFD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FFD
+# -- Compiling architecture logicFunction of FFD
+# End time: 15:54:18 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:18 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/HA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HA
+# -- Compiling architecture structural of HA
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader
+# -- Compiling architecture structural of KeyboardReader
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture KeyboardReader_tb_arch of KeyboardReader_tb
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyControl
+# -- Compiling architecture behavioral of KeyControl
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyControl_tb
+# -- Compiling architecture KeyControl_tb_arch of KeyControl_tb
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyDecode
+# -- Compiling architecture structural of KeyDecode
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyScan
+# -- Compiling architecture structural of KeyScan
+# -- Loading entity PEnc42
+# -- Loading entity RG2
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LSL
+# -- Compiling architecture rtl of LSL
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX2_1
+# -- Compiling architecture structural of MUX2_1
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX4_1
+# -- Compiling architecture structural of MUX4_1
+# End time: 15:54:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PELCD
+# -- Compiling architecture structural of PELCD
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PEnc
+# -- Compiling architecture structural of PEnc
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PEnc42
+# -- Compiling architecture structural of PEnc42
+# -- Loading entity PEnc
+# -- Loading entity MUX2_1
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG2
+# -- Compiling architecture logicFunction of RG2
+# -- Loading entity FFD
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG4
+# -- Compiling architecture logicFunction of RG4
+# -- Loading entity FFD
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RG10
+# -- Compiling architecture logicFunction of RG10
+# -- Loading entity FFD
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver
+# -- Compiling architecture structural of SerialReceiver
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver_tb
+# -- Compiling architecture SerialReceiver_tb_arch of SerialReceiver_tb
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftReg
+# -- Compiling architecture structural of ShiftReg
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine
+# -- Compiling architecture structural of TicketMachine
+# End time: 15:54:20 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:54:20 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TicketMachine_tb
+# -- Compiling architecture TicketMachine_tb_arch of TicketMachine_tb
+# End time: 15:54:21 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.serialreceiver
+# vsim work.serialreceiver 
+# Start time: 15:54:24 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.ffd(logicfunction)
+# Loading work.rg10(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/serialreceiver/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft4x37wz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4x37wz
+vsim work.serialreceiver_tb
+# End time: 15:55:15 on Mar 31,2026, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 2
+# vsim work.serialreceiver_tb 
+# Start time: 15:55:15 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver_tb(serialreceiver_tb_arch)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.ffd(logicfunction)
+# Loading work.rg10(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/serialreceiver_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftv7kxxe".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftv7kxxe
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.ticketmachine
+# End time: 16:02:23 on Mar 31,2026, Elapsed time: 0:07:08
+# Errors: 0, Warnings: 2
+# vsim work.ticketmachine 
+# Start time: 16:02:23 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ticketmachine(structural)
+# ** Error: (vsim-3173) Entity 'C:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim/rtl_work.usbport' has no architecture.
+# Load interrupted
+# Error loading design
+# End time: 16:02:24 on Mar 31,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vsim work.serialreceiver
+# vsim work.serialreceiver 
+# Start time: 16:02:26 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.ffd(logicfunction)
+# Loading work.rg10(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/serialreceiver/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlftbi0nq6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbi0nq6
+force -freeze sim:/serialreceiver/SS 1 0
+force -freeze sim:/serialreceiver/SCLK 1 0, 0 {5000 ps} -r 10000
+force -freeze sim:/serialreceiver/SDX 1 0
+force -freeze sim:/serialreceiver/rst 1 0
+run
+force -freeze sim:/serialreceiver/rst 0 0
+force -freeze sim:/serialreceiver/SS 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/serialreceiver/SS 1 0
+run
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:05:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver
+# -- Compiling architecture structural of SerialReceiver
+# End time: 16:05:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:05:19 on Mar 31,2026
+# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver_tb
+# -- Compiling architecture SerialReceiver_tb_arch of SerialReceiver_tb
+# End time: 16:05:19 on Mar 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.serialreceiver_tb
+# End time: 16:05:27 on Mar 31,2026, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 2
+# vsim work.serialreceiver_tb 
+# Start time: 16:05:27 on Mar 31,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serialreceiver_tb(serialreceiver_tb_arch)
+# Loading work.serialreceiver(structural)
+# Loading work.shiftreg(structural)
+# Loading work.ffd(logicfunction)
+# Loading work.rg10(logicfunction)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/serialreceiver_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
+#           Attempting to use alternate WLF file "./wlft9ry1za".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9ry1za
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint sim:/serialreceiver_tb/*
+add wave -position insertpoint sim:/serialreceiver_tb/UUT/ShiReg/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+force -freeze sim:/serialreceiver_tb/SS_TB 1 0
+run
+# End time: 17:26:17 on Mar 31,2026, Elapsed time: 1:20:50
+# Errors: 0, Warnings: 0

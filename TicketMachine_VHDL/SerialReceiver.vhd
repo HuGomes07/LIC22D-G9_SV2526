@@ -16,7 +16,7 @@ architecture structural of SerialReceiver is
 component ShiftReg is
 	port(
 		SerialIn: in std_logic;
-		CLK: in std_logic;
+		SCLK: in std_logic;
 		enableShift: in std_logic;
 		rst: in std_logic;
 		Q: out std_logic_vector(9 downto 0)
@@ -36,6 +36,6 @@ signal nSS: std_logic;
 
 begin
 	nSS <= not(SS);
-	ShiReg:	ShiftReg	port map(SerialIn => SDX, CLK => SCLK, enableShift => nSS, rst => rst, Q => toReg);
+	ShiReg:	ShiftReg	port map(SerialIn => SDX, SCLK => SCLK, enableShift => nSS, rst => rst, Q => toReg);
 	HldReg:	RG10		port map(D => toReg, Q => Q, CLK => SS, EN => '1', Reset => rst);
 end structural;

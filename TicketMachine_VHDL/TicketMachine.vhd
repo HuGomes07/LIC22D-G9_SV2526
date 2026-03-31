@@ -6,12 +6,12 @@ entity TicketMachine is
 		MClk: in std_logic;
 		rst: in std_logic;
 		KbdLin: in std_logic_vector(3 downto 0);
-		KbdCol: out std_logic_vector(3 downto 0);
+		SW: in std_logic_vector(9 downto 0);		-- SW(0) -> Kack,
 		Tdelay: in std_logic_vector(1 downto 0);
+		KbdCol: out std_logic_vector(3 downto 0);
 		LCD_Data: out std_logic_vector(7 downto 0);
 		LCD_En	: out std_logic;
 		LCD_RS	: out std_logic;
-		SW: in std_logic_vector(9 downto 0);		-- SW(0) -> Kack,
 		LED: out std_logic_vector(9 downto 0)
 	);
 end TicketMachine;
@@ -65,13 +65,13 @@ signal UsbIn, UsbOut	: std_logic_vector(7 downto 0);
 signal D		: std_logic_vector(8 downto 0);
 signal D9		: std_logic;
 	begin
---			Input: Outros[3], Kval[4], K	   	Output: Outros[4], Selec, CLK, SDX
+--			Input: Outros[3], Kval, K[4]	   	Output: Outros[4], Selec, CLK, SDX
 		USBPrt:	UsbPort		port map(inputPort => UsbIn, outputPort => UsbOut);
 		Osc:	CLKDIV 		port map(clk_in => MClk, clk_out => clk);
-		Readr: 	KeyboardReader	port map(Clk => clk, Reset => rst, KbdLin => KbdLin, Tdelay => Tdelay, KbdCol => KbdCol, TXd => Xd, UPort => UsbIn, Kack => SW(0));
+		Readr: 	KeyboardReader	port map(Clk => clk, Reset => rst, KbdLin => KbdLin, Tdelay => Tdelay, KbdCol => KbdCol, TXd => Xd, UPort => UsbIn, Kack => UsbOut(7));
 		ExpLCD:	PELCD		port map(LCDsel => UsbOut(0), SCLK => UsbOut(1), SDX => UsbOut(2), rst => rst, D => D, D9 => D9);
-		LCD_Data <= D(7) & D(6) & D(6) & D(6) & D(6) & D(6) & D(6) & D(6);
-		LCD_Rs <= D(8);
+		LCD_Data <= D(8) & D(7) & D(6) & D(5) & D(4) & D(3) & D(2) & D(1);
+		LCD_Rs <= D(0);
 		LCD_En <= D9;
 		LED <= "00" & UsbIn;
 		--ExpTic: PETicket port map();

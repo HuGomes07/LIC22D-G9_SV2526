@@ -16,7 +16,7 @@ ARCHITECTURE logicFunction OF FFD IS
 BEGIN
 
 
-Q <= '1' when RESET = '1' else '1' when SET = '1' else D WHEN rising_edge(clk) and EN = '1';
+Q <= '0' when RESET = '1' else '1' when SET = '1' else D WHEN rising_edge(clk) and EN = '1';
 
 
 END LogicFunction;
