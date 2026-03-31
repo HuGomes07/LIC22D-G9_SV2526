@@ -4,8 +4,17 @@ import kotlin.math.log2
 
 fun main(args: Array<String>) {
     HAL.init()
-    Time.sleep(3000)
-    SerialEmitter.send(SerialEmitter.Peripheral.LCD, 0b01001110)
+/*
+    LCD.writeCMD(0b11110000)
+*/
+    LCD.writeCMD(0b00110000)
+    LCD.writeCMD(0b00110000)
+    LCD.writeCMD(0b00110000)
+
+    LCD.writeCMD(0b00110100)//+10==2  2 linhas N;
+    LCD.writeCMD(0b00001000)
+    LCD.writeCMD(0b00000001)
+    LCD.writeCMD(0b00000110)
 }
 
 //masks:
@@ -17,28 +26,30 @@ fun main(args: Array<String>) {
     const val sdx =       0b00000100
 //
 object HAL{
+    var outs = 0b00000000
+
     fun init(){
         clrBits(0b11111111)
     }
     fun writeBit(mask:Int, value: Int) {
-        val currBits =UsbPort.read()
-        UsbPort.write((currBits and mask.inv()) or (value and mask))
+        outs = (outs and mask.inv()) or (value and mask)
+        UsbPort.write(outs)
     }
     fun isBit(value: Int): Boolean {
-        val currBits = UsbPort.read()
-        return (value and currBits) != 0
+        outs = value and outs
+        return (outs) != 0
     }
     fun readBit(mask:Int): Int{
-        val currBits = UsbPort.read()
-        return (mask and currBits)
+        outs = mask and outs
+        return (outs)
     }
     fun setBits(mask:Int) {
-        val currBits = UsbPort.read()
-        UsbPort.write(currBits or mask)
+        outs = outs or mask
+        UsbPort.write(outs)
     }
     fun clrBits(mask:Int) {
-        val currBits = UsbPort.read()
-        UsbPort.write(currBits and mask.inv())
+        outs = outs and mask.inv()
+        UsbPort.write(outs)
     }
 }
 
@@ -76,21 +87,6 @@ object SerialEmitter {
     enum class Peripheral {LCD, TICKET}
 
     fun init() {
-        Time.sleep(1000)
-
-        send(Peripheral.LCD, 0b0000110000)
-        Time.sleep(5)
-        send(Peripheral.LCD, 0b0000110000)
-        Time.sleep(1)
-        send(Peripheral.LCD, 0b0000110000)
-
-        send(Peripheral.LCD, 0b0000111000)  //0b000000100 => N  0=1line 1=2line F => 0b00001000 1:0 5x10dots:5x8
-        send(Peripheral.LCD, 0b0000001000)
-        send(Peripheral.LCD, 0b0000000001)
-        send(Peripheral.LCD, 0b0000000110)
-
-        send(Peripheral.LCD, 0b0000001111)
-
     }
     fun send(addr: Peripheral, data: Int) {
         val sel = LCDsel
@@ -105,9 +101,11 @@ object SerialEmitter {
         HAL.clrBits(sel)
 
         // Send exactly 10 bits (MSB first)
-        for (i in 9 downTo 0) {
+        for (i in 0.. 9) {
             val bit = (data shr i) and 1
-
+/*
+            println("Bit: $bit, i: $i")
+*/
             if (bit == 1) HAL.setBits(sdx)
             else HAL.clrBits(sdx)
 
@@ -132,11 +130,13 @@ object LCD {
     const val COLS = 16
     fun writeByteSerial(rs: Boolean, data: Int) {
         val rsBit = if (rs) 1 else 0
+        val notRsBit = if (rs) 0 else 1
+        // Build frame: E (bit 9),  RS (bit 0), DATA (bits 8–1)
+        val firstFrame = (1 shl 9) or (data shl 1) or rsBit
+        val secondFrame = (0 shl 9) or (data shl 1) or rsBit
 
-        // Build frame: RS (bit 9), DATA (bits 8–1), E (bit 0)
-        val frame = (rsBit shl 9) or (data shl 1) or 1
-
-        SerialEmitter.send(SerialEmitter.Peripheral.LCD, frame)
+        SerialEmitter.send(SerialEmitter.Peripheral.LCD, firstFrame)
+        SerialEmitter.send(SerialEmitter.Peripheral.LCD, secondFrame)
     }
     fun writeByte (rs: Boolean, data: Int) {
         writeByteSerial(rs, data)
