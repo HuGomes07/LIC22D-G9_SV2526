@@ -1,29 +1,33 @@
 import isel.leic.UsbPort
 import isel.leic.utils.Time
-import kotlin.math.log2
 
 fun main(args: Array<String>) {
     HAL.init()
-/*
-    LCD.writeCMD(0b11110000)
-*/
-    LCD.writeCMD(0b00110000)
-    LCD.writeCMD(0b00110000)
-    LCD.writeCMD(0b00110000)
+    LCD.init()
+    LCD.writeCMD(0b01000000)
+    LCD.writeDATA(0b010101010)
 
-    LCD.writeCMD(0b00110100)//+10==2  2 linhas N;
-    LCD.writeCMD(0b00001000)
-    LCD.writeCMD(0b00000001)
-    LCD.writeCMD(0b00000110)
+    /*while (true){
+        if (HAL.isBit(kValMask)){
+            val k = KBD.getKey()
+            println(k)
+            HAL.setBits(k_ack)
+            HAL.clrBits(k_ack)
+        }
+
+
+    }*/
+
 }
 
 //masks:
-    const val kMask =     0b00001111
-    const val kValMask =  0b00010000
+    const val k_ack =       0b10000000
+    const val kMask =       0b00001111
+    const val kValMask =    0b00010000
 
-    const val LCDsel =    0b00000001
-    const val sCLK =      0b00000010
-    const val sdx =       0b00000100
+    const val LCDsel =      0b00000001
+    const val sCLK =        0b00000010
+    const val sdx =         0b00000100
 //
 object HAL{
     var outs = 0b00000000
@@ -36,12 +40,12 @@ object HAL{
         UsbPort.write(outs)
     }
     fun isBit(value: Int): Boolean {
-        outs = value and outs
-        return (outs) != 0
+        val currBits = UsbPort.read()
+        return (value and currBits) != 0
     }
     fun readBit(mask:Int): Int{
-        outs = mask and outs
-        return (outs)
+        val currBits = UsbPort.read()
+        return (mask and currBits)
     }
     fun setBits(mask:Int) {
         outs = outs or mask
@@ -91,7 +95,7 @@ object SerialEmitter {
     fun send(addr: Peripheral, data: Int) {
         val sel = LCDsel
 
-        val interval = 10L
+        val interval = 1L
 
         // Ensure idle state
         HAL.setBits(sel)
@@ -149,11 +153,15 @@ object LCD {
         writeByte(true, data)
     }
     fun init() {
-        Time.sleep(50)
-        writeCMD(0x38) // 8-bit, 2 lines
-        writeCMD(0x0C) // display ON
-        writeCMD(0x01) // clear
-        writeCMD(0x06) // entry mode
+        LCD.writeCMD(0b00110000)
+        LCD.writeCMD(0b00110000)
+        LCD.writeCMD(0b00110000)
+
+        LCD.writeCMD(0b00111000)//+10==2  2 linhas N;
+        LCD.writeCMD(0b00001000)
+        LCD.writeCMD(0b00000001)
+        LCD.writeCMD(0b00000110)
+        LCD.writeCMD(0b00001111)
     }
     fun write (c : Char ) {
         writeDATA(c.code)
@@ -169,6 +177,5 @@ object LCD {
     }
     fun clear() {
         writeCMD(0x01)
-        Time.sleep(2)
     }
 }
