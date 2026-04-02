@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity KeyScan is
+	port(
+		Clk     : in  std_logic;
+		rst     : in  std_logic;
+		Kscan   : in  std_logic;
+		KbdLin  : in  std_logic_vector(3 downto 0);
+		KbdCol  : out std_logic_vector(3 downto 0);
+		K       : out std_logic_vector(3 downto 0);
+		Kpress  : out std_logic
+	);
+end KeyScan;
+
+architecture structural of KeyScan is
+
+component Counter is
+	port(
+		CE,Reset    : in  std_logic;
+		MClk        : in  std_logic; 
+		Q           : out std_logic_vector(1 downto 0)
+	);
+end component Counter;
+
+component Decoder is
+	port(
+		S:	in  std_logic_vector(1 downto 0);
+		E:	in  std_logic;
+		O:  out std_logic_vector(3 downto 0)
+	);
+end component Decoder;
+
+signal Q,Ys,RgO         : std_logic_vector(1 downto 0);
+signal nKbdLin, DecO    : std_logic_vector(3 downto 0);
+signal REGclk           : std_logic;
+
+	begin
+		Cont:	Counter 			port map(CE => Kscan, Reset => rst, MClk => Clk, Q => Q);
+		DEC: 	Decoder port map(S(0) => Q(0), S(1) => Q(1), E => '1', O => DecO);
+		KbdCol <= not DecO;
+		nKbdLin <= not KbdLin;
+		REGclk <= not Kscan;
+		PEnc: entity work.PEnc42 port map (I=>nKbdLin,A=>Ys, Gs=>Kpress );
+		RG: entity work.RG2 port map(D=>Ys , Q=>RgO ,En=>'1',CLK=>REGclk, Reset=>rst);
+--		MUX: 	MUX4_1KeyScan	port map(I0 => KbdLin(0), I1 => KbdLin(1), I2 => KbdLin(2), 		
+--			I3 => KbdLin(3), S0 => Q(0), S1 => Q(1), Y => Kpress);
+		K <= Q & RgO;
+
+end structural;

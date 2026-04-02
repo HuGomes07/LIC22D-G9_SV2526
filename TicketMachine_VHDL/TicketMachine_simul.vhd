@@ -1,0 +1,67 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity TicketMachine_simul is
+	port(
+		MClk: in std_logic;
+		rst: in std_logic;
+		KbdLin: in std_logic_vector(3 downto 0);
+		UsbOut: in std_logic_vector(7 downto 0);
+		Tdelay: in std_logic_vector(1 downto 0);
+		KbdCol: out std_logic_vector(3 downto 0);
+		LCD_Data: out std_logic_vector(7 downto 0);
+		LCD_En	: out std_logic;
+		LCD_RS	: out std_logic
+	);
+end TicketMachine_simul;
+
+architecture structural of TicketMachine_simul is
+
+component KeyboardReader is
+	port(
+		Clk: in std_logic;
+		Reset: in std_logic;
+		KbdLin: in std_logic_vector(3 downto 0);
+		Tdelay: in std_logic_vector(1 downto 0);
+		KbdCol: out std_logic_vector(3 downto 0);
+		TXd: out std_logic;
+		UPort: out std_logic_vector(7 downto 0);
+		
+		Kack: in std_logic
+	);
+end component KeyboardReader;
+
+component UsbPort is
+	port(
+		inputPort:  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		outputPort :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+end component UsbPort;
+
+component PELCD is
+	port(
+		LCDsel: in std_logic;
+		SCLK	: in std_logic;
+		SDX	: in std_logic;
+		rst	: in std_logic;
+		D		: out std_logic_vector(8 downto 0);
+		D9		: out std_logic
+	);
+end component PELCD;
+
+signal clk		: std_logic;
+signal Xd		: std_logic;
+-- O que sao estes dois signals acima?
+
+signal UsbIn	: std_logic_vector(7 downto 0);
+signal D		: std_logic_vector(8 downto 0);
+signal D9		: std_logic;
+	begin
+--			Input: Outros[3], Kval, K[4]	   	Output: Outros[4], SDX, SCLK, LCDsel
+		Readr: 	KeyboardReader	port map(Clk => MClk, Reset => rst, KbdLin => KbdLin, Tdelay => Tdelay, KbdCol => KbdCol, TXd => Xd, UPort => UsbIn, Kack => UsbOut(7));
+		ExpLCD:	PELCD		port map(LCDsel => UsbOut(0), SCLK => MClk, SDX => UsbOut(2), rst => rst, D => D, D9 => D9);
+		LCD_Data <= D(8) & D(7) & D(6) & D(5) & D(4) & D(3) & D(2) & D(1);
+		LCD_Rs <= D(0);
+		LCD_En <= D9;
+		--ExpTic: PETicket port map();
+end structural;
