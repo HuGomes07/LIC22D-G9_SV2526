@@ -9,7 +9,7 @@ entity KeyboardReader is
 		Tdelay: in std_logic_vector(1 downto 0);
 		KbdCol: out std_logic_vector(3 downto 0);
 		TXd: out std_logic;
-		UPort: out std_logic_vector(7 downto 0);
+		UPort: out std_logic_vector(4 downto 0);
 		
 		Kack: in std_logic
 	);
@@ -36,5 +36,5 @@ begin
 	Decode:	KeyDecode 		port map(Clk => Clk, Reset => Reset, Kack => Kack, Tdelay => Tdelay, KbdLin => KbdLin, Kval => Kval, Kcode => K, KbdCol => KbdCol);
 --	Buff	:	RingBuffer 		port map();
 --	Transm:	KeyTransmitter port map();
-	UPort <= "000" & Kval & K;
+	UPort <= Kval & K;
 end structural;

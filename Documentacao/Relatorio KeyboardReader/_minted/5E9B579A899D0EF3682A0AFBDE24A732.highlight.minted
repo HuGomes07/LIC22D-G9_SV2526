@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{library}\PYG{+w}{ }\PYG{n+nn}{ieee}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n+nn}{ieee.std\PYGZus{}logic\PYGZus{}1164.}\PYG{k}{all}\PYG{p}{;}
+
+\PYG{k}{entity}\PYG{+w}{ }\PYG{n+nc}{Counter}\PYG{+w}{ }\PYG{k}{is}\PYG{+w}{ }\PYG{k}{port}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{CE}\PYG{p}{,}\PYG{n}{Reset}\PYG{+w}{    }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{  }\PYG{k+kt}{std\PYGZus{}logic}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{MClk}\PYG{+w}{        }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{  }\PYG{k+kt}{std\PYGZus{}logic}\PYG{p}{;}\PYG{+w}{ }
+\PYG{+w}{	}\PYG{n}{Q}\PYG{+w}{           }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{std\PYGZus{}logic\PYGZus{}vector}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{downto}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{p}{);}
+\PYG{k}{end}\PYG{+w}{ }\PYG{n+nc}{Counter}\PYG{p}{;}
+
+\PYG{k}{architecture}\PYG{+w}{ }\PYG{n+nc}{structural}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n+nc}{Counter}\PYG{+w}{ }\PYG{k}{is}\PYG{+w}{ }
+\PYG{+w}{	}\PYG{k}{signal}\PYG{+w}{ }\PYG{n}{CurrQ}\PYG{p}{,}\PYG{n}{RGtoAdd}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{std\PYGZus{}logic\PYGZus{}vector}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{downto}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{k}{begin}
+\PYG{+w}{	}\PYG{n}{Adder}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{entity}\PYG{+w}{ }\PYG{n+nc}{work}\PYG{p}{.}\PYG{n}{Adder}\PYG{+w}{ }\PYG{k}{port}\PYG{+w}{ }\PYG{k}{map}\PYG{p}{(}\PYG{n}{A}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{RGtoAdd}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{B}\PYG{o}{=\PYGZgt{}}\PYG{l+s}{\PYGZdq{}00\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Cin}\PYG{o}{=\PYGZgt{}}\PYG{l+s+sc}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{R}\PYG{o}{=\PYGZgt{}}\PYG{n}{CurrQ}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n}{Reg}\PYG{+w}{   }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{entity}\PYG{+w}{ }\PYG{n+nc}{work}\PYG{p}{.}\PYG{n}{RG2}\PYG{+w}{   }\PYG{k}{port}\PYG{+w}{ }\PYG{k}{map}\PYG{p}{(}\PYG{n}{CLK}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{n}{MCLK}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{D}\PYG{o}{=\PYGZgt{}}\PYG{n}{CurrQ}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Q}\PYG{o}{=\PYGZgt{}}\PYG{n}{RGtoAdd}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{En}\PYG{o}{=\PYGZgt{}}\PYG{n}{CE}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Reset}\PYG{o}{=\PYGZgt{}}\PYG{n}{Reset}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n}{Q}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{RGtoAdd}\PYG{p}{;}
+\PYG{k}{end}\PYG{+w}{ }\PYG{n+nc}{structural}\PYG{p}{;}
+\end{MintedVerbatim}

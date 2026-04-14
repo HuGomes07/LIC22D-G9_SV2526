@@ -10,6 +10,11 @@ fun main() {
             val k = KBD.getKey()
             LCD.write(k)
             println(k)
+            var code = currCol + currLine + 1
+            println("Code is: ${code}")
+            when(currCol) {
+
+            }
             currCol++
             HAL.setBits(k_ack)
             while(HAL.isBit(kValMask));
@@ -20,7 +25,7 @@ fun main() {
                 if(currLine++ < LCD.LINES) currLine++
                 else {
                     currLine = 0
-                    LCD.writeCMD(0b00011000)
+                    //LCD.writeCMD(0b00011000)
                 }
                 LCD.cursor(currLine, currCol)
             }

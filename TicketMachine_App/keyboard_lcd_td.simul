@@ -1,0 +1,52 @@
+## --- Additional packages with Hardware to Simulator
+package isel.leic.simul
+
+# Generic modules to activate from Simulator
+UsbPort = UsbPort
+kbd  = Keyboard("123A456B789C*0#D",4,4,0)
+lcd     = LCD
+sr_lcd  = ShiftRegister(10)
+hr_lcd  = Register(10)
+inv_lcd = Not
+
+sr_td   = ShiftRegister(10)
+hr_td   = Register(10)
+inv_td  = Not
+
+# --------------------------------------
+# KeyBoard Reader
+# --------------------------------------
+# Key Decode
+1 -> kbd.oe
+kbd.val -> UsbPort.I4
+kbd.K[0-3] -> UsbPort.I[0-3]
+UsbPort.O7-> kbd.ack
+
+# --------------------------------------
+# USB Port connections to PE's
+# --------------------------------------
+# SDX
+UsbPort.O2 -> sr_lcd.in, sr_td.in
+# SCLK
+UsbPort.O1-> sr_lcd.clk, sr_td.clk
+# SS_LCD
+UsbPort.O0-> inv_lcd.in, hr_lcd.clk
+# SS_TD
+UsbPort.O3-> inv_td.in, hr_td.clk
+
+# --------------------------------------
+# PE LCD
+# --------------------------------------
+# Port Expander
+inv_lcd.out -> sr_lcd.en
+sr_lcd.out[0-9] -> hr_lcd.in[0-9]
+hr_lcd.out[1-8] -> lcd.D[0-7]
+hr_lcd.out0 -> lcd.rs
+hr_lcd.out9-> lcd.e
+
+# --------------------------------------
+# PE TD
+# --------------------------------------
+# Port Expander
+inv_td.out -> sr_td.en
+sr_td.out[0-9] -> hr_td.in[0-9]

@@ -1,0 +1,41 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{library}\PYG{+w}{ }\PYG{n+nn}{ieee}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n+nn}{ieee.std\PYGZus{}logic\PYGZus{}1164.}\PYG{k}{all}\PYG{p}{;}
+
+\PYG{k}{entity}\PYG{+w}{ }\PYG{n+nc}{KeyControl}\PYG{+w}{ }\PYG{k}{is}
+\PYG{+w}{	}\PYG{k}{port}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{Kack}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Kpress}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rst}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{clk}\PYG{+w}{  }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{  }\PYG{k+kt}{std\PYGZus{}logic}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{Kval}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Kscan}\PYG{+w}{             }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{std\PYGZus{}logic}
+\PYG{+w}{	}\PYG{p}{);}
+\PYG{k}{end}\PYG{+w}{ }\PYG{n+nc}{KeyControl}\PYG{p}{;}
+
+\PYG{k}{architecture}\PYG{+w}{ }\PYG{n+nc}{behavioral}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n+nc}{KeyControl}\PYG{+w}{ }\PYG{k}{is}
+
+\PYG{k}{type}\PYG{+w}{ }\PYG{n}{STATES}\PYG{+w}{ }\PYG{k}{is}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{SCANNING}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SENDING}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ACKNOWLEDGED}\PYG{p}{);}
+\PYG{k}{signal}\PYG{+w}{ }\PYG{n}{CurrentState}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{NextState}\PYG{o}{:}\PYG{+w}{ }\PYG{n}{STATES}\PYG{p}{;}
+
+\PYG{k}{begin}
+\PYG{+w}{	}\PYG{n}{CurrentState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{SCANNING}\PYG{+w}{ }\PYG{k}{when}\PYG{+w}{ }\PYG{n}{rst}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}1\PYGZsq{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{k}{when}\PYG{+w}{ }\PYG{n}{rising\PYGZus{}edge}\PYG{p}{(}\PYG{n}{Clk}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n}{Kscan}\PYG{+w}{        }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}1\PYGZsq{}}\PYG{+w}{ }\PYG{k}{when}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{CurrentState}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{SCANNING}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Kval}\PYG{+w}{         }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}1\PYGZsq{}}\PYG{+w}{ }\PYG{k}{when}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{CurrentState}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{SENDING}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{;}
+
+\PYG{+w}{	}\PYG{n+nc}{GenerateNextState}\PYG{o}{:}
+\PYG{+w}{	}\PYG{k}{process}\PYG{p}{(}\PYG{n}{CurrentState}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Kack}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Kpress}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{begin}
+\PYG{+w}{		}\PYG{k}{case}\PYG{+w}{ }\PYG{n}{CurrentState}\PYG{+w}{ }\PYG{k}{is}
+\PYG{+w}{			}\PYG{k}{when}\PYG{+w}{ }\PYG{n}{SCANNING}\PYG{+w}{	}\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n}{Kpress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{then}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{SENDING}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{else}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{SCANNING}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{end}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{;}
+
+\PYG{+w}{			}\PYG{k}{when}\PYG{+w}{ }\PYG{n}{SENDING}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n}{Kack}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{then}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{ACKNOWLEDGED}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{else}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{SENDING}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{end}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{;}
+
+\PYG{+w}{			}\PYG{k}{when}\PYG{+w}{ }\PYG{n}{ACKNOWLEDGED}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n}{Kpress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{+w}{ }\PYG{k}{and}\PYG{+w}{ }\PYG{n}{Kack}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{then}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{SCANNING}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{elsif}\PYG{p}{(}\PYG{n}{Kpress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}1\PYGZsq{}}\PYG{+w}{ }\PYG{k}{and}\PYG{+w}{ }\PYG{n}{Kack}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{then}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{SENDING}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{else}\PYG{+w}{ }\PYG{n}{NextState}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{ACKNOWLEDGED}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{end}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{;}
+\PYG{+w}{		}\PYG{k}{end}\PYG{+w}{ }\PYG{k}{case}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{end}\PYG{+w}{ }\PYG{k}{process}\PYG{p}{;}
+\PYG{k}{end}\PYG{+w}{ }\PYG{n+nc}{behavioral}\PYG{p}{;}
+\end{MintedVerbatim}
