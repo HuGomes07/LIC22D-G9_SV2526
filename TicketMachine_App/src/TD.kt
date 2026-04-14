@@ -9,22 +9,20 @@ fun main(){
 object TicketDispenser {
     // Inicia a classe, estabelecendo os valores iniciais.
     val stations = arrayOf(
-        "Já foste",
+        "Ja foste",
         "Olha o que eu digo",
-        "Não havia necessidade",
-        "Isto é só rir",
+        "Nao havia necessidade",
+        "Isto e so rir",
         "Calma jovem",
-        "Que informação dramática",
-        "É lidar",
+        "Que informacao dramatica",
+        "E lidar",
         "Ai Jesus",
-        "Tá tudo bem",
-        "Só que não",
+        "Ta tudo bem",
+        "So que nao",
         "A vida custa",
         "Fica para a próxima",
-        "Não me chateies",
-        "É uma casa portuguesa com certeza",
-        "Agora aguenta",
-        "Tá quieto"
+        "Nao me chateies",
+        "Ta quieto"
     )
 
     fun init(){

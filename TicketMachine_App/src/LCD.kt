@@ -34,6 +34,8 @@ fun main() {
 }
 
 object LCD {
+    var currCol = 0
+    var currLine = 0
     const val LINES = 2
     const val COLS = 16
     fun writeByteSerial(rs: Boolean, data: Int) {
@@ -69,6 +71,13 @@ object LCD {
         LCD.writeCMD(0b00001111)
     }
     fun write (c : Char ) {
+        if(currCol == LCD.COLS) {
+            currCol = 0
+            if(currLine++ < LCD.LINES) currLine++
+            else currLine = 0
+            cursor(currLine, currCol)
+        }
+        currCol++
         writeDATA(c.code)
     }
     fun write (text : String ) {
@@ -82,5 +91,7 @@ object LCD {
     }
     fun clear() {
         writeCMD(0x01)
+        currCol=0
+        currLine=0
     }
 }

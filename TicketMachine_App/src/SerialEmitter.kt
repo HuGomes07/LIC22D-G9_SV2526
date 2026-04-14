@@ -4,15 +4,16 @@ fun main() {}
 
 object SerialEmitter {
     enum class Peripheral {LCD, TICKET}
-
+    var lastTDmsg = 0
     fun init() {
     }
     fun send(addr: Peripheral, data: Int) {
-        val sel = LCDsel
-
+        val sel = if(addr== Peripheral.TICKET) TDsel else LCDsel
+        if(addr== Peripheral.TICKET){
+            lastTDmsg = data shr 9
+        }
         val interval = 1L
 
-        // Ensure idle state
         HAL.setBits(sel)
         HAL.clrBits(sCLK)
 
@@ -22,24 +23,25 @@ object SerialEmitter {
         // Send exactly 10 bits (MSB first)
         for (i in 0.. 9) {
             val bit = (data shr i) and 1
-            /*
-                        println("Bit: $bit, i: $i")
-            */
+
             if (bit == 1) HAL.setBits(sdx)
             else HAL.clrBits(sdx)
 
+/*
             Time.sleep(interval)
+*/
 
             // Clock pulse
             HAL.setBits(sCLK)
+/*
             Time.sleep(interval)
+*/
             HAL.clrBits(sCLK)
         }
 
-        // End transmission
         HAL.setBits(sel)
     }
-    /*fun isBusy(): Boolean {
-        return false
-    }*/
+    fun isBusy(): Boolean {
+        return lastTDmsg != 0
+    }
 }
