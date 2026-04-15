@@ -21,7 +21,7 @@ object SerialEmitter {
         HAL.clrBits(sel)
 
         // Send exactly 10 bits (MSB first)
-        for (i in 0.. 9) {
+        for (i in 9 downTo 0) {
             val bit = (data shr i) and 1
 
             if (bit == 1) HAL.setBits(sdx)

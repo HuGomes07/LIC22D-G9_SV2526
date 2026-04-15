@@ -2,9 +2,15 @@ import isel.leic.utils.Time
 
 fun main(){
     HAL.clrBits(TDsel)
-    TicketDispenser.activatePrintingTicket(true, 2,2)
+    TicketDispenser.activatePrintingTicket(true, 3,7)
     HAL.setBits(TDsel)
 }
+
+//fun main() {
+//    HAL.init()
+//
+//    TicketDispenser.activatePrintingTicket(true, 3, 7)
+//}
 
 object TicketDispenser {
     // Inicia a classe, estabelecendo os valores iniciais.
