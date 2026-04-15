@@ -88,6 +88,9 @@ object LCD {
     fun cursor(line: Int, column : Int ) {
         val address = if (line == 0) column else 0x40 + column
         writeCMD(0x80 or address)
+
+        currLine = line
+        currCol = column
     }
     fun clear() {
         writeCMD(0x01)

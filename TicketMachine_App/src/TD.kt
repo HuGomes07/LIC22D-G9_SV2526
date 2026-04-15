@@ -1,10 +1,10 @@
 import isel.leic.utils.Time
 
-fun main(){
-    HAL.clrBits(TDsel)
-    TicketDispenser.activatePrintingTicket(true, 3,7)
-    HAL.setBits(TDsel)
-}
+//fun main(){
+//    HAL.clrBits(TDsel)
+//    TicketDispenser.activatePrintingTicket(true, 3,7)
+//    HAL.setBits(TDsel)
+//}
 
 //fun main() {
 //    HAL.init()
@@ -12,23 +12,36 @@ fun main(){
 //    TicketDispenser.activatePrintingTicket(true, 3, 7)
 //}
 
+fun main() {
+    HAL.init()
+    LCD.init()
+
+    val origin = 1
+    val destination = 12
+    val roundTrip = true
+
+    TicketDispenser.activatePrintingTicket(roundTrip, origin, destination)
+    TicketDispenser.printTicketLCD(origin, destination, roundTrip)
+}
+
+
 object TicketDispenser {
     // Inicia a classe, estabelecendo os valores iniciais.
     val stations = arrayOf(
-        "Ja foste",
-        "Olha o que eu digo",
-        "Nao havia necessidade",
-        "Isto e so rir",
-        "Calma jovem",
-        "Que informacao dramatica",
-        "E lidar",
-        "Ai Jesus",
-        "Ta tudo bem",
-        "So que nao",
-        "A vida custa",
-        "Fica para a próxima",
-        "Nao me chateies",
-        "Ta quieto"
+        "Travanca",
+        "Alfaiates",
+        "Barrancos",
+        "Cercal",
+        "Alvaiázere",
+        "Rio Tinto",
+        "Murtosa",
+        "Sernancelhe",
+        "Almada",
+        "Alfeizerão",
+        "Olivença",
+        "Fundão",
+        "Tabuaço",
+        "Moledo"
     )
 
     fun init(){
@@ -42,4 +55,20 @@ object TicketDispenser {
         SerialEmitter.send(SerialEmitter.Peripheral.TICKET, prePrint)
         SerialEmitter.send(SerialEmitter.Peripheral.TICKET, print)
     }
+
+    fun printTicketLCD(origin: Int, destination: Int, roundTrip: Boolean) {
+        val type = if (roundTrip) "RT" else "OW"
+
+        LCD.clear()
+        Time.sleep(500)
+
+        // linha de cima
+        LCD.cursor(0, 0)
+        LCD.write("o:${stations[origin]}")
+
+        // linha de baixo
+        LCD.cursor(1, 0)
+        LCD.write("d:${stations[destination]}")
+    }
+
 }
