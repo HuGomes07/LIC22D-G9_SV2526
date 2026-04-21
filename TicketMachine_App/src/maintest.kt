@@ -1,3 +1,4 @@
+import TicketDispenser.printTicketLCD
 import isel.leic.UsbPort
 import isel.leic.utils.Time
 
@@ -15,14 +16,18 @@ const val sCLK =            0b00000010
 const val sdx =             0b00000100
 const val TDsel =           0b00001000
 
+var roundTrip = false
+var mainDestination: Int = 0
+var mainOrigin: Int = 0
+var askedYet = false
+
 fun main(args: Array<String>) {
     HAL.init()
     LCD.init()
-
     var destination: Int? = null
     var origin: Int? = null
     var lastKey: Char? = null
-    var roundTrip = false
+
     while (true){
         if (HAL.isBit(kValMask)){
             Time.sleep(50)
@@ -30,26 +35,28 @@ fun main(args: Array<String>) {
             if (k == '*'){
                 if (origin == null) {
                     origin = lastKey.toString().hexToInt()
+                    mainOrigin = origin
                     println("Origin Saved")
                 }
-                else {
+                else if(destination == null){
                     println("Destination Saved")
                     destination = lastKey.toString().hexToInt()
-
-                    /*ADD "round trip?"*/
+                    mainDestination = destination
+                    LCD.clear()
+                    LCD.write("Round Trip? Press #, confirm *")
+                    askedYet = true
+                }else if(askedYet){
+                    printTicketLCD(mainOrigin.toString().hexToInt(),mainDestination.toString().hexToInt(), roundTrip)
                     TicketDispenser.activatePrintingTicket(
                         roundTrip,
-                        origin,
-                        destination,
+                        mainOrigin,
+                        mainDestination,
                     )
-                    LCD.clear()
-                    LCD.write("Orig.:" +TicketDispenser.stations[origin.toString().hexToInt()] + " Dest.:" +TicketDispenser.stations[destination.toString().hexToInt()])
                 }
             }else if(k == '#'){
-                roundTrip= !roundTrip
-                if (roundTrip){println("Round")}else
-                println("One way")
-            }else {
+                roundTrip = !roundTrip
+                if(roundTrip)println("Round Trip")else println("One way")
+            }else{
                 LCD.clear()
                 LCD.write(TicketDispenser.stations[k.toString().hexToInt()])
                 println(TicketDispenser.stations[k.toString().hexToInt()])
@@ -60,28 +67,20 @@ fun main(args: Array<String>) {
             HAL.clrBits(k_ack)
 
 
-            /*if(!SerialEmitter.isBusy()) {
-                *//*
-                TicketDispenser.activatePrintingTicket(true, 2, 2)
-*//*
-                while (!HAL.isBit(isPlaceSet));
-                val place1 = KBD.getKey()
-                LCD.clear()
-                LCD.write(TicketDispenser.stations[place1.toString().toInt()])
-                println(place1)
-                Time.sleep(1000)
-                while (!HAL.isBit(isPlaceSet));
-                val place2 = KBD.getKey()
-                LCD.clear()
-                LCD.write(TicketDispenser.stations[place2.toString().toInt()])
-                println(place2)
-                TicketDispenser.activatePrintingTicket(
-                    false,
-                    place1.toString().hexToInt(),
-                    place2.toString().hexToInt()
-                )
-
-            }*/
         }
     }
+}
+fun waitRoundTrip(){
+                LCD.clear()
+                while (!HAL.isBit(kValMask ));
+                if (KBD.getKey()=='*'){
+
+                    LCD.clear()
+                    printTicketLCD(mainOrigin.toString().hexToInt(),mainDestination.toString().hexToInt(), roundTrip)
+                }/*else if(KBD.getKey()=='#'){
+                    roundTrip= !roundTrip
+                    if (roundTrip){println("Round")}
+                    else println("One way")
+                }*/
+
 }

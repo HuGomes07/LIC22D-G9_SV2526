@@ -24,7 +24,6 @@ fun main() {
     TicketDispenser.printTicketLCD(origin, destination, roundTrip)
 }
 
-
 object TicketDispenser {
     // Inicia a classe, estabelecendo os valores iniciais.
     val stations = arrayOf(
@@ -32,14 +31,14 @@ object TicketDispenser {
         "Alfaiates",
         "Barrancos",
         "Cercal",
-        "Alvaiázere",
+        "Alvaiazere",
         "Rio Tinto",
         "Murtosa",
         "Sernancelhe",
         "Almada",
-        "Alfeizerão",
+        "Alfeizerao",
         "Olivença",
-        "Fundão",
+        "Fundao",
         "Tabuaço",
         "Moledo"
     )
@@ -50,14 +49,14 @@ object TicketDispenser {
     // Envia comando para dispensar um bilhete
     fun activatePrintingTicket(roundTrip: Boolean, origin: Int, destination: Int){
         val rt = if (roundTrip) 1 else 0
-        val prePrint = (0 shl 9) or (rt shl 8) or (origin shl 4) or destination
-        val print = (1 shl 9) or (rt shl 8) or  (origin shl 4) or destination
+        val prePrint = (0) or (rt shl 1) or (origin shl 5) or (destination  shl 9)
+        val print = (1) or (rt shl 1) or  (origin shl 5) or (destination  shl 9)
         SerialEmitter.send(SerialEmitter.Peripheral.TICKET, prePrint)
         SerialEmitter.send(SerialEmitter.Peripheral.TICKET, print)
     }
 
     fun printTicketLCD(origin: Int, destination: Int, roundTrip: Boolean) {
-        val type = if (roundTrip) "RT" else "OW"
+        //val type = if (roundTrip) "RT" else "OW"
 
         LCD.clear()
         Time.sleep(500)

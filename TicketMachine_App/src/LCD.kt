@@ -40,7 +40,7 @@ object LCD {
     const val COLS = 16
     fun writeByteSerial(rs: Boolean, data: Int) {
         val rsBit = if (rs) 1 else 0
-        val notRsBit = if (rs) 0 else 1
+
         // Build frame: E (bit 9),  RS (bit 0), DATA (bits 8–1)
         val firstFrame = (1 shl 9) or (data shl 1) or rsBit
         val secondFrame = (0 shl 9) or (data shl 1) or rsBit
