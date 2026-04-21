@@ -49,8 +49,11 @@ object TicketDispenser {
     // Envia comando para dispensar um bilhete
     fun activatePrintingTicket(roundTrip: Boolean, origin: Int, destination: Int){
         val rt = if (roundTrip) 1 else 0
-        val prePrint = (0) or (rt shl 1) or (origin shl 5) or (destination  shl 9)
-        val print = (1) or (rt shl 1) or  (origin shl 5) or (destination  shl 9)
+        val prePrint = (0 shl 9) or (rt shl 0) or (origin shl 1) or (destination  shl 5)
+        val print = (1 shl 9) or (rt shl 0) or  (origin shl 1) or (destination shl 5)
+        println("rt(0)->origin(1-4)->destination(5-8)->prt(9)")
+        println(print)
+
         SerialEmitter.send(SerialEmitter.Peripheral.TICKET, prePrint)
         SerialEmitter.send(SerialEmitter.Peripheral.TICKET, print)
     }

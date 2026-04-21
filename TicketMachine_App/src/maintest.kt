@@ -70,17 +70,3 @@ fun main(args: Array<String>) {
         }
     }
 }
-fun waitRoundTrip(){
-                LCD.clear()
-                while (!HAL.isBit(kValMask ));
-                if (KBD.getKey()=='*'){
-
-                    LCD.clear()
-                    printTicketLCD(mainOrigin.toString().hexToInt(),mainDestination.toString().hexToInt(), roundTrip)
-                }/*else if(KBD.getKey()=='#'){
-                    roundTrip= !roundTrip
-                    if (roundTrip){println("Round")}
-                    else println("One way")
-                }*/
-
-}

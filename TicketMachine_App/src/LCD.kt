@@ -59,16 +59,18 @@ object LCD {
         writeByte(true, data)
     }
     fun init() {
-        LCD.clear()
-        LCD.writeCMD(0b00110000)
-        LCD.writeCMD(0b00110000)
-        LCD.writeCMD(0b00110000)
+        clear()
+        writeCMD(0b00110000)
+        writeCMD(0b00110000)
+        writeCMD(0b00110000)
 
-        LCD.writeCMD(0b00111000)//+10==2  2 linhas N;
-        LCD.writeCMD(0b00001000)
-        LCD.writeCMD(0b00000001)
-        LCD.writeCMD(0b00000110)
-        LCD.writeCMD(0b00001111)
+        writeCMD(0b00111000)//+10==2  2 linhas N;
+        writeCMD(0b00001000)
+        writeCMD(0b00000001)
+        writeCMD(0b00000110)
+        writeCMD(0b00001111)
+
+        clear()
     }
     fun write (c : Char ) {
         if(currCol == LCD.COLS) {
