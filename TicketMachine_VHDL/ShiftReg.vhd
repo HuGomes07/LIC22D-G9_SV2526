@@ -28,7 +28,7 @@ end component FFD;
 signal nextFFD: std_logic_vector(9 downto 0);
 
 begin
-	FF9: FFD port map(CLK => SCLK, RESET => rst, SET => '0', EN => enableShift, D => SerialIn, Q => nextFFD(9));
+	FF9: FFD port map(CLK => SCLK, RESET => rst, SET => '0', EN => enableShift, D => SerialIn	 , Q => nextFFD(9));
 	FF8: FFD port map(CLK => SCLK, RESET => rst, SET => '0', EN => enableShift, D => nextFFD(9), Q => nextFFD(8));
 	FF7: FFD port map(CLK => SCLK, RESET => rst, SET => '0', EN => enableShift, D => nextFFD(8), Q => nextFFD(7));
 	FF6: FFD port map(CLK => SCLK, RESET => rst, SET => '0', EN => enableShift, D => nextFFD(7), Q => nextFFD(6));

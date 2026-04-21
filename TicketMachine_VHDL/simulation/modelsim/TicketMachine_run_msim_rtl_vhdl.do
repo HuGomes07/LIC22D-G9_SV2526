@@ -19,6 +19,10 @@ vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd}
 vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl.vhd}
 vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd}
 vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd}
+vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/decoderHex.vhd}
+vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/int7seg.vhd}
+vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ticketDispenser.vhd}
+vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PETD.vhd}
 vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/shiftreg.vhd}
 vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/FA.vhd}
 vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG2.vhd}

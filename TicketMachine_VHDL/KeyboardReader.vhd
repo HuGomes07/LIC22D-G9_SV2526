@@ -35,6 +35,6 @@ signal K:		std_logic_vector(3 downto 0);
 begin
 	Decode:	KeyDecode 		port map(Clk => Clk, Reset => Reset, Kack => Kack, Tdelay => Tdelay, KbdLin => KbdLin, Kval => Kval, Kcode => K, KbdCol => KbdCol);
 --	Buff	:	RingBuffer 		port map();
---	Transm:	KeyTransmitter port map();
+	--Transm:	KeyTransmitter port map();
 	UPort <= Kval & K;
 end structural;

@@ -6,7 +6,7 @@ entity TicketMachine is
 		MClk: in std_logic;
 		rst: in std_logic;
 		KbdLin: in std_logic_vector(3 downto 0);
-		SW: in std_logic_vector(9 downto 0);		-- SW(0) -> CollectTicket
+		SW: in std_logic_vector(9 downto 0);		-- SW(0) -> CollectTicket, SW(9) -> Reset
 		Tdelay: in std_logic_vector(1 downto 0);
 		KbdCol: out std_logic_vector(3 downto 0);
 		LCD_Data: out std_logic_vector(7 downto 0);
@@ -96,8 +96,8 @@ signal Origem, Destino	: std_logic_vector(3 downto 0);
 		LCD_Rs 	<= DLcd(0);
 		LCD_En 	<= D9Lcd;
 		ExpTic: PETD port map(TDsel => UsbOut(3), SCLK => UsbOut(1), SDX => UsbOut(2), rst => rst, D => DTd, D9 => D9Td);
-		Destino 	<= DLcd(3) & DLcd(2) & DLcd(1) & DLcd(0);
-		Origem 	<= DLcd(7) & DLcd(6) & DLcd(5) & DLcd(4);
-		TickDisp:	TICKET_DISPENSER port map(RT => DLcd(8), Prt => D9Td, CollectTicket => SW(0), O => Origem, D => Destino, Fn => Finish, 
+		Origem 	<= DTd(5) & DTd(6) & DTd(7) & DTd(8);
+		Destino 	<= DTd(1) & DTd(2) & DTd(3) & DTd(4);
+		TickDisp:	TICKET_DISPENSER port map(RT => DTd(0), Prt => D9Td, CollectTicket => SW(0), O => Origem, D => Destino, Fn => Finish, 
 						HEX0 => HEX0, HEX1 => HEX1, HEX2 => HEX2, HEX3 => HEX3, HEX4 => HEX4, HEX5 => HEX5);
 end structural;

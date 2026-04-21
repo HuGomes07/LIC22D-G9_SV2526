@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TicketMachine
-Tue Mar 31 17:38:12 2026
+Tue Apr 21 12:10:56 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,40 +19,45 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Inverted Register Statistics
  12. Parameter Settings for User Entity Instance: UsbPort:USBPrt|sld_virtual_jtag:b2v_inst
  13. Parameter Settings for User Entity Instance: CLKDIV:Osc
- 14. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD9"
- 15. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD8"
- 16. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD7"
- 17. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD6"
- 18. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD5"
- 19. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD4"
- 20. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD3"
- 21. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD2"
- 22. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD1"
- 23. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD0"
- 24. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg"
- 25. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF0"
- 26. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF1"
- 27. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF2"
- 28. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF3"
- 29. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF4"
- 30. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF5"
- 31. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF6"
- 32. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF7"
- 33. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF8"
- 34. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF9"
- 35. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|RG2:RG"
- 36. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX1"
- 37. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Decoder:DEC"
- 38. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD1"
- 39. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0"
- 40. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|Adder:Adder"
- 41. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode"
- 42. Port Connectivity Checks: "KeyboardReader:Readr"
- 43. Port Connectivity Checks: "UsbPort:USBPrt"
- 44. Virtual JTAG Settings
- 45. Post-Synthesis Netlist Statistics for Top Partition
- 46. Elapsed Time Per Partition
- 47. Analysis & Synthesis Messages
+ 14. Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U5"
+ 15. Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U4"
+ 16. Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U3"
+ 17. Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U2"
+ 18. Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U1"
+ 19. Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U0"
+ 20. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD9"
+ 21. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD8"
+ 22. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD7"
+ 23. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD6"
+ 24. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD5"
+ 25. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD4"
+ 26. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD3"
+ 27. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD2"
+ 28. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD1"
+ 29. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD0"
+ 30. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg"
+ 31. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF0"
+ 32. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF1"
+ 33. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF2"
+ 34. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF3"
+ 35. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF4"
+ 36. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF5"
+ 37. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF6"
+ 38. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF7"
+ 39. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF8"
+ 40. Port Connectivity Checks: "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF9"
+ 41. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|RG2:RG"
+ 42. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX1"
+ 43. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Decoder:DEC"
+ 44. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD1"
+ 45. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0"
+ 46. Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|Adder:Adder"
+ 47. Port Connectivity Checks: "KeyboardReader:Readr"
+ 48. Port Connectivity Checks: "UsbPort:USBPrt"
+ 49. Virtual JTAG Settings
+ 50. Post-Synthesis Netlist Statistics for Top Partition
+ 51. Elapsed Time Per Partition
+ 52. Analysis & Synthesis Messages
 
 
 
@@ -79,16 +84,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 31 17:38:12 2026       ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 21 12:10:56 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TicketMachine                               ;
 ; Top-level Entity Name              ; TicketMachine                               ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 230                                         ;
-;     Total combinational functions  ; 186                                         ;
-;     Dedicated logic registers      ; 146                                         ;
-; Total registers                    ; 146                                         ;
-; Total pins                         ; 42                                          ;
+; Total logic elements               ; 280                                         ;
+;     Total combinational functions  ; 216                                         ;
+;     Dedicated logic registers      ; 166                                         ;
+; Total registers                    ; 166                                         ;
+; Total pins                         ; 90                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -228,11 +233,15 @@ https://fpgasoftware.intel.com/eula.
 ; PELCD.vhd                                                          ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd                                                          ;             ;
 ; SerialReceiver.vhd                                                 ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd                                                 ;             ;
 ; RG10.vhd                                                           ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd                                                           ;             ;
+; decoderHex.vhd                                                     ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/decoderHex.vhd                                                     ;             ;
+; int7seg.vhd                                                        ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/int7seg.vhd                                                        ;             ;
+; ticketDispenser.vhd                                                ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ticketDispenser.vhd                                                ;             ;
+; PETD.vhd                                                           ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PETD.vhd                                                           ;             ;
+; ShiftReg.vhd                                                       ; yes             ; User VHDL File                               ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd                                                       ;             ;
 ; sld_virtual_jtag.v                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                                 ;             ;
 ; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v                           ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                      ;             ;
 ; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                  ;             ;
-; shiftreg.vhd                                                       ; yes             ; Auto-Found VHDL File                         ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/shiftreg.vhd                                                       ;             ;
 ; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                        ; altera_sld  ;
 ; db/ip/sld89da40d0/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/db/ip/sld89da40d0/alt_sld_fab.v                                    ; alt_sld_fab ;
 ; db/ip/sld89da40d0/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/ISEL/LIC/Projeto/TicketMachine_VHDL/db/ip/sld89da40d0/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
@@ -250,30 +259,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 230                      ;
+; Estimated Total logic elements              ; 280                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 186                      ;
+; Total combinational functions               ; 216                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 64                       ;
-;     -- 3 input functions                    ; 43                       ;
-;     -- <=2 input functions                  ; 79                       ;
+;     -- 4 input functions                    ; 77                       ;
+;     -- 3 input functions                    ; 44                       ;
+;     -- <=2 input functions                  ; 95                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 147                      ;
+;     -- normal mode                          ; 177                      ;
 ;     -- arithmetic mode                      ; 39                       ;
 ;                                             ;                          ;
-; Total registers                             ; 146                      ;
-;     -- Dedicated logic registers            ; 146                      ;
+; Total registers                             ; 166                      ;
+;     -- Dedicated logic registers            ; 166                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 42                       ;
+; I/O pins                                    ; 90                       ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 107                      ;
-; Total fan-out                               ; 1035                     ;
-; Average fan-out                             ; 2.44                     ;
+; Total fan-out                               ; 1255                     ;
+; Average fan-out                             ; 2.20                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -282,12 +291,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                       ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |TicketMachine                                                                                                                          ; 186 (2)             ; 146 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |TicketMachine                                                                                                                                                                                                                                                                                                                                            ; TicketMachine                     ; work         ;
+; |TicketMachine                                                                                                                          ; 216 (2)             ; 166 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 90   ; 0            ; 0          ; |TicketMachine                                                                                                                                                                                                                                                                                                                                            ; TicketMachine                     ; work         ;
 ;    |CLKDIV:Osc|                                                                                                                         ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|CLKDIV:Osc                                                                                                                                                                                                                                                                                                                                 ; CLKDIV                            ; work         ;
-;    |KeyboardReader:Readr|                                                                                                               ; 13 (0)              ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr                                                                                                                                                                                                                                                                                                                       ; KeyboardReader                    ; work         ;
-;       |KeyDecode:Decode|                                                                                                                ; 13 (0)              ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode                                                                                                                                                                                                                                                                                                      ; KeyDecode                         ; work         ;
+;    |KeyboardReader:Readr|                                                                                                               ; 14 (0)              ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr                                                                                                                                                                                                                                                                                                                       ; KeyboardReader                    ; work         ;
+;       |KeyDecode:Decode|                                                                                                                ; 14 (0)              ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode                                                                                                                                                                                                                                                                                                      ; KeyDecode                         ; work         ;
 ;          |KeyControl:Ctrl|                                                                                                              ; 5 (5)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyControl:Ctrl                                                                                                                                                                                                                                                                                      ; KeyControl                        ; work         ;
-;          |KeyScan:Scann|                                                                                                                ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann                                                                                                                                                                                                                                                                                        ; KeyScan                           ; work         ;
+;          |KeyScan:Scann|                                                                                                                ; 9 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann                                                                                                                                                                                                                                                                                        ; KeyScan                           ; work         ;
 ;             |Counter:Cont|                                                                                                              ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont                                                                                                                                                                                                                                                                           ; Counter                           ; work         ;
 ;                |RG2:Reg|                                                                                                                ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|RG2:Reg                                                                                                                                                                                                                                                                   ; RG2                               ; work         ;
 ;                   |FFD:FDD0|                                                                                                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|RG2:Reg|FFD:FDD0                                                                                                                                                                                                                                                          ; FFD                               ; work         ;
@@ -295,9 +304,10 @@ https://fpgasoftware.intel.com/eula.
 ;             |Decoder:DEC|                                                                                                               ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Decoder:DEC                                                                                                                                                                                                                                                                            ; Decoder                           ; work         ;
 ;                |DeMUX:DeMUX2|                                                                                                           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX2                                                                                                                                                                                                                                                               ; DeMUX                             ; work         ;
 ;                |DeMUX:DeMUX3|                                                                                                           ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Decoder:DEC|DeMUX:DeMUX3                                                                                                                                                                                                                                                               ; DeMUX                             ; work         ;
-;             |PEnc42:PEnc|                                                                                                               ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc                                                                                                                                                                                                                                                                            ; PEnc42                            ; work         ;
+;             |PEnc42:PEnc|                                                                                                               ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc                                                                                                                                                                                                                                                                            ; PEnc42                            ; work         ;
 ;                |MUX2_1:Mux|                                                                                                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc|MUX2_1:Mux                                                                                                                                                                                                                                                                 ; MUX2_1                            ; work         ;
 ;                |PEnc:PEnc1|                                                                                                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc|PEnc:PEnc1                                                                                                                                                                                                                                                                 ; PEnc                              ; work         ;
+;                |PEnc:PEnc3|                                                                                                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc|PEnc:PEnc3                                                                                                                                                                                                                                                                 ; PEnc                              ; work         ;
 ;             |RG2:RG|                                                                                                                    ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|RG2:RG                                                                                                                                                                                                                                                                                 ; RG2                               ; work         ;
 ;                |FFD:FDD0|                                                                                                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|RG2:RG|FFD:FDD0                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
 ;                |FFD:FDD1|                                                                                                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|RG2:RG|FFD:FDD1                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
@@ -325,6 +335,36 @@ https://fpgasoftware.intel.com/eula.
 ;             |FFD:FF7|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF7                                                                                                                                                                                                                                                                                    ; FFD                               ; work         ;
 ;             |FFD:FF8|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF8                                                                                                                                                                                                                                                                                    ; FFD                               ; work         ;
 ;             |FFD:FF9|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF9                                                                                                                                                                                                                                                                                    ; FFD                               ; work         ;
+;    |PETD:ExpTic|                                                                                                                        ; 0 (0)               ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic                                                                                                                                                                                                                                                                                                                                ; PETD                              ; work         ;
+;       |SerialReceiver:Rcv|                                                                                                              ; 0 (0)               ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv                                                                                                                                                                                                                                                                                                             ; SerialReceiver                    ; work         ;
+;          |RG10:HldReg|                                                                                                                  ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg                                                                                                                                                                                                                                                                                                 ; RG10                              ; work         ;
+;             |FFD:FDD0|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD0                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD1|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD1                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD2|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD2                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD3|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD3                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD4|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD4                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD5|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD5                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD6|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD6                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD7|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD7                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD8|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD8                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FDD9|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|RG10:HldReg|FFD:FDD9                                                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;          |ShiftReg:ShiReg|                                                                                                              ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg                                                                                                                                                                                                                                                                                             ; ShiftReg                          ; work         ;
+;             |FFD:FF0|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF0                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF1|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF1                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF2|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF2                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF3|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF3                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF4|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF4                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF5|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF5                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF6|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF6                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF7|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF7                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF8|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF8                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;             |FFD:FF9|                                                                                                                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|PETD:ExpTic|SerialReceiver:Rcv|ShiftReg:ShiReg|FFD:FF9                                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
+;    |TICKET_DISPENSER:TickDisp|                                                                                                          ; 29 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|TICKET_DISPENSER:TickDisp                                                                                                                                                                                                                                                                                                                  ; TICKET_DISPENSER                  ; work         ;
+;       |DECODERHEX:U0|                                                                                                                   ; 14 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|TICKET_DISPENSER:TickDisp|DECODERHEX:U0                                                                                                                                                                                                                                                                                                    ; DECODERHEX                        ; work         ;
+;          |INT7SEG:U0|                                                                                                                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|TICKET_DISPENSER:TickDisp|DECODERHEX:U0|INT7SEG:U0                                                                                                                                                                                                                                                                                         ; INT7SEG                           ; work         ;
+;       |DECODERHEX:U2|                                                                                                                   ; 14 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|TICKET_DISPENSER:TickDisp|DECODERHEX:U2                                                                                                                                                                                                                                                                                                    ; DECODERHEX                        ; work         ;
+;          |INT7SEG:U0|                                                                                                                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|TICKET_DISPENSER:TickDisp|DECODERHEX:U2|INT7SEG:U0                                                                                                                                                                                                                                                                                         ; INT7SEG                           ; work         ;
+;       |DECODERHEX:U4|                                                                                                                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|TICKET_DISPENSER:TickDisp|DECODERHEX:U4                                                                                                                                                                                                                                                                                                    ; DECODERHEX                        ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 120 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TicketMachine|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -367,12 +407,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 146   ;
+; Total registers                              ; 166   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 60    ;
+; Number of registers using Asynchronous Clear ; 80    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 68    ;
+; Number of registers using Clock Enable       ; 78    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -414,6 +454,80 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; div            ; 250000 ; Signed Integer                ;
 +----------------+--------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U5" ;
++-----------+-------+----------+--------------------------------------+
+; Port      ; Type  ; Severity ; Details                              ;
++-----------+-------+----------+--------------------------------------+
+; a[1..0]   ; Input ; Info     ; Stuck at VCC                         ;
+; a[3]      ; Input ; Info     ; Stuck at VCC                         ;
+; a[2]      ; Input ; Info     ; Stuck at GND                         ;
+; ewr[5..4] ; Input ; Info     ; Stuck at VCC                         ;
+; ewr[2..1] ; Input ; Info     ; Stuck at VCC                         ;
+; ewr[7]    ; Input ; Info     ; Stuck at VCC                         ;
+; ewr[6]    ; Input ; Info     ; Stuck at GND                         ;
+; ewr[3]    ; Input ; Info     ; Stuck at GND                         ;
+; ewr[0]    ; Input ; Info     ; Stuck at GND                         ;
+; clear     ; Input ; Info     ; Stuck at GND                         ;
++-----------+-------+----------+--------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U4" ;
++---------+-------+----------+----------------------------------------+
+; Port    ; Type  ; Severity ; Details                                ;
++---------+-------+----------+----------------------------------------+
+; a[3..1] ; Input ; Info     ; Stuck at GND                           ;
+; ewr     ; Input ; Info     ; Stuck at VCC                           ;
++---------+-------+----------+----------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U3" ;
++-----------+-------+----------+--------------------------------------+
+; Port      ; Type  ; Severity ; Details                              ;
++-----------+-------+----------+--------------------------------------+
+; a         ; Input ; Info     ; Stuck at GND                         ;
+; ewr[1..0] ; Input ; Info     ; Stuck at VCC                         ;
+; ewr[4..2] ; Input ; Info     ; Stuck at GND                         ;
+; ewr[7]    ; Input ; Info     ; Stuck at VCC                         ;
+; ewr[6]    ; Input ; Info     ; Stuck at GND                         ;
+; ewr[5]    ; Input ; Info     ; Stuck at VCC                         ;
+; clear     ; Input ; Info     ; Stuck at GND                         ;
++-----------+-------+----------+--------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U2" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; ewr  ; Input ; Info     ; Stuck at VCC                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U1" ;
++---------+-------+----------+----------------------------------------+
+; Port    ; Type  ; Severity ; Details                                ;
++---------+-------+----------+----------------------------------------+
+; a[3..2] ; Input ; Info     ; Stuck at VCC                           ;
+; a[1]    ; Input ; Info     ; Stuck at GND                           ;
+; a[0]    ; Input ; Info     ; Stuck at VCC                           ;
+; ewr     ; Input ; Info     ; Stuck at VCC                           ;
+; clear   ; Input ; Info     ; Stuck at GND                           ;
++---------+-------+----------+----------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "TICKET_DISPENSER:TickDisp|DECODERHEX:U0" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; ewr  ; Input ; Info     ; Stuck at VCC                              ;
++------+-------+----------+-------------------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -661,16 +775,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "KeyboardReader:Readr|KeyDecode:Decode"                                                                     ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                  ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; kpress ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; cols   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "KeyboardReader:Readr"                                                               ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -685,7 +789,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port             ; Type   ; Severity ; Details                                                                             ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
-; outputport[6..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; inputport[7..6]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; outputport[6..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -703,23 +808,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 81                          ;
-; cycloneiii_ff         ; 60                          ;
-;     CLR               ; 17                          ;
-;     ENA CLR           ; 10                          ;
+; boundary_port         ; 129                         ;
+; cycloneiii_ff         ; 80                          ;
+;     CLR               ; 27                          ;
+;     ENA CLR           ; 20                          ;
 ;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 68                          ;
+; cycloneiii_lcell_comb ; 100                         ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 37                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 14                          ;
+;     normal            ; 69                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 27                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.49                        ;
+; Average LUT depth     ; 2.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -738,7 +843,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar 31 17:37:58 2026
+    Info: Processing started: Tue Apr 21 12:10:42 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TicketMachine -c TicketMachine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -749,13 +854,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file keyboar
     Info (12022): Found design unit 1: KeyboardReader-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 18
     Info (12023): Found entity 1: KeyboardReader File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keydecode.vhd
-    Info (12022): Found design unit 1: KeyDecode-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 20
+    Info (12022): Found design unit 1: KeyDecode-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 17
     Info (12023): Found entity 1: KeyDecode File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keyscan.vhd
     Info (12022): Found design unit 1: KeyScan-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 16
     Info (12023): Found entity 1: KeyScan File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ticketmachine.vhd
-    Info (12022): Found design unit 1: TicketMachine-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 19
+    Info (12022): Found design unit 1: TicketMachine-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 20
     Info (12023): Found entity 1: TicketMachine File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
     Info (12022): Found design unit 1: Decoder-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder.vhd Line: 12
@@ -808,15 +913,69 @@ Info (12021): Found 2 design units, including 1 entities, in source file pelcd.v
 Info (12021): Found 2 design units, including 1 entities, in source file serialreceiver.vhd
     Info (12022): Found design unit 1: SerialReceiver-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd Line: 14
     Info (12023): Found entity 1: SerialReceiver File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file lsl.vhd
-    Info (12022): Found design unit 1: LSL-rtl File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd Line: 12
-    Info (12023): Found entity 1: LSL File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/LSL.vhd Line: 4
+Warning (12019): Can't analyze file -- file LSL.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file rg10.vhd
     Info (12022): Found design unit 1: RG10-logicFunction File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd Line: 11
     Info (12023): Found entity 1: RG10 File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/RG10.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file penc42_tb.vhd
+    Info (12022): Found design unit 1: PEnc42_tb-Penc42_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd Line: 7
+    Info (12023): Found entity 1: PEnc42_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoderhex.vhd
+    Info (12022): Found design unit 1: DECODERHEX-logicFuntion File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/decoderHex.vhd Line: 13
+    Info (12023): Found entity 1: DECODERHEX File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/decoderHex.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file int7seg.vhd
+    Info (12022): Found design unit 1: INT7SEG-logicFunction File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/int7seg.vhd Line: 12
+    Info (12023): Found entity 1: INT7SEG File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/int7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ticketdispenser.vhd
+    Info (12022): Found design unit 1: TICKET_DISPENSER-arq_TICKET_DISPENSER File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ticketDispenser.vhd Line: 15
+    Info (12023): Found entity 1: TICKET_DISPENSER File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ticketDispenser.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file petd.vhd
+    Info (12022): Found design unit 1: PETD-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PETD.vhd Line: 15
+    Info (12023): Found entity 1: PETD File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PETD.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file petd_tb.vhd
+    Info (12022): Found design unit 1: PETD_tb-PETD_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PETD_tb.vhd Line: 7
+    Info (12023): Found entity 1: PETD_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PETD_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shiftreg.vhd
+    Info (12022): Found design unit 1: ShiftReg-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd Line: 14
+    Info (12023): Found entity 1: ShiftReg File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg.vhd Line: 4
+Warning (12019): Can't analyze file -- file PEnc_TB.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file ticketmachine_tb.vhd
+    Info (12022): Found design unit 1: TicketMachine_tb-TicketMachine_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd Line: 7
+    Info (12023): Found entity 1: TicketMachine_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ticketmachine_simul.vhd
+    Info (12022): Found design unit 1: TicketMachine_simul-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_simul.vhd Line: 18
+    Info (12023): Found entity 1: TicketMachine_simul File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine_simul.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pelcd_tb.vhd
+    Info (12022): Found design unit 1: PELCD_tb-PELCD_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD_tb.vhd Line: 7
+    Info (12023): Found entity 1: PELCD_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shiftreg_tb.vhd
+    Info (12022): Found design unit 1: ShiftReg_tb-ShiftReg_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg_tb.vhd Line: 7
+    Info (12023): Found entity 1: ShiftReg_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ShiftReg_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keydecode_tb.vhd
+    Info (12022): Found design unit 1: KeyDecode_tb-KeyDecode_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode_tb.vhd Line: 7
+    Info (12023): Found entity 1: KeyDecode_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keyscan_tb.vhd
+    Info (12022): Found design unit 1: KeyScan_tb-KeyScan_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan_tb.vhd Line: 7
+    Info (12023): Found entity 1: KeyScan_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file serialreceiver_tb.vhd
+    Info (12022): Found design unit 1: SerialReceiver_tb-SerialReceiver_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd Line: 7
+    Info (12023): Found entity 1: SerialReceiver_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keycontrol_tb.vhd
+    Info (12022): Found design unit 1: KeyControl_tb-KeyControl_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd Line: 7
+    Info (12023): Found entity 1: KeyControl_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyControl_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keyboardreader_tb.vhd
+    Info (12022): Found design unit 1: KeyboardReader_tb-KeyboardReader_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd Line: 7
+    Info (12023): Found entity 1: KeyboardReader_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoder_tb.vhd
+    Info (12022): Found design unit 1: Decoder_tb-Decoder_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: Decoder_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Decoder_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file counter_tb.vhd
+    Info (12022): Found design unit 1: Counter_tb-Counter_tb_arch File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd Line: 7
+    Info (12023): Found entity 1: Counter_tb File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter_tb.vhd Line: 4
 Info (12127): Elaborating entity "TicketMachine" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at TicketMachine.vhd(61): object "Xd" assigned a value but never read File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 61
-Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:USBPrt" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 69
+Warning (10541): VHDL Signal Declaration warning at TicketMachine.vhd(15): used implicit default value for signal "LED" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
+Warning (10036): Verilog HDL or VHDL warning at TicketMachine.vhd(82): object "Xd" assigned a value but never read File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 82
+Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:USBPrt" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 91
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:USBPrt|sld_virtual_jtag:b2v_inst" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd Line: 80
 Info (12130): Elaborated megafunction instantiation "UsbPort:USBPrt|sld_virtual_jtag:b2v_inst" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd Line: 80
 Info (12133): Instantiated megafunction "UsbPort:USBPrt|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd Line: 80
@@ -833,13 +992,12 @@ Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "UsbPort:
 Info (12131): Elaborated megafunction instantiation "UsbPort:USBPrt|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "UsbPort:USBPrt|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:USBPrt|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:USBPrt|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "CLKDIV" for hierarchy "CLKDIV:Osc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 70
-Info (12128): Elaborating entity "KeyboardReader" for hierarchy "KeyboardReader:Readr" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 71
+Info (12128): Elaborating entity "CLKDIV" for hierarchy "CLKDIV:Osc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 92
+Info (12128): Elaborating entity "KeyboardReader" for hierarchy "KeyboardReader:Readr" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 93
 Warning (10541): VHDL Signal Declaration warning at KeyboardReader.vhd(11): used implicit default value for signal "TXd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 11
 Info (12128): Elaborating entity "KeyDecode" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyboardReader.vhd Line: 36
-Warning (10541): VHDL Signal Declaration warning at KeyDecode.vhd(15): used implicit default value for signal "Kpress" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 15
-Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyControl:Ctrl" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 47
-Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 48
+Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyControl:Ctrl" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 43
+Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyDecode.vhd Line: 44
 Info (12128): Elaborating entity "Counter" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 40
 Info (12128): Elaborating entity "Adder" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|Adder:Adder" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Counter.vhd Line: 15
 Info (12128): Elaborating entity "FA" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|Counter:Cont|Adder:Adder|FA:U1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/Adder.vhd Line: 18
@@ -851,15 +1009,16 @@ Info (12128): Elaborating entity "DeMUX" for hierarchy "KeyboardReader:Readr|Key
 Info (12128): Elaborating entity "PEnc42" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/KeyScan.vhd Line: 45
 Info (12128): Elaborating entity "PEnc" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc|PEnc:PEnc1" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 15
 Info (12128): Elaborating entity "MUX2_1" for hierarchy "KeyboardReader:Readr|KeyDecode:Decode|KeyScan:Scann|PEnc42:PEnc|MUX2_1:Mux" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd Line: 19
-Info (12128): Elaborating entity "PELCD" for hierarchy "PELCD:ExpLCD" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 72
+Info (12128): Elaborating entity "PELCD" for hierarchy "PELCD:ExpLCD" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 94
 Info (12128): Elaborating entity "SerialReceiver" for hierarchy "PELCD:ExpLCD|SerialReceiver:Rcv" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PELCD.vhd Line: 28
-Warning (12125): Using design file shiftreg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ShiftReg-structural File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/shiftreg.vhd Line: 14
-    Info (12023): Found entity 1: ShiftReg File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/shiftreg.vhd Line: 4
 Info (12128): Elaborating entity "ShiftReg" for hierarchy "PELCD:ExpLCD|SerialReceiver:Rcv|ShiftReg:ShiReg" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd Line: 39
 Info (12128): Elaborating entity "RG10" for hierarchy "PELCD:ExpLCD|SerialReceiver:Rcv|RG10:HldReg" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/SerialReceiver.vhd Line: 40
+Info (12128): Elaborating entity "PETD" for hierarchy "PETD:ExpTic" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 98
+Info (12128): Elaborating entity "TICKET_DISPENSER" for hierarchy "TICKET_DISPENSER:TickDisp" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 101
+Info (12128): Elaborating entity "DECODERHEX" for hierarchy "TICKET_DISPENSER:TickDisp|DECODERHEX:U0" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/ticketDispenser.vhd Line: 41
+Info (12128): Elaborating entity "INT7SEG" for hierarchy "TICKET_DISPENSER:TickDisp|DECODERHEX:U0|INT7SEG:U0" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/decoderHex.vhd Line: 27
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2026.03.31.17:38:06 Progress: Loading sld89da40d0/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2026.04.21.12:10:50 Progress: Loading sld89da40d0/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -882,18 +1041,49 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/db/ip/sld89da40d0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld89da40d0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/db/ip/sld89da40d0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[0]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
+    Warning (13410): Pin "LED[1]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
+    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
+    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
+    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
     Warning (13410): Pin "LED[5]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
     Warning (13410): Pin "LED[6]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
     Warning (13410): Pin "LED[7]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
     Warning (13410): Pin "LED[8]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
     Warning (13410): Pin "LED[9]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 15
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 16
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 9
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 9
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 9
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 9
@@ -905,13 +1095,13 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 9
     Warning (15610): No output dependent on input pin "Tdelay[0]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 10
     Warning (15610): No output dependent on input pin "Tdelay[1]" File: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/TicketMachine.vhd Line: 10
-Info (21057): Implemented 281 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 381 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 234 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info (21059): Implemented 73 output pins
+    Info (21061): Implemented 286 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
     Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Tue Mar 31 17:38:12 2026
+    Info: Processing ended: Tue Apr 21 12:10:56 2026
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:24
 

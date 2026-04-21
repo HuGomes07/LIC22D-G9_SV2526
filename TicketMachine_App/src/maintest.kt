@@ -1,6 +1,7 @@
-import TicketDispenser.printTicketLCD
 import isel.leic.UsbPort
 import isel.leic.utils.Time
+import TicketDispenser.printTicketLCD
+import kValMask
 
 //masks:
 //IN
@@ -32,7 +33,7 @@ fun main(args: Array<String>) {
         if (HAL.isBit(kValMask)){
             Time.sleep(50)
             val k = KBD.getKey()
-            if (k == '*'){
+            if (k == '*' && lastKey != null){
                 if (origin == null) {
                     origin = lastKey.toString().hexToInt()
                     mainOrigin = origin
@@ -65,8 +66,6 @@ fun main(args: Array<String>) {
             HAL.setBits(k_ack)
             Time.sleep(100)
             HAL.clrBits(k_ack)
-
-
         }
     }
 }

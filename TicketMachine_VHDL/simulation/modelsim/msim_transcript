@@ -13,7 +13,7 @@
 # 
 # vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:27:35 on Apr 02,2026
+# Start time: 11:53:36 on Apr 21,2026
 # vcom -reportprogress 300 -93 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,98 +22,10 @@
 # -- Compiling architecture bdf_type of UsbPort
 # ** Error: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd(90): (vcom-1035) Formal port "tdo" has OPEN or no actual associated with it.
 # ** Note: C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd(92): VHDL Compiler exiting
-# End time: 09:27:35 on Apr 02,2026, Elapsed time: 0:00:00
+# End time: 11:53:36 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
 # ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
 # Error in macro ./TicketMachine_run_msim_rtl_vhdl.do line 8
 # C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
 #     while executing
 # "vcom -93 -work work {C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd}"
-vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:28:33 on Apr 02,2026
-# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity MUX2_1
-# -- Compiling architecture structural of MUX2_1
-# End time: 09:28:33 on Apr 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:28:33 on Apr 02,2026
-# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity MUX4_1
-# -- Compiling architecture structural of MUX4_1
-# End time: 09:28:33 on Apr 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:28:33 on Apr 02,2026
-# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PEnc
-# -- Compiling architecture structural of PEnc
-# End time: 09:28:33 on Apr 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:28:33 on Apr 02,2026
-# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PEnc42
-# -- Compiling architecture structural of PEnc42
-# -- Loading entity PEnc
-# -- Loading entity MUX2_1
-# End time: 09:28:33 on Apr 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:28:33 on Apr 02,2026
-# vcom -reportprogress 300 -work work C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PEnc42_tb
-# -- Compiling architecture Penc42_tb_arch of PEnc42_tb
-# End time: 09:28:33 on Apr 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.penc42_tb
-# vsim work.penc42_tb 
-# Start time: 09:28:36 on Apr 02,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.penc42_tb(penc42_tb_arch)
-# Loading work.penc42(structural)
-# Loading work.penc(structural)
-# Loading work.mux2_1(structural)
-add wave -position insertpoint sim:/penc42_tb/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Hugo  Hostname: DESKTOP-1BITHMS  ProcessID: 19180
-#           Attempting to use alternate WLF file "./wlftmnvvi8".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftmnvvi8
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 09:29:26 on Apr 02,2026, Elapsed time: 0:00:50
-# Errors: 0, Warnings: 2
