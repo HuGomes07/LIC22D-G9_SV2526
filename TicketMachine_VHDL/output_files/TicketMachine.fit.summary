@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Mar 31 17:38:18 2026
+Fitter Status : Successful - Tue Apr 21 12:11:01 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TicketMachine
 Top-level Entity Name : TicketMachine
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 229 / 49,760 ( < 1 % )
-    Total combinational functions : 187 / 49,760 ( < 1 % )
-    Dedicated logic registers : 146 / 49,760 ( < 1 % )
-Total registers : 146
-Total pins : 42 / 360 ( 12 % )
+Total logic elements : 273 / 49,760 ( < 1 % )
+    Total combinational functions : 217 / 49,760 ( < 1 % )
+    Dedicated logic registers : 166 / 49,760 ( < 1 % )
+Total registers : 166
+Total pins : 90 / 360 ( 25 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

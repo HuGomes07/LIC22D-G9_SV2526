@@ -1,7 +1,6 @@
 m255
 K4
 z2
-!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -9,217 +8,10 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/ISEL/LIC/Projeto/TicketMachine_VHDL/simulation/modelsim
-Emux2_1
-Z1 w1774341554
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 1
-R0
-Z4 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
-Z5 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd
-l0
-L4 1
-VXXU_XSdS@:zEX;Ql@zMA40
-!s100 ejE4i]b7>1B`USBl1YGQ32
-Z6 OV;C;2020.1;71
-32
-Z7 !s110 1775118513
-!i10b 1
-Z8 !s108 1775118513.000000
-Z9 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd|
-Z10 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX2_1.vhd|
-!i113 1
-Z11 o-work work
-Z12 tExplicit 1 CvgOpt 0
-Astructural
-R2
-R3
-Z13 DEx4 work 6 mux2_1 0 22 XXU_XSdS@:zEX;Ql@zMA40
-!i122 1
-l16
-L14 5
-Vm;NalSJ?1V^W64fWX0;hm2
-!s100 @gYjiS131FLU`7hf3lR202
-R6
-32
-R7
-!i10b 1
-R8
-R9
-R10
-!i113 1
-R11
-R12
-Emux4_1
-R1
-R2
-R3
-!i122 2
-R0
-Z14 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd
-Z15 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd
-l0
-L4 1
-VEU^ceo[F=nKiCNkXLAm4]2
-!s100 ZHYAShOYHQhni95?k6Q1Y2
-R6
-32
-R7
-!i10b 1
-R8
-Z16 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd|
-Z17 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/MUX4_1.vhd|
-!i113 1
-R11
-R12
-Astructural
-R2
-R3
-DEx4 work 6 mux4_1 0 22 EU^ceo[F=nKiCNkXLAm4]2
-!i122 2
-l32
-L17 39
-V5WIlUZZNJ@laH_1`=e[8g1
-!s100 jblAf6bF]<5BCJ1fz@_0`0
-R6
-32
-R7
-!i10b 1
-R8
-R16
-R17
-!i113 1
-R11
-R12
-Epenc
-R1
-R2
-R3
-!i122 3
-R0
-Z18 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
-Z19 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd
-l0
-L4 1
-VAUlhadNEoiGF;]3C_5[2i1
-!s100 Md^i<^`o:;I1^`cS^QDTd3
-R6
-32
-R7
-!i10b 1
-R8
-Z20 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd|
-Z21 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc.vhd|
-!i113 1
-R11
-R12
-Astructural
-R2
-R3
-Z22 DEx4 work 4 penc 0 22 AUlhadNEoiGF;]3C_5[2i1
-!i122 3
-l12
-L10 7
-VKa^mzW@DAd5Y00GHL?g^m3
-!s100 KkYDdV;Iz2^ZUj0lj1?4c0
-R6
-32
-R7
-!i10b 1
-R8
-R20
-R21
-!i113 1
-R11
-R12
-Epenc42
-Z23 w1774451386
-R2
-R3
-!i122 4
-R0
-Z24 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
-Z25 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd
-l0
-L4 1
-Vo2KD?>Ln0TW6B27=FH6:J2
-!s100 LljN]N[=`UM2<f4<FW>[51
-R6
-32
-R7
-!i10b 1
-R8
-Z26 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd|
-Z27 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42.vhd|
-!i113 1
-R11
-R12
-Astructural
-R13
-R22
-R2
-R3
-DEx4 work 6 penc42 0 22 o2KD?>Ln0TW6B27=FH6:J2
-!i122 4
-l14
-L11 14
-V=Ah=aTh;U0>nYZ`C@I?Oj3
-!s100 ?SLPfFnXNUAecZ_Q@X4MV3
-R6
-32
-R7
-!i10b 1
-R8
-R26
-R27
-!i113 1
-R11
-R12
-Epenc42_tb
-Z28 w1775118440
-R2
-R3
-!i122 5
-R0
-Z29 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd
-Z30 FC:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd
-l0
-L4 1
-V?TJ_Y90zDjYRjV_:SkX<z0
-!s100 9eoIIH21WzLA11J=AoAQi3
-R6
-32
-R7
-!i10b 1
-R8
-Z31 !s90 -reportprogress|300|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd|
-!s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd|
-!i113 1
-R11
-R12
-Apenc42_tb_arch
-R2
-R3
-DEx4 work 9 penc42_tb 0 22 ?TJ_Y90zDjYRjV_:SkX<z0
-!i122 5
-l26
-L7 41
-VBfjP0BZL5BJ>biSAgKdTV2
-!s100 1j0?08GN;`FjahDe4ONeZ1
-R6
-32
-R7
-!i10b 1
-R8
-R31
-Z32 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/PEnc42_tb.vhd|
-!i113 1
-R11
-R12
 Eusbport
-R1
-R2
-R3
+w1774341554
+DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
 R0
 8C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd
@@ -228,13 +20,13 @@ l0
 L25 1
 VH<Ia8`dE_cdIGLca01JFN3
 !s100 hl94EPOkeW;iYO_Coen0c3
-R6
+OV;C;2020.1;71
 31
-!s110 1775118455
+!s110 1776768816
 !i10b 1
-!s108 1775118455.000000
+!s108 1776768816.000000
 !s90 -reportprogress|300|-93|-work|work|C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd|
 !s107 C:/ISEL/LIC/Projeto/TicketMachine_VHDL/UsbPort.vhd|
 !i113 1
 o-93 -work work
-R12
+tExplicit 1 CvgOpt 0
