@@ -13,7 +13,7 @@ component Counter
 	);
 end component;
 
--- Entradas e saídas
+-- Entradas e saidas
 signal CE_TB, Reset_TB: std_logic;
 signal MClk_TB: std_logic := '1';
 signal Q_TB: std_logic_vector(1 downto 0);
