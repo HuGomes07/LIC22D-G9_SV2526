@@ -16,6 +16,7 @@ const val LCDsel =          0b00000001
 const val sCLK =            0b00000010
 const val sdx =             0b00000100
 const val TDsel =           0b00001000
+const val TXclk =           0b00010000
 
 var roundTrip = false
 var mainDestination: Int = 0
@@ -31,7 +32,7 @@ fun main(args: Array<String>) {
 
     while (true){
         if (HAL.isBit(kValMask)){
-            Time.sleep(50)
+            Time.sleep(50) //isto ta aqui para q?
             val k = KBD.getKey()
             if (k == '*' && lastKey != null){
                 if (origin == null) {

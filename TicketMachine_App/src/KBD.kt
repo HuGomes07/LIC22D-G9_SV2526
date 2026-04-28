@@ -1,12 +1,17 @@
 import isel.leic.utils.Time
-
+var serialReceiver = 0b0000
 fun main() {
     while (true){
-        if (HAL.isBit(kValMask)){
+        /*if (HAL.isBit(kValMask)){
             val k = KBD.getKey()
             println(k)
             HAL.setBits(k_ack)
             HAL.clrBits(k_ack)
+        }*/
+        if(!HAL.isBit(kValMask)){
+
+            KBD.getKey()
+
         }
     }
 }
@@ -23,12 +28,29 @@ object KBD {
     fun init() {}
 
     fun getKey(): Char {
-        val keyCol = HAL.readBit(0b00001100) shr 2
-        val keyLin = HAL.readBit(0b00000011)
-        val Kval = HAL.isBit(kValMask)
-        return if(Kval) {
-            matrix[keyLin][keyCol]
-        } else NONE.digitToChar()
+        serialReceiver = 0b0000
+
+        for (i in 0..6) {
+            HAL.setBits(TXclk)
+            Time.sleep(1)
+            HAL.clrBits(TXclk)
+            val bit = if(HAL.isBit(kValMask)) 1 else 0
+
+            if(i in 1..4){
+                serialReceiver += bit shl i-1
+                //println(serialReceiver)
+            }
+
+            if (i==0 && bit!=1 || i==6 && bit!=0) return NONE.digitToChar()
+
+        }
+        println("serialReceiver = ${serialReceiver.toString(2)}")  // <-- and this
+
+        val keyCol = serialReceiver shr 2
+        println("$keyCol")
+        val keyLin = serialReceiver and 0b11
+        println("$keyLin")
+        return matrix[keyLin][keyCol]
     }
 
     fun waitKey(timeout: Long): Char {

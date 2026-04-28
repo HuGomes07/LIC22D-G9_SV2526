@@ -1,52 +1,77 @@
 ## --- Additional packages with Hardware to Simulator
-package isel.leic.simul
+package ticketmachine.simul
 
 # Generic modules to activate from Simulator
 UsbPort = UsbPort
 kbd  = Keyboard("123A456B789C*0#D",4,4,0)
-lcd     = LCD
-sr_lcd  = ShiftRegister(10)
-hr_lcd  = Register(10)
-inv_lcd = Not
+lcd  = LCD
+m    = Switch ; "manut" ; setLabel("M")
 
-sr_td   = ShiftRegister(10)
-hr_td   = Register(10)
-inv_td  = Not
+# Costume modules from Ticket Machine package
+rb  = RingBuffer
+kt = KeyTransmitter
+pelcd = PortExpander(10)
+petd = PortExpander(10)
+
+ca = CoinAcceptor
+tp = TicketPrinter
+
+## --- Project Links ---
+# --------------------------------------
+# Manut
+# --------------------------------------
+m.out -> UsbPort.I6
 
 # --------------------------------------
 # KeyBoard Reader
 # --------------------------------------
 # Key Decode
 1 -> kbd.oe
-kbd.val -> UsbPort.I4
-kbd.K[0-3] -> UsbPort.I[0-3]
-UsbPort.O7-> kbd.ack
+kbd.val -> rb.DAV
+kbd.K[0-3] -> rb.D[0-3]
+
+# Ring Buffer
+rb.DAC -> kbd.ack
+rb.Q[0-3] -> kt.D[0-3]
+rb.Wreg -> kt.Load
+
+# Key Transmitter
+kt.KBfree -> rb.CTS
+kt.TXd-> UsbPort.I4
+UsbPort.O4-> kt.TXclk
 
 # --------------------------------------
-# USB Port connections to PE's
+# Coin Acceptor
 # --------------------------------------
-# SDX
-UsbPort.O2 -> sr_lcd.in, sr_td.in
-# SCLK
-UsbPort.O1-> sr_lcd.clk, sr_td.clk
-# SS_LCD
-UsbPort.O0-> inv_lcd.in, hr_lcd.clk
-# SS_TD
-UsbPort.O3-> inv_td.in, hr_td.clk
+UsbPort.O4 -> ca.accept
+UsbPort.O6 -> ca.collect
+UsbPort.O5 -> ca.eject
+ca.coin -> UsbPort.I3
+ca.cid[0-2] -> UsbPort.I[0-2]
 
 # --------------------------------------
 # PE LCD
 # --------------------------------------
 # Port Expander
-inv_lcd.out -> sr_lcd.en
-sr_lcd.out[0-9] -> hr_lcd.in[0-9]
-hr_lcd.out[1-8] -> lcd.D[0-7]
-hr_lcd.out0 -> lcd.rs
-hr_lcd.out9-> lcd.e
+UsbPort.O2 -> pelcd.SDX
+UsbPort.O1-> pelcd.SCLK
+UsbPort.O0-> pelcd.nSS
+
+# LCD
+pelcd.D[1-8] -> lcd.D[0-7]
+pelcd.D0 -> lcd.rs
+pelcd.D9-> lcd.e
 
 # --------------------------------------
-# PE TD
+# PE Ticket Dispenser
 # --------------------------------------
 # Port Expander
-inv_td.out -> sr_td.en
-sr_td.out[0-9] -> hr_td.in[0-9]
+UsbPort.O2 -> petd.SDX
+UsbPort.O1-> petd.SCLK
+UsbPort.O3-> petd.nSS
+
+petd.D[1-4] -> tp.DId[0-3]
+petd.D[5-8] -> tp.OId[0-3]
+petd.D0 -> tp.rt
+petd.D9 -> tp.prt
+tp.fn -> UsbPort.I4
