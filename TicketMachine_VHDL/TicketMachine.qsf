@@ -184,4 +184,13 @@ set_global_assignment -name VHDL_FILE KeyControl_tb.vhd
 set_global_assignment -name VHDL_FILE KeyboardReader_tb.vhd
 set_global_assignment -name VHDL_FILE Decoder_tb.vhd
 set_global_assignment -name VHDL_FILE Counter_tb.vhd
+set_global_assignment -name VHDL_FILE KeyTransmitter_DataPath.vhd
+set_global_assignment -name VHDL_FILE KTControl.vhd
+set_global_assignment -name VHDL_FILE KeyTransmitter.vhd
+set_global_assignment -name VHDL_FILE Adder4.vhd
+set_global_assignment -name VHDL_FILE KTControl_tb.vhd
+set_global_assignment -name VHDL_FILE MUX8_1.vhd
+set_global_assignment -name VHDL_FILE RG3.vhd
+set_global_assignment -name VHDL_FILE Counter4.vhd
+set_global_assignment -name VHDL_FILE ShtRegPL.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
