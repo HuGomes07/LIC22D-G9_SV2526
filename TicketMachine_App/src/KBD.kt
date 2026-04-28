@@ -38,18 +38,17 @@ object KBD {
 
             if(i in 1..4){
                 serialReceiver += bit shl i-1
-                //println(serialReceiver)
             }
 
-            if (i==0 && bit!=1 || i==6 && bit!=0) return NONE.digitToChar()
+            if (i==0 && bit!=1 || i==5 && bit!=0) {
+                return NONE.digitToChar()
+            }
 
         }
-        println("serialReceiver = ${serialReceiver.toString(2)}")  // <-- and this
+//        println("serialReceiver = ${serialReceiver.toString(2)}")  // <-- and this
 
         val keyCol = serialReceiver shr 2
-        println("$keyCol")
         val keyLin = serialReceiver and 0b11
-        println("$keyLin")
         return matrix[keyLin][keyCol]
     }
 

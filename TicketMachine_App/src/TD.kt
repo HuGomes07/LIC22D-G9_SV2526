@@ -27,20 +27,20 @@ fun main() {
 object TicketDispenser {
     // Inicia a classe, estabelecendo os valores iniciais.
     val stations = arrayOf(
-        "Travanca",         // 1
-        "Alfaiates",        // 2
-        "Barrancos",        // 3
-        "Cercal",           // 4
-        "Alvaiazere",       // 5
-        "Rio Tinto",        // 6
-        "Murtosa",          // 7
-        "Sernancelhe",      // 8
-        "Almada",           // 9
-        "Alfeizerao",       // A
-        "Olivença",         // B
-        "Fundao",           // C
-        "Tabuaço",          // D
-        "Moledo"            // E
+        "Travanca",         // 0
+        "Alfaiates",        // 1
+        "Barrancos",        // 2
+        "Cercal",           // 3
+        "Alvaiazere",       // 4
+        "Rio Tinto",        // 5
+        "Murtosa",          // 6
+        "Sernancelhe",      // 7
+        "Almada",           // 8
+        "Alfeizerao",       // 9
+        "Olivenca",         // 10
+        "Fundao",           // 11
+        "Tabuaco",          // 12
+        "Moledo"            // 13
     )
 
     fun init(){

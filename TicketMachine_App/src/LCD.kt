@@ -68,7 +68,7 @@ object LCD {
         writeCMD(0b00001000)
         writeCMD(0b00000001)
         writeCMD(0b00000110)
-        writeCMD(0b00001111)
+        writeCMD(0b00001100)//last 2 bits are for cursor _ blinking
 
         clear()
     }

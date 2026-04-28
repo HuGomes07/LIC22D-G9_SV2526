@@ -74,4 +74,4 @@ petd.D[1-4] -> tp.DId[0-3]
 petd.D[5-8] -> tp.OId[0-3]
 petd.D0 -> tp.rt
 petd.D9 -> tp.prt
-tp.fn -> UsbPort.I4
+tp.fn -> UsbPort.I5
